@@ -8,7 +8,7 @@ class CreateCraftmen < ActiveRecord::Migration[5.1]
       t.string :address
       t.text :description
       t.date :birth_date
-      t.references :job, foreign_key: true, index:true
+      t.references :job, foreign_key: true, index: true
 
       t.timestamps
     end
