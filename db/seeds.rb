@@ -67,7 +67,7 @@ colin = Craftman.new(
     phone: "07 85 45 34 78",
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
-    address: "34 rue de la paix, Paris",
+    address: "Place Pey Berland, 33000 Bordeaux",
     birth_date: "01/12/1940",
     job: carpenter
   })
@@ -82,7 +82,7 @@ vincent = Craftman.new(
     phone: "07 85 45 34 78",
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
-    address: "34 rue de la paix, Paris",
+    address: "Piazza del Duomo, 56126 Pisa PI, Italie",
     birth_date: "11/11/1987",
     job: carpenter
   })
@@ -97,7 +97,7 @@ emile = Craftman.new(
     phone: "06 23 34 78 09",
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
-    address: "13 rue des meuniers, 94300 Vincennes",
+    address: "1 Rue de Kiel, 29200 Brest",
     birth_date: "03/08/1956",
     job: cabinetmaker
   })
@@ -112,7 +112,7 @@ jaqueline = Craftman.new(
     phone: "06 23 34 78 09",
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
-    address: "13 rue des meuniers, 94300 Vincennes",
+    address: "Patio de Banderas, s/n, 41004 Sevilla, Espagne",
     birth_date: "10/12/1987",
     job: cabinetmaker
   })
@@ -127,7 +127,7 @@ francis = Craftman.new(
   phone: "07 56 45 23 11",
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
-  address: "13 rue des meuniers, 94300 Vincennes",
+  address: "55 Rue du Faubourg Saint-Honoré, 75008 Paris",
   birth_date: "10/10/2000",
   job: framer
   })
@@ -142,7 +142,7 @@ thomas = Craftman.new(
   phone: "06 16 55 23 21",
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
-  address: "13 rue des meuniers, 94300 Vincennes",
+  address: "17 Rue des Braves, 13007 Marseille",
   birth_date: "12/12/1937",
   job: framer
   })
