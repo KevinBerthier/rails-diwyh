@@ -41,7 +41,7 @@ puts '2 users created...'
 # SEEDS FOR WOOD UNIVERSE #
 ###########################
 
-wood = Universe.new({ name: "Wood" })
+wood = Universe.new({ name: "Wood", code: "wood" })
 wood.save
 puts 'Wood universe created...'
 
