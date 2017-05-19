@@ -6,4 +6,8 @@ class Booking < ApplicationRecord
   enum status: [:submitted, :accepted, :rejected]
 
   monetize :total_price_cents
+
+  validates :date_check_in, presence: true
+  validates :date_check_out, presence: true
+
 end
