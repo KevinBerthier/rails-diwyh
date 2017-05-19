@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
   root to: 'pages#home'
-  devise_for :users #, :craftmen
+  devise_for :users
+  #devise_for :craftmen
 
   get '/dashboard', to: 'users#dashboard'
   get '/edit-profile', to: 'users#edit'
