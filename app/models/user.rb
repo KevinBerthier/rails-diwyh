@@ -6,6 +6,6 @@ class User < ApplicationRecord
   has_many :messages, dependent: :destroy
   has_many :bookings
 
-  has_attachment :photo
+  has_attachment :avatar
 
 end

@@ -1,6 +1,6 @@
 class WorkshopsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show,:new, :create ]
-  #before_action :authenticate_craftman!, [ :new, :create]
+  before_action :authenticate_craftman!, only: [ :new, :create]
   before_action :set_workshop, only: [:show, :edit, :update, :destroy]
 
   # GET /workshops
@@ -55,7 +55,7 @@ class WorkshopsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def workshop_params
-      params.require(:workshop).permit(:title, :description, :price)
+      params.require(:workshop).permit(:title, :description, :photos, :price)
     end
 
 end

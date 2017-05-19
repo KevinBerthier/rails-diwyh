@@ -7,5 +7,5 @@ class Craftman < ApplicationRecord
   has_many :workshops, dependent: :destroy
   has_many :bookings, through: :workshops
 
-  has_attachment :photo
+  has_attachment :avatar
 end

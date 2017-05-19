@@ -10,9 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 20170519094829) do
-
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,7 +39,6 @@ ActiveRecord::Schema.define(version: 20170519094829) do
     t.datetime "updated_at", null: false
     t.integer "status"
     t.integer "total_price_cents", default: 0, null: false
-    t.string "total_price_currency", default: "USD", null: false
     t.index ["user_id"], name: "index_bookings_on_user_id"
     t.index ["workshop_id"], name: "index_bookings_on_workshop_id"
   end
@@ -86,7 +83,7 @@ ActiveRecord::Schema.define(version: 20170519094829) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "author_types"
+    t.integer "author_type"
     t.index ["craftman_id"], name: "index_messages_on_craftman_id"
     t.index ["user_id"], name: "index_messages_on_user_id"
     t.index ["workshop_id"], name: "index_messages_on_workshop_id"
@@ -134,7 +131,6 @@ ActiveRecord::Schema.define(version: 20170519094829) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "price_cents", default: 0, null: false
-    t.string "price_currency", default: "USD", null: false
     t.index ["craftman_id"], name: "index_workshops_on_craftman_id"
   end
 

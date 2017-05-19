@@ -1,5 +1,7 @@
 class CraftmenController < ApplicationController
   before_action :set_craftman, only: %i(dashboard edit update destroy)
+  skip_before_action :authenticate_user!
+  before_action :authenticate_craftman!
 
 
   def dashboard; end
@@ -31,7 +33,7 @@ class CraftmenController < ApplicationController
   def craftman_params
     params.require(:craftman).permit(
       :last_name, :first_name, :phone, :description,
-      :photo, :adress, :lat, :lng, :birth_date
+      :avatar, :adress, :lat, :lng, :birth_date
     )
   end
 end

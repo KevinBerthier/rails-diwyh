@@ -1,0 +1,10 @@
+<%= simple_form_for(@workshop) do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :phone %>
+  <%= f.input :photos, as: :attachinary %>
+
+  <%= f.button :submit %>
+<% end %>
