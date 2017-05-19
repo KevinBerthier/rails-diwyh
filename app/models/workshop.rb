@@ -1,6 +1,7 @@
 class Workshop < ApplicationRecord
   belongs_to :craftman
-  has_many :messages
+  has_many :messages, dependent: :nullify
   has_many :bookings
-  monetize :price
+
+  monetize :price_cents
 end
