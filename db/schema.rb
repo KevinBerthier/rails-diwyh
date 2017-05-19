@@ -10,10 +10,70 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170518151829) do
+ActiveRecord::Schema.define(version: 20170518223428) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.date "date_check_in"
+    t.date "date_check_out"
+    t.bigint "workshop_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+    t.index ["workshop_id"], name: "index_bookings_on_workshop_id"
+  end
+
+  create_table "craftmen", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "phone"
+    t.string "address"
+    t.text "description"
+    t.date "birth_date"
+    t.bigint "job_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["job_id"], name: "index_craftmen_on_job_id"
+  end
+
+  create_table "jobs", force: :cascade do |t|
+    t.string "name"
+    t.bigint "universe_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["universe_id"], name: "index_jobs_on_universe_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.text "content"
+    t.bigint "craftman_id"
+    t.bigint "workshop_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["craftman_id"], name: "index_messages_on_craftman_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
+    t.index ["workshop_id"], name: "index_messages_on_workshop_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "rating"
+    t.text "comment"
+    t.bigint "booking_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["booking_id"], name: "index_reviews_on_booking_id"
+  end
+
+  create_table "universes", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -32,4 +92,22 @@ ActiveRecord::Schema.define(version: 20170518151829) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "workshops", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.bigint "craftman_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["craftman_id"], name: "index_workshops_on_craftman_id"
+  end
+
+  add_foreign_key "bookings", "users"
+  add_foreign_key "bookings", "workshops"
+  add_foreign_key "craftmen", "jobs"
+  add_foreign_key "jobs", "universes"
+  add_foreign_key "messages", "craftmen"
+  add_foreign_key "messages", "users"
+  add_foreign_key "messages", "workshops"
+  add_foreign_key "reviews", "bookings"
+  add_foreign_key "workshops", "craftmen"
 end
