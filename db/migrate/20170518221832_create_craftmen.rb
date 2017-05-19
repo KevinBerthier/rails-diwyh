@@ -3,7 +3,6 @@ class CreateCraftmen < ActiveRecord::Migration[5.1]
     create_table :craftmen do |t|
       t.string :first_name
       t.string :last_name
-      t.string :email
       t.string :phone
       t.string :address
       t.text :description

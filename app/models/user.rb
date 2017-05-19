@@ -6,6 +6,8 @@ class User < ApplicationRecord
   has_many :messages, dependent: :destroy
   has_many :bookings
 
+  has_attachment :avatar
+
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :phone, presence: true
