@@ -3,9 +3,7 @@ class Craftman < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
-  belongs_to :job
+  belongs_to :job, optional: true
   has_many :workshops, dependent: :destroy
   has_many :bookings, through: :workshops
 

@@ -24,7 +24,7 @@ class CraftmenController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_craftman
-    @craftman = current_user
+    @craftman = current_craftman
   end
 
   # Only allow a trusted parameter "white list" through.
