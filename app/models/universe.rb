@@ -3,4 +3,6 @@ class Universe < ApplicationRecord
   has_many :craftmen, through: :jobs
 
   validates :name, presence: true
+
+  has_attachement :photo
 end
