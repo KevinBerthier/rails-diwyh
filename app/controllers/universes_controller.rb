@@ -8,6 +8,6 @@ class UniversesController < ApplicationController
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_universe
-    @universe = Universe.find(params[:id])
+    @universe = Universe.friendly.find(params[:id])
   end
 end
