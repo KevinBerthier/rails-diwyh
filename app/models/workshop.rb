@@ -3,6 +3,8 @@ class Workshop < ApplicationRecord
   has_many :messages, dependent: :nullify
   has_many :bookings
 
+  has_attachments :photos, maximum: 10
+
   monetize :price_cents,
   :numericality => {
     :greater_than_or_equal_to => 0,
@@ -12,4 +14,5 @@ class Workshop < ApplicationRecord
   validates :title, presence: true
   validates :description, presence: true
   validates :price, presence: true
+
 end

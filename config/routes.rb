@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Attachinary::Engine => "/attachinary"
 
   root to: 'pages#home'
   devise_for :users
@@ -9,10 +10,10 @@ Rails.application.routes.draw do
   patch  '/edit-profile', to: 'users#update'
   delete '/edit-profile', to: 'users#destroy'
 
-  get '/dashboard', to: 'craftmen#dashboard'
-  get '/edit-profile', to: 'craftmen#edit'
-  patch  '/edit-profile', to: 'craftmen#update'
-  delete '/edit-profile', to: 'craftmen#destroy'
+  get '/craftmen/dashboard', to: 'craftmen#dashboard'
+  get '/craftmen/edit-profile', to: 'craftmen#edit'
+  patch  '/craftmen/edit-profile', to: 'craftmen#update'
+  delete '/craftmen/edit-profile', to: 'craftmen#destroy'
 
   resources :universes, only: %i(show) do
     resources :workshops, only: %i(index)
