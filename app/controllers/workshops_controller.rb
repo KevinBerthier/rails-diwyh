@@ -6,6 +6,13 @@ class WorkshopsController < ApplicationController
   # GET /workshops
   def index
     @workshops = Workshop.all
+
+  #geocoder
+    @craftmen = Craftman.where.not(latitude: nil, longitude: nil)
+
+    @hash = Gmaps4rails.build_markers(@craftmen) do |craftman, marker|
+      marker.lat craftman.latitude
+      marker.lng craftman.longitude
   end
 
   # GET /workshops/1

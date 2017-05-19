@@ -6,7 +6,12 @@ class Craftman < ApplicationRecord
   belongs_to :job, optional: true
   has_many :workshops, dependent: :destroy
   has_many :bookings, through: :workshops
+
   has_attachment :avatar
+
+  geocoded_by :address
+  after_validation :geocode, if: :address_changed?
+
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :phone, presence: true

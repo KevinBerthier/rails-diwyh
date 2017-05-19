@@ -4,5 +4,5 @@ class Universe < ApplicationRecord
 
   validates :name, presence: true
 
-  has_attachement :photo
+  has_attachment :photo
 end
