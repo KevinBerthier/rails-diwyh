@@ -68,7 +68,7 @@ colin = Craftman.new(
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
     address: "34 rue de la paix, Paris",
-    birth_date: "",
+    birth_date: "01/12/1940",
     job: carpenter
   })
 colin.save
@@ -83,7 +83,7 @@ vincent = Craftman.new(
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
     address: "34 rue de la paix, Paris",
-    birth_date: "",
+    birth_date: "11/11/1987",
     job: carpenter
   })
 vincent.save
@@ -98,7 +98,7 @@ emile = Craftman.new(
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
     address: "13 rue des meuniers, 94300 Vincennes",
-    birth_date: "",
+    birth_date: "03/08/1956",
     job: cabinetmaker
   })
 emile.save
@@ -113,7 +113,7 @@ jaqueline = Craftman.new(
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
     address: "13 rue des meuniers, 94300 Vincennes",
-    birth_date: "",
+    birth_date: "10/12/1987",
     job: cabinetmaker
   })
 jaqueline.save
@@ -128,7 +128,7 @@ francis = Craftman.new(
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
   address: "13 rue des meuniers, 94300 Vincennes",
-  birth_date: "",
+  birth_date: "10/10/2000",
   job: framer
   })
 francis.save
@@ -143,7 +143,7 @@ thomas = Craftman.new(
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
   address: "13 rue des meuniers, 94300 Vincennes",
-  birth_date: "",
+  birth_date: "12/12/1937",
   job: framer
   })
 thomas.save
@@ -226,7 +226,7 @@ workshop_attributes = [
 
 ]
 Workshop.create!(workshop_attributes)
-puts '10 workshops created...'
+puts "#{workshop_attributes.count} workshops created..."
 
 ###############################
 # SEEDS FOR OTHER UNIVERSE... #
