@@ -18,6 +18,8 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 
+gem 'omniauth-facebook'
+
 # Photos
 gem 'cloudinary'
 gem 'attachinary', github: 'assembler/attachinary'
