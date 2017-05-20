@@ -21,9 +21,10 @@ Rails.application.routes.draw do
   end
 
   resources :workshops, only: %i(show new create edit update destroy) do
-    resources :messages, only: %i(index new create)
+    resources :messages, only: %i(new create)
   end
 
-  resources :bookings, only: %i(show new create destroy)
+  resources :messages, only: %i(index)
+  resources :bookings, only: %i(index show new create destroy)
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

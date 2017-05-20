@@ -1,8 +1,8 @@
-<h1>Universes#show</h1>
-<%= @universe.name %>
+<h1><%= @universe.name %></h1>
 
 <% @universe.jobs.each do |job| %>
 
-  <%= link_to job, #  %>
-
 <% end %>
+<br>
+
+<%= link_to "Discover workshops related to #{@universe.name}", universe_workshops_path(@universe)  %>

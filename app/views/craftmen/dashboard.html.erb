@@ -1,2 +1,9 @@
-<h1>Craftmen#dashboard</h1>
-<p>Find me in app/views/craftmen/dashboard.html.erb</p>
+<h1>Craftman Dashboard</h1>
+
+<h2>Manage my workshops</h2>
+<% current_craftman.workshops.each do |wksp| %>
+  <p><%= link_to wksp.title, workshop_path(wksp) %> <%= link_to "Edit", edit_workshop_path(wksp) %></p>
+<% end %>
+
+<h3><%= link_to "Mailbox", messages_path  %></h3>
+<h3><%= link_to "Edit my profile", craftmen_edit_profile_path  %><h3>
