@@ -1,2 +1,8 @@
 <h1>Universes#show</h1>
-<p>Find me in app/views/universes/show.html.erb</p>
+<%= @universe.name %>
+
+<% @universe.jobs.each do |job| %>
+
+  <%= link_to job, #  %>
+
+<% end %>
