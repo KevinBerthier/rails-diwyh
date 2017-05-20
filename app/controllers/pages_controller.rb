@@ -2,6 +2,6 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home ]
 
   def home
-    @wood = Universe.where(code: 'wood')
+    @universes = Universe.all
   end
 end

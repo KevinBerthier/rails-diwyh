@@ -1,2 +1,18 @@
-<h1>Message#new</h1>
-<p>Find me in app/views/message/new.html.erb</p>
+<div class="padded-md" style="background-image: linear-gradient(-225deg, rgba(0, 101, 168, 0.6) 0%, rgba(55, 101, 132, 0.4) 80%);">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+        <div class="background-form">
+          <h1 class="text-center">New Message</h1>
+          <%= simple_form_for [@workshop, @message] do |f| %>
+            <%= f.error_notification %>
+
+            <%= f.input :content %>
+
+            <%= f.button :submit, class: "btn btn-default btn-block" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

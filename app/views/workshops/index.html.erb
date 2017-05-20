@@ -1,1 +1,5 @@
-<h1>Index des workshops</h1>
+<h1><%=  %>Workshops</h1>
+
+<% @workshops.each do |wksp| %>
+  <p><%= link_to wksp.title, workshop_path(wksp) %></p>
+<% end %>

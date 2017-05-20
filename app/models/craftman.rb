@@ -6,6 +6,7 @@ class Craftman < ApplicationRecord
   belongs_to :job, optional: true
   has_many :workshops, dependent: :destroy
   has_many :bookings, through: :workshops
+  has_many :messages
   has_attachment :avatar
   validates :first_name, presence: true
   validates :last_name, presence: true

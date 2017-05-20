@@ -1,2 +1,8 @@
-<h1>Universes#show</h1>
-<p>Find me in app/views/universes/show.html.erb</p>
+<h1><%= @universe.name %></h1>
+
+<% @universe.jobs.each do |job| %>
+
+<% end %>
+<br>
+
+<%= link_to "Discover workshops related to #{@universe.name}", universe_workshops_path(@universe)  %>

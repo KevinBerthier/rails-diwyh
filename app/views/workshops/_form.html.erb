@@ -1,10 +1,22 @@
-<%= simple_form_for(@workshop) do |f| %>
-  <%= f.error_notification %>
+<div class="padded-md" style="background-image: linear-gradient(-225deg, rgba(0, 101, 168, 0.6) 0%, rgba(55, 101, 132, 0.4) 80%);">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+        <div class="background-form">
+          <h1 class="text-center">Create a workshop</h1>
+          <%= simple_form_for(@workshop) do |f| %>
+            <%= f.error_notification %>
 
-  <%= f.input :first_name %>
-  <%= f.input :last_name %>
-  <%= f.input :phone %>
-  <%= f.input :photos, as: :attachinary %>
+            <%= f.input :title %>
+            <%= f.input :description %>
+            <%= f.input :price %>
+            <%= f.input :photos, as: :attachinary %>
 
-  <%= f.button :submit %>
-<% end %>
+            <%= f.button :submit %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
