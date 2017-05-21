@@ -4,6 +4,40 @@
  * Feel free to change them and create your own
  * ------------------------------------- */
 
+.banner-photo {
+  height: 250px;
+  background-size: cover;
+}
+
+.upper-line hr {
+  color: $gray;
+  background-color: $gray;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  height: 1px;
+}
+.upper-line-left hr {
+  color: #979797;
+  background-color: #979797;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  height: 0.75px;
+}
+.final-line hr {
+  color: $gray;
+  background-color: $gray;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  height: 1px;
+}
+.final-line-left hr {
+  color: #979797;
+  background-color: #979797;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  height: 0.75px;
+}
+
 // Paddings
 .padded {
   padding-top: 5em;
@@ -15,7 +49,7 @@
   background: #4a4a4a;
 }
 .bg-grey {
-  background: #aeaeae;
+  background: $gray;
 }
 .bg-blue {
   background: #00a3e1;
