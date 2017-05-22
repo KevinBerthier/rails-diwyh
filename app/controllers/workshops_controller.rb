@@ -20,6 +20,12 @@ class WorkshopsController < ApplicationController
 
   # GET /workshops/1
   def show
+    #geocoder
+    #@craftman = Craftman.find(params[:id])
+    #@hash = Gmaps4rails.build_markers(@craftman) do |craftman, marker|
+    #  marker.lat craftman.latitude
+    #  marker.lng craftman.longitude
+    #end
   end
 
   # GET /workshops/new
