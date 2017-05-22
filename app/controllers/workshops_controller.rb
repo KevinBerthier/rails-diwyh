@@ -13,6 +13,7 @@ class WorkshopsController < ApplicationController
     @hash = Gmaps4rails.build_markers(@craftmen) do |craftman, marker|
       marker.lat craftman.latitude
       marker.lng craftman.longitude
+    end
   end
 
   # GET /workshops/1
