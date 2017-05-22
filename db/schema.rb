@@ -63,6 +63,8 @@ ActiveRecord::Schema.define(version: 20170519154803) do
     t.datetime "last_sign_in_at"
     t.inet "current_sign_in_ip"
     t.inet "last_sign_in_ip"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["email"], name: "index_craftmen_on_email", unique: true
     t.index ["job_id"], name: "index_craftmen_on_job_id"
     t.index ["reset_password_token"], name: "index_craftmen_on_reset_password_token", unique: true

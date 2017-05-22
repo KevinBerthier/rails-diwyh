@@ -5,8 +5,17 @@ class WorkshopsController < ApplicationController
 
   # GET /workshops
   def index
+
     @universe = Universe.friendly.find(params[:universe_id])
     @workshops = @universe.workshops
+
+    #geocoder
+    @craftmen = Craftman.where.not(latitude: nil, longitude: nil)
+    @hash = Gmaps4rails.build_markers(@craftmen) do |craftman, marker|
+      marker.lat craftman.latitude
+      marker.lng craftman.longitude
+    end
+
   end
 
   # GET /workshops/1
