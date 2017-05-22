@@ -15,4 +15,6 @@ class Workshop < ApplicationRecord
   validates :description, presence: true
   validates :price, presence: true
 
+  extend FriendlyId
+  friendly_id :title, use: :slugged
 end
