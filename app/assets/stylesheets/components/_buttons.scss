@@ -1,3 +1,27 @@
+.btn-wood {
+  background-color: $gray;
+
+  font-size: -rem(10px);
+  letter-spacing: .3em;
+  color: rgba($gold1, .7);
+  border-radius: 0;
+  padding: 18px 80px 20px;
+  transition: all .7s ease-out;
+  background: linear-gradient(270deg, $gold1, $gold2, rgba(black, 0), rgba(black, 0));
+  background-position: 1% 50%;
+  background-size: 300% 300%;
+  text-decoration: none;
+  margin: -rem(10px);
+  border: none;
+  border: 1px solid rgba($gold1, .3);
+
+  &:hover {
+    color: white;
+    border: 1px solid rgba($gold1, 0);
+    background-position: 99% 50%;
+  }
+}
+
 .loginBtn {
   box-sizing: border-box;
   position: relative;
