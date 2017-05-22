@@ -20,6 +20,13 @@ class WorkshopsController < ApplicationController
 
   # GET /workshops/1
   def show
+    #geocoder
+    @craftman = @workshop.craftman
+
+    @hash = Gmaps4rails.build_markers(@craftman) do |craftman, marker|
+      marker.lat craftman.latitude
+      marker.lng craftman.longitude
+    end
   end
 
   # GET /workshops/new
@@ -60,7 +67,7 @@ class WorkshopsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_workshop
-      @workshop = Workshop.find(params[:id])
+      @workshop = Workshop.friendly.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
