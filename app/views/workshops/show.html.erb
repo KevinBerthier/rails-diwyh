@@ -1,10 +1,9 @@
 <!-- BANNER -->
 <div class="container-fluid">
-  <div>
-    <%= image_tag 'wood_univers.jpg', height: 250, crop: :fill, class: "banner-photo"%>
-  </div>
 
-  <div class="row bg-grey">
+  <%= render 'shared/universe_photo' %>
+
+  <div class="row banner-bk-gray">
     <div class="col-sm-10 col-md-offset-2">
       <h1 class="white"><%= @workshop.title %></h1>
     </div>
@@ -84,32 +83,31 @@
   </div>
 
   <!-- PHOTOS -->
-  <div class="row">
+  <div class="photos-group">
     <div class="row">
       <div class="col-sm-12">
-        <%= image_tag 'wood_dentelle.jpg', height: 150, crop: :fill %>
+        <%= image_tag @workshop.universe.top_gallery.fullpath, height: 150, crop: :fill %>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-8">
-        <%= image_tag 'wood_workshop.jpg' %>
+        <%= image_tag @workshop.universe.middle_gallery.first.fullpath %>
       </div>
       <div class="col-sm-4">
-        <!-- image3 -->
+        <%= image_tag @workshop.universe.middle_gallery.last.fullpath %>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-12 col-md-4">
-        <%= image_tag 'wood_art.jpg' %>
+        <%= image_tag @workshop.universe.gallery[0].fullpath %>
       </div>
       <div class="col-sm-12 col-md-4">
-        <%= image_tag 'wood_sciure.jpg' %>
+        <%= image_tag @workshop.universe.gallery[1].fullpath %>
       </div>
       <div class="col-sm-12 col-md-4">
-        <%= image_tag 'wood_sciure.jpg' %>
+        <%= image_tag @workshop.universe.gallery[2].fullpath %>
       </div>
     </div>
-
   </div>
 
   <!-- ARTISAN -->
@@ -118,6 +116,16 @@
       <hr>
       <h2>the ARTISAN</h2>
     </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <%= @workshop.craftman.description %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+
   </div>
 
 

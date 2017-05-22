@@ -15,6 +15,11 @@ class Workshop < ApplicationRecord
   validates :description, presence: true
   validates :price, presence: true
 
+
+  def universe
+    craftman.job.universe
+  end
+
   extend FriendlyId
   friendly_id :title, use: :slugged
 end
