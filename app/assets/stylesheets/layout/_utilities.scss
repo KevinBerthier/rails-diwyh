@@ -33,11 +33,28 @@
   height: 0.75px;
 }
 
+// margins
+.margin-verti-fat {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
 // Paddings
 .padded {
   padding-top: 5em;
   padding-bottom: 5em;
 }
+
+.padded-md {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.padded-ri {
+  padding-right: 30px;
+}
+
+
 
 // Backgrounds
 .bg-black {
@@ -52,3 +69,5 @@
 .bg-dark-blue {
   background: #3b5998;
 }
+
+

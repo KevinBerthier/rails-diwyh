@@ -1,10 +1,10 @@
 <!-- wrapper -->
-<div class="wrapper">
+<div class="wrapper margin-verti-fat">
   <!-- container texte and photo -->
   <div class="container">
     <div class="row">
 
-      <div class="col-xs-12 col-md-6 padded-ri">
+      <div class="col-xs-12 col-md-6 final-line-left hr">
       <!-- colonne text -->
        <div class="">
        <!-- caracteristiques -->
@@ -82,24 +82,32 @@
   <div class="container">
     <div class="row">
 
-      <div class="col-xs-12 col-md-6 text-center">
-       <div id="btn-conf-booking">
-         <%= simple_form_for @booking, url: accept_booking_path(@booking) do |f| %>
-         <%= f.input :date_check_in, as: :hidden %>
-         <%= f.input :date_check_out, as: :hidden  %>
-         <%= f.submit "ACCEPT", class: "btn btn-default " %>
-         <% end %>
-       </div>
+      <div class="col-xs-12 col-md-6 margin-verti-fat">
+
+        <div class="row">
+          <div class="col-xs-6 col-md-6 text-right">
+             <div id="btn-conf-booking">
+               <%= simple_form_for @booking, url: accept_booking_path(@booking) do |f| %>
+               <%= f.input :date_check_in, as: :hidden %>
+               <%= f.input :date_check_out, as: :hidden  %>
+               <%= f.submit "ACCEPT", class: "btn btn-default " %>
+               <% end %>
+             </div>
+          </div>
+          <div class="col-xs-6 col-md-6">
+             <div id="btn-conf-booking">
+               <%= simple_form_for @booking, url: reject_booking_path(@booking) do |f| %>
+               <%= f.input :date_check_in, as: :hidden %>
+               <%= f.input :date_check_out, as: :hidden  %>
+               <%= f.submit "REJECT", class: "btn btn-default " %>
+               <% end %>
+             </div>
+          </div>
+        </div>
+
       </div>
 
-      <div class="col-xs-12 col-md-6 text-center">
-        <div id="btn-conf-booking">
-           <%= simple_form_for @booking, url: reject_booking_path(@booking) do |f| %>
-           <%= f.input :date_check_in, as: :hidden %>
-           <%= f.input :date_check_out, as: :hidden  %>
-           <%= f.submit "REJECT", class: "btn btn-default " %>
-           <% end %>
-         </div>
+      <div class="col-xs-12 col-md-6 text-center margin-verti-fat">
       </div>
 
     </div>
