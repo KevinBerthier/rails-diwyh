@@ -20,4 +20,8 @@
       });
     });
   </script>
+<h1><%=  %>Workshops</h1>
+
+<% @workshops.each do |wksp| %>
+  <p><%= link_to wksp.title, workshop_path(wksp) %></p>
 <% end %>

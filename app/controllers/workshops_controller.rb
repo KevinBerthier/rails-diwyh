@@ -1,19 +1,21 @@
 class WorkshopsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index, :show,:new, :create ]
+  skip_before_action :authenticate_user!
   before_action :authenticate_craftman!, only: [ :new, :create]
   before_action :set_workshop, only: [:show, :edit, :update, :destroy]
 
   # GET /workshops
   def index
-    @workshops = Workshop.all
 
-  #geocoder
+    @universe = Universe.friendly.find(params[:universe_id])
+    @workshops = @universe.workshops
+
+    #geocoder
     @craftmen = Craftman.where.not(latitude: nil, longitude: nil)
-
     @hash = Gmaps4rails.build_markers(@craftmen) do |craftman, marker|
       marker.lat craftman.latitude
       marker.lng craftman.longitude
     end
+
   end
 
   # GET /workshops/1
@@ -58,7 +60,7 @@ class WorkshopsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_workshop
-      @workshop = workshop.find(params[:id])
+      @workshop = Workshop.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.

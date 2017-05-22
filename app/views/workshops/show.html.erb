@@ -1,1 +1,18 @@
-<h1>Show workshop</h1>
+<h1><%= @workshop.title %></h1>
+
+<p><%= @workshop.description %></p>
+
+<p><%= @workshop.price.to_i  %> €</p>
+
+<p><%= @workshop.craftman.first_name %> <%= @workshop.craftman.last_name %></p>
+
+
+<!-- Ne fonctionne pas -->
+<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=15&size=200x200&sensor=false&maptype=roadmap&markers=color:red|#{@workshop.craftman.address}" %>
+
+<br>
+
+<%= link_to "Contact
+#{@workshop.craftman.first_name} #{@workshop.craftman.last_name}",
+new_workshop_message_path(@workshop) %>
+

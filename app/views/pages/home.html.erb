@@ -1,1 +1,2 @@
-<%= link_to "glass", @glass  %>
+<% @wood = @universes.friendly.find("wood") %>
+<%= link_to @wood.name, universe_path(@wood)  %>

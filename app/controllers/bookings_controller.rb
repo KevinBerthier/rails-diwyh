@@ -4,6 +4,9 @@ class BookingsController < ApplicationController
   def show
   end
 
+  def index
+  end
+
   def new
     @booking = Booking.new
   end

@@ -26,6 +26,9 @@ gem 'autoprefixer-rails'
 
 gem 'omniauth-facebook'
 
+# slug
+gem 'friendly_id', '~> 5.1.0'
+
 # Photos
 gem 'cloudinary'
 gem 'attachinary', github: 'assembler/attachinary'
