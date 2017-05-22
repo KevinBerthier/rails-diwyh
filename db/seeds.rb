@@ -14,6 +14,10 @@ Job.destroy_all
 Craftman.destroy_all
 Workshop.destroy_all
 
+def open_photo(filename)
+   File.open(Rails.root.join("db", "images_seeds", filename))
+end
+
 puts 'database cleaned...'
 
 ##########################################
@@ -41,8 +45,12 @@ puts '2 users created...'
 # SEEDS FOR WOOD UNIVERSE #
 ###########################
 
-wood = Universe.new({ name: "Wood", code: "wood" })
-wood.save
+wood = Universe.new({
+  name: "Wood",
+  code: "wood",
+  banner: open_photo("wood_univers.jpg"),
+})
+wood.save!
 puts 'Wood universe created...'
 
 ##########################################

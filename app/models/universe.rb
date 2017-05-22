@@ -9,5 +9,8 @@ class Universe < ApplicationRecord
 
   validates :name, presence: true
 
-  has_attachment :photo
+  has_attachment :banner
+  has_attachment :top_gallery
+  has_attachments :middle_gallery, maximum: 2
+  has_attachments :gallery, maximum: 3
 end

@@ -1,7 +1,8 @@
 <!-- BANNER -->
 <div class="container-fluid">
-  <div>
-    <%= image_tag 'wood_univers.jpg', height: 250, crop: :fill, class: "banner-photo"%>
+  <div class="row">
+    <div class="banner-photo" style="background-image: url(<%= @workshop.universe.banner.fullpath %>)">
+    </div>
   </div>
 
   <div class="row bg-grey">
@@ -84,7 +85,7 @@
   </div>
 
   <!-- PHOTOS -->
-  <div class="row">
+  <div class="photos-group">
     <div class="row">
       <div class="col-sm-12">
         <%= image_tag 'wood_dentelle.jpg', height: 150, crop: :fill %>
@@ -109,7 +110,6 @@
         <%= image_tag 'wood_sciure.jpg' %>
       </div>
     </div>
-
   </div>
 
   <!-- ARTISAN -->
