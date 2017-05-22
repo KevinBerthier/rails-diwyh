@@ -1,5 +1,9 @@
+<!-- list des workshops -->
 <h1>Index des workshops</h1>
-<h2>test</h2>
+
+<% @workshops.each do |wksp| %>
+  <p><%= link_to wksp.title, workshop_path(wksp) %></p>
+<% end %>
 
 <!-- map de ouf -->
 <div id="map" style="width: 100%; height: 600px;"></div>
@@ -197,8 +201,4 @@
   </script>
 <% end %>
 
-<h1>Workshops</h1>
 
-<% @workshops.each do |wksp| %>
-  <p><%= link_to wksp.title, workshop_path(wksp) %></p>
-<% end %>

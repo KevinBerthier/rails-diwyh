@@ -1,10 +1,145 @@
-<h1><%= @workshop.title %></h1>
+<!-- BANNER -->
+<div class="container-fluid">
+  <div>
+    <%= image_tag 'wood_univers.jpg', height: 250, crop: :fill, class: "banner-photo"%>
+  </div>
 
-<p><%= @workshop.description %></p>
+  <div class="row bg-grey">
+    <div class="col-sm-10 col-md-offset-2">
+      <h1 class="white"><%= @workshop.title %></h1>
+    </div>
+  </div>
 
-<p><%= @workshop.price.to_i  %> €</p>
+<!-- THE WORKSHOP -->
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <hr>
+      <h2>THE workshop</h2>
+    </div>
+  </div>
 
-<p><%= @workshop.craftman.first_name %> <%= @workshop.craftman.last_name %></p>
+  <div class="row">
+
+    <!-- Tableau DETAILS workshop -->
+    <div class="col-md-3 col-md-offset-1">
+
+      <!-- 1ère ligne ARTISAN -->
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="upper-line"><hr></div>
+          <h6 class="txt-regular">Artisan</h6>
+        </div>
+        <div class="col-sm-9">
+          <div class="upper-line-left"><hr></div>
+          <h6 class="txt-light"><%= @workshop.craftman.first_name %> <%= @workshop.craftman.last_name %></h6>
+        </div>
+      </div>
+
+      <!-- 2ème ligne / TECHNIQUES -->
+      <div class="row">
+        <div class="col-md-3">
+          <div class="upper-line"><hr></div>
+          <h6 class="txt-regular">Techniques you will learn</h6>
+        </div>
+        <div class="col-md-9">
+          <div class="upper-line-left"><hr></div>
+          <h6 class="txt-light">Morphology of wood, Recognize woods, Materials & tools, Different turning techniques.</h6>
+        </div>
+      </div>
+
+      <!-- 3ème ligne / PRICE -->
+      <div class="row">
+        <div class="col-md-3">
+          <div class="upper-line"><hr></div>
+          <h6 class="txt-regular">Price</h6>
+        </div>
+        <div class="col-md-9">
+          <div class="upper-line-left"><hr></div>
+          <h6 class="txt-light">from <%= @workshop.price.to_i %> €/day</h6>
+        </div>
+      </div>
+
+      <!-- Dernière ligne / WHERE -->
+      <div class="row">
+        <div class="col-md-3">
+          <div class="upper-line"><hr></div>
+          <h6 class="txt-regular">Where</h6>
+          <div class="final-line"><hr></div>
+        </div>
+        <div class="col-md-9">
+          <div class="upper-line-left"><hr></div>
+          <h6 class="txt-light">address</h6>
+          <div class="final-line-left"><hr></div>
+        </div>
+      </div>
+
+    <!-- Fin du tableau de détails -->
+    </div>
+
+      <!-- Description workshop -->
+      <div class="col-md-7">
+        <p><%= @workshop.description %></p>
+      </div>
+
+  </div>
+
+  <!-- PHOTOS -->
+  <div class="row">
+    <div class="row">
+      <div class="col-sm-12">
+        <%= image_tag 'wood_dentelle.jpg', height: 150, crop: :fill %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8">
+        <%= image_tag 'wood_workshop.jpg' %>
+      </div>
+      <div class="col-sm-4">
+        <!-- image3 -->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-4">
+        <%= image_tag 'wood_art.jpg' %>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <%= image_tag 'wood_sciure.jpg' %>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <%= image_tag 'wood_sciure.jpg' %>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ARTISAN -->
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <hr>
+      <h2>the ARTISAN</h2>
+    </div>
+  </div>
+
+
+  <!-- REVIEWS -->
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h3>Reviews</h3>
+    </div>
+  </div>
+
+
+
+  <!-- OTHER WORKSHOPS -->
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h3>Other workshops with <%= @workshop.craftman.first_name %> <%= @workshop.craftman.last_name %></h3>
+    </div>
+  </div>
+
+
+<!-- Fin de container -->
+</div>
 
 
 <!-- Ne fonctionne pas -->
@@ -15,4 +150,5 @@
 <%= link_to "Contact
 #{@workshop.craftman.first_name} #{@workshop.craftman.last_name}",
 new_workshop_message_path(@workshop) %>
+
 
