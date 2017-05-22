@@ -1,6 +1,6 @@
 Geocoder.configure(
   :lookup    => :google,
-  :api_key   => ENV['GOOGLE_API_BROWSER_KEY'],
+  :api_key   => ENV.fetch('GOOGLE_API_SERVER_KEY'),
   :use_https => true,
   :units => :km
 )
