@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: %i(show update destroy)
+  before_action :set_booking, only: %i(show edit accept reject destroy)
 
   def show
   end
@@ -9,12 +9,28 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    @booking.date_check_in = params[:date_check_in].to_date
+    @booking.date_check_out = params[:date_check_out].to_date
+    @booking.total_price =
+    @booking.workshop.price * (@booking.date_check_out - @booking.date_check_in + 1)
   end
 
   def edit
+    @craftman = @booking.workshop.craftman
   end
 
-  def update
+  def accept
+    if @booking.submitted?
+      @booking.status = :accepted
+      @booking.save
+    end
+    redirect_to edit_booking_url, notice: "The quotation ' #{@booking.workshop.title} ' has been successfully accepted"
+    # à terme rediriger vers la page de paiement que l'on séparera.
+  end
+
+  def reject
+    @booking.rejected! if @booking.submitted?
+    redirect_to dashboard_url, notice: "The quotation for the workshop ' #{@booking.workshop.title} ' has been rejected"
   end
 
   def create
@@ -31,7 +47,7 @@ class BookingsController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_booking
-    @booking = booking.find(params[:id])
+    @booking = Booking.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.

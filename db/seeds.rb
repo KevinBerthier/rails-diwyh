@@ -8,6 +8,7 @@
 
 puts 'start!'
 
+Booking.destroy_all
 User.destroy_all
 Universe.destroy_all
 Job.destroy_all
@@ -227,6 +228,20 @@ workshop_attributes = [
 ]
 Workshop.create!(workshop_attributes)
 puts "#{workshop_attributes.count} workshops created..."
+
+
+first_booking = Booking.new({
+  user: loic,
+  workshop: Workshop.first,
+  date_check_in: Date.today,
+  date_check_out: Date.tomorrow + 1,
+  status: :submitted,
+  total_price: 3000,
+  })
+first_booking.save
+puts '1 first_booking created...'
+
+
 
 ###############################
 # SEEDS FOR OTHER UNIVERSE... #
