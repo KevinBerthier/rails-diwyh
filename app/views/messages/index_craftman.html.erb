@@ -1,27 +1,13 @@
 <br>
 <!-- NE SURTOUT PAS CHANGER LES CLASS -->
 <div class="chat_window">
-  <ul class="messages">
-    <% @messages.each do |msg| %>
-      <li class="message <%= msg.craftman_left_right %> appeared">
-        <div class="avatar">
-
-        </div>
-        <div class="text_wrapper">
-          <div class="text"><%= msg.content %></div>
-        </div>
-      </li>
+  <ul class="messages" id="messages">
+    <% @messages.each do |message| %>
+      <%= render "messages/show_craftman", message: message %>
     <% end %>
   </ul>
   <div class="bottom_wrapper clearfix">
-
-    <%= simple_form_for(@message, url: workshop_create_user_message_path(@workshop, @user)) do |f| %>
-      <%= f.error_notification %>
-        <div class="message_input_wrapper">
-      <%= f.input :content, input_html: {class: "message_input"}, placeholder: "Type your message here...", label: false  %>
-        </div>
-          <%= f.button :submit, class: "text send_message" %>
-    <% end %>
+    <%= render 'messages/form_craftman', workshop: @workshop, user: @user, message: @message %>
   </div>
 </div>
 

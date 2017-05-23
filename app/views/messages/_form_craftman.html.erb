@@ -1,0 +1,7 @@
+    <%= simple_form_for message, url: workshop_create_user_message_path(workshop, user), remote: true do |f| %>
+      <%= f.error_notification %>
+        <div class="message_input_wrapper">
+      <%= f.input :content, input_html: {class: "message_input"}, placeholder: "Type your message here...", label: false  %>
+        </div>
+          <%= f.button :submit, class: "text send_message" %>
+    <% end %>
