@@ -50,6 +50,7 @@ wood = Universe.new({
   name: "Wood",
   code: "wood",
   banner: open_photo("wood_univers.jpg"),
+  banner_bottom: open_photo("copeaux.jpg"),
   top_gallery: open_photo("wood_dentelle.jpg"),
   middle_gallery: [open_photo("wood_workshop.jpg"),open_photo("wood_sciure.jpg")],
   gallery: [open_photo("wood_art.jpg"), open_photo("wood_art.jpg"), open_photo("wood_art.jpg")],

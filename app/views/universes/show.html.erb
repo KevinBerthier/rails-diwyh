@@ -8,19 +8,25 @@
       <div class="banner-bk-gray position banner-height-lg">
 
         <div class="row">
-          <div class="col-8 col-xs-6">
-            <h1 class="text-center"><%= @universe.name.upcase %></h1>
+          <div class="col-xs-6 col-xs-offset-2">
+            <h1><%= @universe.name.upcase %></h1>
           </div>
-          <div class="col-4 col-xs-6">
+          <div class="col-xs-6 col-md-6 col-md-offset-2">
             <h5>
             <!-- @universe.slug -->
               Wood is a soft and living material rich in a multitude of essences. A natural product that must dry slowly before being shaped.
             </h5>
           </div>
         </div>
-        <div class="details-photo universe">
-          <!-- photo -->
-          <img src="http://placehold.it/620x330" alt="">
+
+        <div class="row">
+          <div class="col-xs-offset-3 col-lg-offset-3">
+            <div class="details-photo universe">
+              <!-- photo -->
+              <%= image_tag @universe.banner_bottom.fullpath, crop: :fill %>
+              <!-- <img src="http://placehold.it/620x330" alt=""> -->
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -32,7 +38,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="universe-presentation">
-      <div class="col-xs-12 col-sm-8">
+      <div class="col-xs-12 col-md-8 col-md-offset-1">
         <h4>
           “There is a magical, contemplative feeling
           in the forest. We encourage people to visit,
@@ -43,7 +49,7 @@
           be reconstituted a century later.”
         </h4>
       </div>
-      <div class="col-xs-12 col-sm-4">
+      <div class="col-xs-12 col-md-4 col-md-offset-8">
         <div class="universe <%= @universe.code %> border">
           <%= image_tag 'http://placehold.it/250x320' %>
         </div>
@@ -64,12 +70,12 @@
 <div class="container-fluid">
   <div class="row">
     <div class="universe-desciption">
-      <div class="col-md-6 col-offset-2">
+      <div class="col-xs-12 col-md-6 col-md-offset-2">
         <p class="text-left universe-text-top">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </div>
-      <div class="col-md-6 col-offset-2">
+      <div class="col-xs-12 col-md-6 col-md-offset-5">
         <p class="text-left universe-text-bottom">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
@@ -79,59 +85,79 @@
 </div>
 
 <!-- BUTTON BY UNIVERSE -->
-<div class="text-center universe <%= @universe.code %> button">
-  <%= link_to "Explore our #{@universe.name.downcase} workshops", universe_workshops_path(@universe), class: "btn-wood"  %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="text-center universe <%= @universe.code %> button">
+        <%= link_to "Explore our #{@universe.name.downcase} workshops", universe_workshops_path(@universe), class: "btn-wood"  %>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- JOBS -->
-
-<div class="universe <%= @universe.code %> job">
-  <div class="universe <%= @universe.code %> surligned">
+<div class="container-fluid">
+  <div class="row">
+    <div class="universe <%= @universe.code %> job padded">
+      <div class="col-xs-12 col-xs-offset-1">
+        <div class="universe <%= @universe.code %> surligned">
+        </div>
+        <h2><%= @universe.name %></h2>
+        <h2 class="padding-left-xl">jobs</h2>
+      </div>
+    </div>
   </div>
-  <h2 class="one"><%= @universe.name %></h2>
-  <h2 class="two">jobs</h2>
 </div>
 
 <div class="container-fluid">
   <div class="row">
     <div class="jobs">
       <%# @universe.jobs.each do |job| %>
-
+      <div class="col-xs-12 col-sm-4">
         <div class="card-job">
           <%= image_tag 'http://placehold.it/430x330' %>
           <!-- remplacer chaque titre par son @universe.job -->
           <h3 class="text-center">Carpenter</h3>
         </div>
-
+      </div>
+      <div class="col-xs-12 col-sm-4">
         <div class="card-job">
           <%= image_tag 'http://placehold.it/430x330' %>
           <!-- remplacer chaque titre par son @universe.job -->
           <h3 class="text-center">Cabinetmaker</h3>
         </div>
-
+      </div>
+      <div class="col-xs-12 col-sm-4">
         <div class="card-job">
           <%= image_tag 'http://placehold.it/430x330' %>
           <!-- remplacer chaque titre par son @universe.job -->
           <h3 class="text-center">Framer</h3>
         </div>
+      </div>
       <%# end %>
     </div>
   </div>
 </div>
 
 <!-- CRAFTMEN -->
-<div class="universe <%= @universe.code %> job padded">
-  <div class="universe <%= @universe.code %> surligned">
+<div class="container-fluid">
+  <div class="row">
+    <div class="universe <%= @universe.code %> job padded">
+      <div class="col-xs-12 col-xs-offset-1">
+        <div class="universe <%= @universe.code %> surligned">
+        </div>
+        <h2>Meet ours</h2>
+        <h2 class="padding-left-xl">craftmen</h2>
+      </div>
+    </div>
   </div>
-  <h2 class="text-left">Meet ours</h2>
-  <h2 class="text-left">craftmen</h2>
 </div>
 
 <!-- Artisan #1 -->
 <div class="container-fluid">
   <div class="row">
     <div class="padded universe craftman">
-      <div class="col-md-6 ">
+      <div class="col-xs-6 col-md-3 col-md-offset-1  ">
         <div class="presentation-pic">
           <div class="name">
             <!-- introduire en ruby le nom du craftman -->
@@ -143,7 +169,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-xs-6 col-md-8">
         <div class="presentation-text">
           <div class="craftman-presentation one">
             <!-- texte de présentation -->

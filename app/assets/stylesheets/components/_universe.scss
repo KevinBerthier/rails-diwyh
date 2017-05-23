@@ -10,17 +10,22 @@
   width: 500px;
 }
 
-.banner-bk-gray.position {
+.position {
   position: relative;
 }
-.banner-bk-gray.position h5 {
+.position h1 {
   position: absolute;
-  top: 80px;
+  bottom: -200px;
 }
-.banner-bk-gray.position img {
+.position h5 {
   position: absolute;
-  bottom: -100px;
-  left: 350px;
+  // top: 150px;
+  // left: 448px;
+}
+.position img {
+  position: absolute;
+  width: 50%;
+  top: 400px;
 }
 
 // UNIVERSE INSPIRATION
@@ -79,22 +84,12 @@
 // UNIVERSE DESCRIPTION
 .universe-desciption {
   height: 500px;
-  position: relative;
 }
 
-.universe-desciption p {
-  color: black;
-}
 .universe-text-top {
-  position: absolute;
-  top: 40px;
-  left: 200px;
   width: 500px;
 }
 .universe-text-bottom {
-  position: absolute;
-  top: 260px;
-  right: 160px;
   width: 500px;
 }
 
@@ -114,19 +109,25 @@
   height: 270px;
 }
 
+.universe.wood h2 {
+}
+
+.wood.two {
+  position: absolute;
+  left: 80px;
+}
 
 // JOBS
 .jobs {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  // margin-top: 40px;
+  // margin-bottom: 40px;
   height: 330px;
-  display: flex;
+  // display: flex;
   position: relative;
 }
-.card-job {
-  flex: 1 1 auto;
-  border: 1px solid black;
-}
+// .card-job {
+//   flex: 1 1 auto;
+// }
 
 .card-job h3 {
   color: white;
@@ -135,22 +136,23 @@
   text-align: center;
   vertical-align: middle;
   width: 250px;
-  padding-left: 9%;
+  padding-left: 12%;
 }
 
 // CRAFTMEN
-.universe.craftman {
-  position: relative;
-}
-.presentation-pic {
-  position: absolute;
-  left: 150px;
+// .universe.craftman {
+//   position: relative;
+// }
+// .presentation-pic {
+//   position: absolute;
+//   left: 150px;
 
-}
+// }
 .presentation-text {
-  position: absolute;
-  top: 150px;
-  left: -100px;
+  // position: absolute;
+  // top: 150px;
+  // left: -100px;
+  height: 300px;
 }
 
 .left-surlign.wood {
@@ -160,12 +162,12 @@
 .craftman-presentation.one {
   height: 110px;
   width: 350px;
-  padding-left: 25px;
+  // padding-left: 20px;
 }
 
 .craftman-presentation.two {
   height: 110px;
-  width: 350px;
+  width: 355px;
   padding-left: 20px;
 }
 .name h3 {
