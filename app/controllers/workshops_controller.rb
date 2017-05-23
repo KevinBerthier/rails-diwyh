@@ -22,7 +22,7 @@ class WorkshopsController < ApplicationController
   def show
     #geocoder
     @craftman = @workshop.craftman
-
+    @universe = @workshop.universe
     @hash = Gmaps4rails.build_markers(@craftman) do |craftman, marker|
       marker.lat craftman.latitude
       marker.lng craftman.longitude
