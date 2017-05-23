@@ -1,10 +1,17 @@
+.dashboard-pictures {
+  position: relative;
+}
+
 .profil-pic {
  position: absolute;
  box-shadow: 1px 1px 3px grey;
+ z-index: 11;
+ left: calc(50% - 150px/2);
 }
 
 .marble {
  position: relative;
- left: 50px;
- bottom: 30px;
+ left: -20px;
+ top: -20px;
+ z-index: 10;
 }

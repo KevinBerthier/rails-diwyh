@@ -12,7 +12,9 @@
     <!-- profile pic block w/ edit  -->
     <div class="row">
       <div class="col-xs-12 col-sm-6 padded-top-md margin-verti-fat">
-          <div class="text-center">
+          <div class="text-center dashboard-pictures">
+            <%= image_tag 'marbre.jpg', height: 150, width: 150, crop: :fill, class: "marble" %>
+
              <% if current_user.avatar? %>
               <%= cl_image_tag current_user.avatar.path, height: 150, width: 150, crop: :fill, class: "profil-pic" %>
              <% elsif current_user.facebook_picture_url %>
@@ -21,8 +23,6 @@
               <%= image_tag "loic.png", height: 150, width: 150, crop: :fill, class: "profil-pic" %>
              <% end %>
 
-             <div class="marble">
-             <%= image_tag 'marbre.jpg', height: 150, width: 150, crop: :fill %></div>
           </div>
 
            <div class="txt-md txt-light text-center padded-top">
