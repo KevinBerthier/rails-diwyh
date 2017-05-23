@@ -27,6 +27,8 @@ Rails.application.routes.draw do
     resources :messages, only: %i(index new create)
   end
 
-  resources :bookings, only: %i(index show new create destroy)
+  resources :bookings, only: %i(show new create edit destroy)
+  patch  '/bookings/:id/accept', to: 'bookings#accept', as: :accept_booking
+  patch  '/bookings/:id/reject', to: 'bookings#reject', as: :reject_booking
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
