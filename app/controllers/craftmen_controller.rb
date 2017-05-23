@@ -4,7 +4,10 @@ class CraftmenController < ApplicationController
   before_action :authenticate_craftman!
 
 
-  def dashboard; end
+  def dashboard
+    @user = current_craftman
+    @threads = @user.messages.includes(:workshop).group_by { |msg| [ msg.workshop, msg.user ] }
+  end
 
   def edit; end
 
