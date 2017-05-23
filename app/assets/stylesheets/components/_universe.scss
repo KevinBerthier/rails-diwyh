@@ -2,7 +2,6 @@
 .banner-bk-gray {
   background: $gray;
 }
-
 .banner-height-lg {
   height: 100vh;
 }
@@ -42,7 +41,7 @@
   position: relative;
   height: 320px;
   width: 250px;
-  border: 3px solid $brown;
+  border: 3px solid $wood;
 }
 
 .universe.wood.border img {
@@ -107,7 +106,7 @@
 
 // TRAIT DE COULEUR
 .universe.wood.surligned {
-  border-top: 6px solid $brown;
+  border-top: 6px solid $wood;
   width: 170px; // dépends de la taille de la police
 }
 
@@ -155,7 +154,7 @@
 }
 
 .left-surlign.wood {
-  border-left: 6px solid $brown;
+  border-left: 6px solid $wood;
 }
 
 .craftman-presentation.one {

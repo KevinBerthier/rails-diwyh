@@ -1,3 +1,41 @@
+// Titre blanc de la bannière grise :
+// WOOD (universe#show), WOOD workshops(workshops#index),
+// Workshop name(workshop#show), user.name(dashboard)
+h1 {
+  font-family: 'Vidaloka', serif;
+  font-size: 80px;
+  color: white;
+}
+
+// Titre gris : universe#show, workshop#show
+h2 {
+  font-family: 'Vidaloka', serif;
+  font-size: 80px;
+  color: $gray;
+  margin-top: 0px;
+}
+
+// Titres intermédiares Noms des jobs (workshops#index), reviews(workshop#show),
+// craftmen names(universe#show)
+h3 {
+  font-weight: bold;
+  color: $gray;
+  margin-top: 0px;
+  font-size: 30px;
+}
+
+// Texte d'intro / citation / inspiration avec line height plus espacé
+h4 {
+  color: $gray;
+  line-height: 47,5px;
+}
+
+// Texte blanc de mini description de l'univers sur la bannière grise
+h5 {
+  color: white;
+  font-size: 24px;
+}
+
 .txt-sm {
   font-size: 12px;
 }
