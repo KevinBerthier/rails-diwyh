@@ -1,18 +1,19 @@
 class MessagesController < ApplicationController
   skip_before_action :authenticate_user!
   # A CORRIGER pour athenticate craftman
-  # before_action :authenticate_user! , only: [ :index_user, :create_user, :new_user ]
+  before_action :authenticate_user! , only: [ :index, :create, :new ]
   before_action :authenticate_craftman! , only: [ :index_craftman, :create_craftman, :new_craftman ]
 
   def index
-    @messages = current_user.messages.where(workshop_id: params[:workshop_id])
+    @workshop = Workshop.friendly.find(params[:workshop_id])
+    @messages = current_user.messages.where(workshop_id: @workshop.id)
     @message = Message.new
-    @workshop = Workshop.find(params[:workshop_id])
+
   end
 
   def index_craftman
     @user = User.find(params[:user_id])
-    @workshop = Workshop.find(params[:workshop_id])
+    @workshop = Workshop.friendly.find(params[:workshop_id])
     @messages = current_craftman.messages_for_workshop_and_user(@workshop.id, @user.id)
     @message = Message.new
     # raise
@@ -41,7 +42,7 @@ class MessagesController < ApplicationController
 
   def create_craftman
     @message = Message.new(message_params)
-    @workshop = Workshop.find(params[:workshop_id])
+    @workshop = Workshop.friendly.find(params[:workshop_id])
     @user = User.find(params[:user_id])
 
     @message.workshop = @workshop
