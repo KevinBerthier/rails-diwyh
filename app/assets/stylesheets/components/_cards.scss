@@ -1,3 +1,42 @@
+
+
+.card-index {
+  background-size: cover !important;
+  height: 500px;
+  position: relative;
+  border: solid 1px;
+}
+.card-index-title {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+.card-index-user {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.card-index-description {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin-bottom: 0px;
+}
+
+.card-img {
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.card-img .craftman-name {
+  position: absolute;
+  display: inline-block;
+}
+
+.card-img .craftman-name p {
+  position: absolute;
+
 // Cards pour les reviews
 .card-white {
   background-color: white;

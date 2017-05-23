@@ -7,6 +7,7 @@ class WorkshopsController < ApplicationController
   def index
 
     @universe = Universe.friendly.find(params[:universe_id])
+    @jobs = @universe.jobs
     @workshops = @universe.workshops
 
     #geocoder
