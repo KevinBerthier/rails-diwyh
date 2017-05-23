@@ -1,25 +1,20 @@
 // BANNER
 .banner-bk-gray {
   background: $gray;
+}
+
+.banner-height-lg {
   height: 100vh;
 }
 
-.banner-bk-gray h1 {
-  font-size: 90px;
-  font-weight: bold;
-  color: white;
-}
-
-.banner-bk-gray p {
-  color: white;
-  font-size: 25px;
+.banner-bk-gray h5 {
   width: 500px;
 }
 
 .banner-bk-gray.position {
   position: relative;
 }
-.banner-bk-gray.position p {
+.banner-bk-gray.position h5 {
   position: absolute;
   top: 80px;
 }
@@ -37,9 +32,8 @@
   margin-bottom: 100px;
 }
 
-.universe-presentation p {
+.universe-presentation h4 {
   width: 400px;
-  font-size: 22px;
   position: absolute;
   left: 200px;
 }
@@ -48,10 +42,10 @@
   position: relative;
   height: 320px;
   width: 250px;
-  border: 3px solid $orange;
+  border: 3px solid $brown;
 }
 
-.universe.wood.border-brown img {
+.universe.wood.border img {
   position: absolute;
   left: -20px;
   bottom: -20px;
@@ -106,24 +100,19 @@
 }
 
 // UNIVERSE BUTTON
-.universe.button {
-  height: 100px;
-}
+
 // .universe.wood.btn {
 //   color: $orange;
 // }
 
 // TRAIT DE COULEUR
 .universe.wood.surligned {
-  border-top: 10px solid $orange;
+  border-top: 6px solid $brown;
   width: 170px; // dépends de la taille de la police
 }
 
 .universe.wood.job {
   height: 270px;
-}
-.universe.wood.job h1 {
-  font-size: 100px;
 }
 
 
@@ -140,7 +129,7 @@
   border: 1px solid black;
 }
 
-.card-job h2 {
+.card-job h3 {
   color: white;
   position: absolute;
   top: 120px;
@@ -166,7 +155,7 @@
 }
 
 .left-surlign.wood {
-  border-left: 6px solid $orange;
+  border-left: 6px solid $brown;
 }
 
 .craftman-presentation.one {
@@ -180,9 +169,7 @@
   width: 350px;
   padding-left: 20px;
 }
-.name p {
-  font-weight: bold;
-  font-size: 22px;
+.name h3 {
   width: 20px;
 }
 

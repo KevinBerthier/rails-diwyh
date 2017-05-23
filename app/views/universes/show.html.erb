@@ -1,21 +1,21 @@
 <!-- BANNER -->
-<%# render 'shared/universe-photo' %>
+<%# render 'shared/universe_photo' %>
+
 <div class="container-fuid">
   <!-- photo de la banner -->
-  <%# render 'shared/universe_banner' %>
   <div class="row">
     <div class="col-xs-12">
-      <div class="banner-bk-gray position">
+      <div class="banner-bk-gray position banner-height-lg">
 
         <div class="row">
           <div class="col-8 col-xs-6">
             <h1 class="text-center"><%= @universe.name.upcase %></h1>
           </div>
           <div class="col-4 col-xs-6">
-            <p>
+            <h5>
             <!-- @universe.slug -->
               Wood is a soft and living material rich in a multitude of essences. A natural product that must dry slowly before being shaped.
-            </p>
+            </h5>
           </div>
         </div>
         <div class="details-photo universe">
@@ -33,7 +33,7 @@
   <div class="row">
     <div class="universe-presentation">
       <div class="col-xs-12 col-sm-8">
-        <p>
+        <h4>
           “There is a magical, contemplative feeling
           in the forest. We encourage people to visit,
           to take this journey, and over the decades,
@@ -41,11 +41,11 @@
           year, the writers' words forming invisible
           chapters in the trees whose narratives will
           be reconstituted a century later.”
-        </p>
+        </h4>
       </div>
       <div class="col-xs-12 col-sm-4">
-        <div class="universe <%= @universe.code %> border border-brown">
-          <img src="http://placehold.it/250x320" alt="">
+        <div class="universe <%= @universe.code %> border">
+          <%= image_tag 'http://placehold.it/250x320' %>
         </div>
       </div>
     </div>
@@ -94,13 +94,14 @@
 
 <!-- BUTTON BY UNIVERSE -->
 <div class="text-center universe <%= @universe.code %> button">
-  <%= link_to "Explore our #{@universe.name.downcase} workshops", universe_workshops_path(@universe), class: "btn btn-default"  %>
+  <%= link_to "Explore our #{@universe.name.downcase} workshops", universe_workshops_path(@universe), class: "btn-wood"  %>
 </div>
 
 <!-- JOBS -->
 
 <div class="universe <%= @universe.code %> job">
-  <div class="universe <%= @universe.code %> surligned"></div>
+  <div class="universe <%= @universe.code %> surligned">
+  </div>
   <h2 class="one"><%= @universe.name %></h2>
   <h2 class="two">jobs</h2>
 </div>
@@ -113,19 +114,19 @@
         <div class="card-job">
           <%= image_tag 'http://placehold.it/430x330' %>
           <!-- remplacer chaque titre par son @universe.job -->
-          <h2 class="text-center">Carpenter</h2>
+          <h3 class="text-center">Carpenter</h3>
         </div>
 
         <div class="card-job">
           <%= image_tag 'http://placehold.it/430x330' %>
           <!-- remplacer chaque titre par son @universe.job -->
-          <h2 class="text-center">Cabinetmaker</h2>
+          <h3 class="text-center">Cabinetmaker</h3>
         </div>
 
         <div class="card-job">
           <%= image_tag 'http://placehold.it/430x330' %>
           <!-- remplacer chaque titre par son @universe.job -->
-          <h2 class="text-center">Framer</h2>
+          <h3 class="text-center">Framer</h3>
         </div>
       <%# end %>
     </div>
@@ -134,9 +135,10 @@
 
 <!-- CRAFTMEN -->
 <div class="universe <%= @universe.code %> job padded">
-  <div class="universe <%= @universe.code %> surligned"></div>
-  <h1 class="text-left">MEET ours</h1>
-  <h1 class="text-left">CRAFTMEN</h1>
+  <div class="universe <%= @universe.code %> surligned">
+  </div>
+  <h2 class="text-left">Meet ours</h2>
+  <h2 class="text-left">craftmen</h2>
 </div>
 
 <!-- Artisan #1 -->
@@ -147,7 +149,7 @@
         <div class="presentation-pic">
           <div class="name">
             <!-- introduire en ruby le nom du craftman -->
-            <p>MAT JOHNSON</p>
+            <h3>MAT JOHNSON</h3>
           </div>
           <div>
             <!-- photo du craftman -->
