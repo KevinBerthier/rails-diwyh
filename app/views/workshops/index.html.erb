@@ -1,9 +1,70 @@
-<!-- list des workshops -->
-<h1>Index des workshops</h1>
+<div class="banner-photo" style="background-image: url(<%= @universe.banner.fullpath %>)">
+</div>
+<h1 class="text-center"><%= @universe.name %> workshops</h1>
 
-<% @workshops.each do |wksp| %>
-  <p><%= link_to wksp.title, workshop_path(wksp) %></p>
-<% end %>
+<div class="container">
+  <% @jobs.each do |job| %>
+    <h2><%= job.name %></h2>
+      <div class="row">
+    <% job.workshops.each do |wksp| %>
+        <div class="col-xs-12 col-sm-4">
+          <div class="card-index">
+            <div class="card-img">
+              <%= cl_image_tag wksp.photos.first, height: 150, width: 358, crop: :fill, style: "background: rgba(0,36,61,0.6)" %>
+              <div class="col-xs-12 text-center craftman-name">
+                <p class="white"><%= wksp.craftman.first_name %></p>
+                <p class="white"><%= wksp.craftman.last_name %></p>
+              </div>
+            </div>
+            <div class="card-block">
+              <h2 class="card-title"><%= wksp.title %></h2>
+              <p class="card-text"><%= wksp.description[0..80] %>...</p>
+              <div>
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="upper-line"><hr></div>
+                    <h6 class="txt-regular">Where</h6>
+                  </div>
+                  <div class="col-md-9">
+                    <div class="upper-line-left"><hr></div>
+                    <h6 class="txt-light"><%= wksp.craftman.address %></h6>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="upper-line"><hr></div>
+                    <h6 class="txt-regular">Price</h6>
+                  </div>
+                  <div class="col-md-9">
+                    <div class="upper-line-left"><hr></div>
+                    <h6 class="txt-light"><%= wksp.price.to_i %>€/day</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <%= link_to "DETAILS", workshop_path(wksp), class: "btn btn-lg btn-default" %>
+              </div>
+            </div>
+          </div>
+        </div>
+    <% end %>
+      </div>
+  <% end %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- map de ouf -->
 <div id="map" style="width: 100%; height: 600px;"></div>
