@@ -14,13 +14,13 @@ class MessagesController < ApplicationController
   # GET /messages/new
   def new
     @message = Message.new
-    @workshop = Workshop.find(params[:workshop_id])
+    @workshop = Workshop.friendly.find(params[:workshop_id])
   end
 
   # POST /messages
   def create
     @message = Message.new(message_params)
-    @workshop = Workshop.find(params[:workshop_id])
+    @workshop = Workshop.friendly.find(params[:workshop_id])
     @message.workshop = @workshop
     @message.craftman = @workshop.craftman
     @message.user = current_user
