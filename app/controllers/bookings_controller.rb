@@ -1,5 +1,7 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: %i(show edit accept reject destroy)
+  before_action :disable_nav, only: [:edit]
+
 
   def show
   end
