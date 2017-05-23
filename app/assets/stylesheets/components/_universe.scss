@@ -1,0 +1,177 @@
+// BANNER
+.banner-bk-gray {
+  background: $gray;
+}
+.banner-height {
+  height: 360px;
+}
+.banner-height-lg {
+  height: 100vh;
+}
+
+.banner-bk-gray h5 {
+  width: 500px;
+}
+
+.banner-bk-gray.position {
+  position: relative;
+}
+.banner-bk-gray.position h5 {
+  position: absolute;
+  top: 80px;
+}
+.banner-bk-gray.position img {
+  position: absolute;
+  bottom: -100px;
+  left: 350px;
+}
+
+// UNIVERSE INSPIRATION
+.universe-presentation {
+  height: 500px;
+  padding-top: 200px;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.universe-presentation h4 {
+  width: 400px;
+  position: absolute;
+  left: 200px;
+}
+
+.universe.wood.border {
+  position: relative;
+  height: 320px;
+  width: 250px;
+  border: 3px solid $wood;
+}
+
+.universe.wood.border img {
+  position: absolute;
+  left: -20px;
+  bottom: -20px;
+}
+
+// UNIVERSE PHOTOS
+.photos {
+  height: 600px;
+  position: relative;
+}
+
+.photo-1 {
+  position: absolute;
+  left: 40px;
+  top: 40px;
+}
+.photo-2 {
+  position: absolute;
+  right: 20px;
+}
+.photo-3 {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+}
+.photo-4 {
+  position: absolute;
+  left: 40px;
+  bottom: 10px;
+}
+
+// UNIVERSE DESCRIPTION
+.universe-desciption {
+  height: 500px;
+  position: relative;
+}
+
+.universe-desciption p {
+  color: black;
+}
+.universe-text-top {
+  position: absolute;
+  top: 40px;
+  left: 200px;
+  width: 500px;
+}
+.universe-text-bottom {
+  position: absolute;
+  top: 260px;
+  right: 160px;
+  width: 500px;
+}
+
+// UNIVERSE BUTTON
+
+// .universe.wood.btn {
+//   color: $orange;
+// }
+
+// TRAIT DE COULEUR
+.universe.wood.surligned {
+  border-top: 6px solid $wood;
+  width: 170px; // dépends de la taille de la police
+}
+
+.universe.wood.job {
+  height: 270px;
+}
+
+
+// JOBS
+.jobs {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  height: 330px;
+  display: flex;
+  position: relative;
+}
+.card-job {
+  flex: 1 1 auto;
+  border: 1px solid black;
+}
+
+.card-job h3 {
+  color: white;
+  position: absolute;
+  top: 120px;
+  text-align: center;
+  vertical-align: middle;
+  width: 250px;
+  padding-left: 9%;
+}
+
+// CRAFTMEN
+.universe.craftman {
+  position: relative;
+}
+.presentation-pic {
+  position: absolute;
+  left: 150px;
+
+}
+.presentation-text {
+  position: absolute;
+  top: 150px;
+  left: -100px;
+}
+
+.left-surlign.wood {
+  border-left: 6px solid $wood;
+}
+
+.craftman-presentation.one {
+  height: 110px;
+  width: 350px;
+  padding-left: 25px;
+}
+
+.craftman-presentation.two {
+  height: 110px;
+  width: 350px;
+  padding-left: 20px;
+}
+.name h3 {
+  width: 20px;
+}
+
