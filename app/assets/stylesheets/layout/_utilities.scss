@@ -47,7 +47,15 @@
   margin-right: 0px;
   margin-bottom: 14px;
 }
-
+.color-line-title-wood hr {
+  background-color: $wood;
+  border-top: 1px solid $wood;
+  height: 4px;
+  width: 140px;
+  text-align: let;
+  margin-left: 0px;
+  margin-bottom: 14px;
+}
 .color-line-red hr {
   background-color: red;
   height: 4px;
@@ -94,7 +102,7 @@
   padding-top: 40px;
 }
 .padded-top-lg {
-  padding-top: 160px;
+  padding-top: 120px;
 }
 .padded-top-neg {
   top: -30px;
@@ -104,6 +112,9 @@
 }
 .padded-bottom-md {
   padding-bottom: 40px;
+}
+.padded-bottom-lg {
+  padding-bottom: 80px;
 }
 
 .padded-md {

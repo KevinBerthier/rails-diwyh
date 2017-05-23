@@ -3,10 +3,14 @@
 <div class="chat_window">
   <ul class="messages">
     <% @messages.each do |msg| %>
-      <li class="message <%= msg.user_left_right %> appeared">
-        <div class="avatar">
+      <li class="message <%= side = msg.user_left_right %> appeared">
 
-        </div>
+        <% if side == "right" %>
+          <%= image_tag user_avatar(current_user), class: "avatar" %>
+        <% else %>
+        <%= image_tag craftman_avatar(msg.craftman), class: "avatar" %>
+        <% end %>
+
         <div class="text_wrapper">
           <div class="text"><%= msg.content %></div>
         </div>
