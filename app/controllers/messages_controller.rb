@@ -34,9 +34,15 @@ class MessagesController < ApplicationController
     @message.user = current_user
     @message.author_type = :user
     if @message.save
-      redirect_to workshop_messages_path(@workshop), notice: 'Your message was successfully sent.'
+      respond_to do |format|
+        format.html { redirect_to workshop_messages_path(@workshop), notice: 'Your message was successfully sent.' }
+        format.js  # <-- will render `app/views/reviews/create.js.erb`
+      end
     else
-      render :new
+      respond_to do |format|
+        format.html { render :new }
+        format.js  # <-- idem
+      end
     end
   end
 
