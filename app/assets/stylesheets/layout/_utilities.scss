@@ -3,7 +3,13 @@
  * These are examples of utilities classes
  * Feel free to change them and create your own
  * ------------------------------------- */
+// SUPPR ESPACE COLLAGE PHOTOS
+.sm-gutter > [class*='col-'] {
+    padding-right:5px;
+    padding-left:0px;
+}
 
+// hr
 .upper-line hr {
   color: $gray;
   background-color: $gray;
@@ -32,12 +38,74 @@
   margin-bottom: 0px;
   height: 0.75px;
 }
+.color-line hr {
+  color: $gray;
+  background-color: $gray;
+  height: 4px;
+  width: 100px;
+  text-align: right;
+  margin-right: 0px;
+  margin-bottom: 14px;
+}
+
+// margins
+.margin-verti-fat {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
 
 // Paddings
 .padded {
   padding-top: 5em;
   padding-bottom: 5em;
 }
+.padded-lg {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.padded-md {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.padded-sm {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.padded-top {
+  padding-top: 20px;
+}
+.padded-top-xs {
+  padding-top: 5px;
+}
+.padded-top-sm {
+  padding-top: 10px;
+}
+.padded-top-md {
+  padding-top: 40px;
+}
+.padded-top-lg {
+  padding-top: 160px;
+}
+.padded-top-neg {
+  top: -30px;
+}
+.padded-bottom-sm {
+  padding-bottom: 10px;
+}
+.padded-bottom-md {
+  padding-bottom: 40px;
+}
+
+.padded-md {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.padded-ri {
+  padding-right: 30px;
+}
+
+
 
 // Backgrounds
 .bg-black {
@@ -52,3 +120,5 @@
 .bg-dark-blue {
   background: #3b5998;
 }
+
+

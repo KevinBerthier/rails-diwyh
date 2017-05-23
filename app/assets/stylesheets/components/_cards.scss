@@ -1,4 +1,5 @@
 
+
 .card-index {
   background-size: cover !important;
   height: 500px;
@@ -35,4 +36,29 @@
 
 .card-img .craftman-name p {
   position: absolute;
+
+// Cards pour les reviews
+.card-white {
+  background-color: white;
+  padding: 40px 30px 20px 30px;
+  border-radius: 2px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.card-white h4 {
+  margin-top: 0px;
+}
+.card-white-quote {
+  position: absolute;
+  left: 20px;
+  top: -65px;
+}
+.card-white-quote p {
+  font-family: Raleway;
+}
+.card-white-avatar {
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
