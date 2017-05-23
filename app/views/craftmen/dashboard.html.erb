@@ -5,5 +5,14 @@
   <p><%= link_to wksp.title, workshop_path(wksp) %> <%= link_to "Edit", edit_workshop_path(wksp) %></p>
 <% end %>
 
-<h3><%= link_to "Mailbox", messages_path  %></h3>
+<h2>Inbox</h2>
+
+<% @threads.each_pair do |(workshop, user), message| %>
+  <p>
+    <%= link_to "#{workshop.title} with #{message.first.user.first_name}", workshop_user_messages_path(workshop, user) %>
+  </p>
+<% end %>
+
+
+
 <h3><%= link_to "Edit my profile", craftmen_edit_profile_path  %><h3>

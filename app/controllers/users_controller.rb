@@ -2,7 +2,11 @@ class UsersController < ApplicationController
   before_action :set_user, only: %i(dashboard edit update destroy)
 
   # GET /users/1
-  def dashboard; end
+  def dashboard
+    @user = current_user
+    @threads = @user.messages.includes(:workshop).group_by { |msg| [ msg.workshop, msg.user ] }
+    # raise
+  end
 
   # GET /users/1/edit
   def edit; end
