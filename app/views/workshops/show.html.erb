@@ -1,20 +1,23 @@
 <!-- BANNER -->
-<div class="container-fluid">
-  <div>
-    <%= image_tag 'wood_univers.jpg', height: 250, crop: :fill, class: "banner-photo"%>
-  </div>
+<%= render 'shared/universe_photo' %>
 
-  <div class="row bg-grey">
-    <div class="col-sm-10 col-md-offset-2">
-      <h1 class="white"><%= @workshop.title %></h1>
+<div class="container-fluid">
+  <div class="title banner-bk-gray">
+    <div class="row">
+      <div class="col-sm-10 col-md-offset-1">
+        <h1 class="padded-top-lg"><%= @workshop.title %></h1>
+      </div>
     </div>
   </div>
 
 <!-- THE WORKSHOP -->
-  <div class="row">
-    <div class="col-md-10 col-md-offset-1">
-      <hr>
-      <h2>THE workshop</h2>
+  <div class="title">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <hr>
+        <h2 class="padded-top-md">the</h2>
+        <h2 class="padded-bottom-md">workshop</h2>
+      </div>
     </div>
   </div>
 
@@ -73,58 +76,180 @@
         </div>
       </div>
 
+      <!-- mini map -->
+      <div class="padded-md">
+        <div id="map" style="width: 290px; height: 290px;"></div>
+
+        <% content_for(:after_js) do %>
+          <script>
+            $(document).ready(function() {
+              var handler = Gmaps.build('Google');
+              handler.buildMap({
+                provider: {
+                  styles: Diwyh.map_styles
+                  // possibility to pass other gmap options here
+                },
+                internal: { id: 'map' } }, function() {
+                markers = handler.addMarkers(<%= raw @hash.to_json %>);
+                handler.bounds.extendWith(markers);
+                handler.fitMapToBounds();
+                if (markers.length == 0) {
+                  handler.getMap().setZoom(2);
+                } else if (markers.length == 1) {
+                  handler.getMap().setZoom(14);
+                }
+              });
+            });
+          </script>
+        <% end %>
+      </div>
+
     <!-- Fin du tableau de détails -->
     </div>
 
       <!-- Description workshop -->
-      <div class="col-md-7">
+      <div class="col-md-6 col-md-offset-1">
         <p><%= @workshop.description %></p>
       </div>
 
   </div>
 
-  <!-- PHOTOS -->
-  <div class="row">
-    <div class="row">
-      <div class="col-sm-12">
-        <%= image_tag 'wood_dentelle.jpg', height: 150, crop: :fill %>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-8">
-        <%= image_tag 'wood_workshop.jpg' %>
-      </div>
-      <div class="col-sm-4">
-        <!-- image3 -->
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12 col-md-4">
-        <%= image_tag 'wood_art.jpg' %>
-      </div>
-      <div class="col-sm-12 col-md-4">
-        <%= image_tag 'wood_sciure.jpg' %>
-      </div>
-      <div class="col-sm-12 col-md-4">
-        <%= image_tag 'wood_sciure.jpg' %>
-      </div>
-    </div>
 
+
+  <!-- PHOTOS -->
+  <div class="photos-group">
+    <div class="row">
+      <div class="col-sm-10 col-md-offset-1">
+
+        <div class="row sm-gutter padded-top-xs">
+          <div class="col-sm-12">
+            <%= image_tag @workshop.universe.top_gallery.fullpath, height: 150, crop: :fill %>
+          </div>
+        </div>
+        <div class="row sm-gutter padded-top-xs">
+          <div class="col-sm-8">
+            <%= image_tag @workshop.universe.middle_gallery.first.fullpath, height: 400, crop: :fill %>
+          </div>
+          <div class="col-sm-4">
+            <%= image_tag @workshop.universe.middle_gallery.last.fullpath, height: 400, crop: :fill %>
+          </div>
+        </div>
+        <div class="row sm-gutter padded-top-xs">
+          <div class="col-sm-12 col-md-4">
+            <%= image_tag @workshop.universe.gallery[0].fullpath %>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <%= image_tag @workshop.universe.gallery[1].fullpath %>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <%= image_tag @workshop.universe.gallery[2].fullpath %>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
+
+
 
   <!-- ARTISAN -->
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
       <hr>
-      <h2>the ARTISAN</h2>
-    </div>
+      <div class="title">
+        <h2 class="padded-lg">the artisan</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <%= @workshop.craftman.description %>
+        </div>
+        <div class="col-sm-2 col-md-offset-1">
+          <%= image_tag @workshop.universe.artisan_profile.fullpath, height: 400, width: 400, crop: :fill%>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-2 col-sm-offset-5">
+          <%= image_tag @workshop.universe.artisan_hands.fullpath, height: 120, crop: :fill %>
+        </div>
+      </div>
   </div>
+</div>
+  <div class="row">
+
+  </div>
+
+
+
+  <!-- BUTTON -->
+  <div class="text-center padded-lg">
+    <%= link_to "Contact #{@workshop.craftman.first_name} #{@workshop.craftman.last_name}",
+    new_workshop_message_path(@workshop), class: "btn-wood text-uppercase" %>
+  </div>
+
 
 
   <!-- REVIEWS -->
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
-      <h3>Reviews</h3>
+      <div class="txt-heavy padded-lg">
+        <h3>Reviews</h3>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 padded-sm">
+          <div class="card-white">
+            <div class="card-white-quote">
+              <p class="txt-xl">“</p>
+            </div>
+            <div>
+              <p class="txt-description txt-light text-center">This workshop confirmed I like working with wood. It is a perfect way of artistic expression for me. I plan to go to another one.</p>
+            </div>
+            <div class="color-line text-right">
+              <hr>
+            </div>
+            <div>
+              <h4 class="txt-description txt-bold text-right">Kévin</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 padded-sm">
+          <div class="card-white">
+            <div class="card-white-quote">
+              <p class="txt-xl">“</p>
+            </div>
+            <div>
+              <p class="txt-description txt-light text-center">I had a very good time creating and making my own furniture. I didn't know I was able to do such an amazing piece.</p>
+            </div>
+            <div class="color-line text-right">
+              <hr>
+            </div>
+            <div>
+              <h4 class="txt-description txt-bold text-right">Loic</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 padded-sm">
+          <div class="card-white">
+            <div class="card-white-quote">
+              <p class="txt-xl">“</p>
+            </div>
+            <div>
+              <p class="txt-description txt-light text-center">What a workshop! I specifically recommand you to live this awesome experience. The piece I made is a great souvenir.</p>
+            </div>
+            <div class="color-line text-right">
+              <hr>
+            </div>
+            <div>
+              <h4 class="txt-description txt-bold text-right">Odaia</h4>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 
@@ -133,22 +258,13 @@
   <!-- OTHER WORKSHOPS -->
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
-      <h3>Other workshops with <%= @workshop.craftman.first_name %> <%= @workshop.craftman.last_name %></h3>
+      <div class="txt-heavy padded-lg">
+        <h3>Other workshops with <%= @workshop.craftman.first_name %> <%= @workshop.craftman.last_name %></h3>
+      </div>
     </div>
   </div>
 
 
 <!-- Fin de container -->
 </div>
-
-
-<!-- Ne fonctionne pas -->
-<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=15&size=200x200&sensor=false&maptype=roadmap&markers=color:red|#{@workshop.craftman.address}" %>
-
-<br>
-
-<%= link_to "Contact
-#{@workshop.craftman.first_name} #{@workshop.craftman.last_name}",
-new_workshop_message_path(@workshop) %>
-
 

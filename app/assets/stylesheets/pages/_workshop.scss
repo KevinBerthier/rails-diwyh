@@ -1,0 +1,21 @@
+.banner-photo {
+  height: 275px;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.photos-group {
+  img {
+    width: 100%;
+  }
+}
+.title h1 {
+  font-family: 'Vidaloka', serif;
+  font-size: 80px;
+  color: white;
+}
+.title h2 {
+  font-family: 'Vidaloka', serif;
+  font-size: 80px;
+  color: $gray;
+  margin-top: 0px;
+}
