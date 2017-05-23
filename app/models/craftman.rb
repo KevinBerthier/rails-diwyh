@@ -19,4 +19,8 @@ class Craftman < ApplicationRecord
   validates :address, presence: true
   validates :description, presence: true
   validates :email, presence: true, email: true
+
+  def messages_for_workshop_and_user(workshop_id, user_id)
+    messages.where(workshop_id: workshop_id, user_id: user_id)
+  end
 end

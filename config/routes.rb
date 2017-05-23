@@ -21,10 +21,12 @@ Rails.application.routes.draw do
   end
 
   resources :workshops, only: %i(show new create edit update destroy) do
-    resources :messages, only: %i(new create)
+    get '/users/:user_id/messages/new', to: 'messages#new_craftman', as: :new_user_message
+    post '/users/:user_id/messages/create', to: 'messages#create_craftman', as: :create_user_message
+    get '/users/:user_id/messages', to: 'messages#index_craftman', as: :user_messages
+    resources :messages, only: %i(index new create)
   end
 
-  resources :messages, only: %i(index)
   resources :bookings, only: %i(index show new create destroy)
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
