@@ -50,6 +50,7 @@ wood = Universe.new({
   name: "Wood",
   code: "wood",
   banner: open_photo("wood_univers.jpg"),
+  banner_bottom: open_photo("copeaux.jpg"),
   top_gallery: open_photo("wood_dentelle.jpg"),
   middle_gallery: [open_photo("wood_workshop.jpg"),open_photo("wood_sciure.jpg")],
   gallery: [open_photo("wood_art.jpg"), open_photo("wood_art.jpg"), open_photo("wood_art.jpg")],
@@ -60,13 +61,25 @@ wood.save!
 puts 'Wood universe created...'
 
 ##########################################
-carpenter = Job.new({ name: "Carpenter", universe: wood })
+carpenter = Job.new({
+  name: "Carpenter",
+  universe: wood,
+  image: open_photo("carpenter.jpg")
+  })
 carpenter.save
 
-cabinetmaker = Job.new({ name: "Cabinetmaker", universe: wood })
+cabinetmaker = Job.new({
+  name: "Cabinetmaker",
+  universe: wood,
+  image: open_photo("wood_univers.jpg")
+  })
 cabinetmaker.save
 
-framer = Job.new({ name: "Framer", universe: wood })
+framer = Job.new({
+  name: "Framer",
+  universe: wood,
+  image: open_photo("framer.jpg")
+  })
 framer.save
 puts '3 jobs created for wood universe...'
 
