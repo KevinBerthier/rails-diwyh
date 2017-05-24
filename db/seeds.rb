@@ -59,6 +59,7 @@ wood = Universe.new({
 wood.save!
 puts 'Wood universe created...'
 
+
 ##########################################
 carpenter = Job.new({ name: "Carpenter", universe: wood })
 carpenter.save
@@ -254,10 +255,68 @@ first_booking = Booking.new({
 first_booking.save
 puts '1 first_booking created...'
 
-
-
 ###############################
 # SEEDS FOR OTHER UNIVERSE... #
+###############################
+
+glass = Universe.new({
+  name: "Glass",
+  code: "glass",
+  banner: open_photo("glass_univers.jpg"),
+})
+glass.save!
+puts 'Glass universe created...'
+
+###############################
+
+metal = Universe.new({
+  name: "Metal",
+  code: "metal",
+  banner: open_photo("metal_univers.jpg"),
+})
+metal.save!
+puts 'Metal universe created...'
+
+###############################
+
+clay = Universe.new({
+  name: "Clay",
+  code: "clay",
+  banner: open_photo("clay_univers.jpg"),
+})
+clay.save!
+puts 'Clay universe created...'
+
+###############################
+
+stone = Universe.new({
+  name: "Stone",
+  code: "stone",
+  banner: open_photo("stone_univers.jpg"),
+})
+stone.save!
+puts 'Stone universe created...'
+
+###############################
+
+fabric = Universe.new({
+  name: "Fabric",
+  code: "fabric",
+  banner: open_photo("fabric_univers.jpg"),
+})
+fabric.save!
+puts 'Fabric universe created...'
+
+###############################
+
+leather = Universe.new({
+  name: "Leather",
+  code: "leather",
+  banner: open_photo("leather_univers.jpg"),
+})
+leather.save!
+puts 'Leather universe created...'
+
 ###############################
 
 puts 'Finished!'

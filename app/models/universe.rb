@@ -16,9 +16,9 @@ class Universe < ApplicationRecord
   has_attachment :artisan_hands
 
   validates :banner, presence: true
-  validates :top_gallery, presence: true
-  validates :middle_gallery, presence: true
-  validates :gallery, presence: true
-  validates :artisan_profile, presence: true
-  validates :artisan_hands, presence: true
+  # validates :top_gallery, presence: true
+  # validates :middle_gallery, presence: true
+  # validates :gallery, presence: true
+  # validates :artisan_profile, presence: true
+  # validates :artisan_hands, presence: true
 end
