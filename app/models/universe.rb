@@ -22,3 +22,5 @@ class Universe < ApplicationRecord
   validates :artisan_profile, presence: true
   validates :artisan_hands, presence: true
 end
+
+

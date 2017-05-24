@@ -52,6 +52,14 @@
           <%= link_to "#{workshop.title} with #{workshop.craftman.first_name}", workshop_messages_path(workshop) %>
           </p>
           <% end %>
+
+          <div class="color-line-red text-left"><hr></div>
+          <h4 class="txt-md txt-heavy">quotations</h4>
+          <% @user.bookings.each do |booking| %>
+          <p>
+          <%= link_to "#{booking.workshop.title} - by #{booking.workshop.craftman.first_name} - #{booking.status}", edit_booking_path(booking) %>
+          </p>
+          <% end %>
       </div>
 
     </div>
