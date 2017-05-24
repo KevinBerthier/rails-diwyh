@@ -8,7 +8,7 @@
       <div class="banner-bk-gray position banner-height-lg">
 
         <div class="row">
-          <div class="col-xs-12 col-xs-offset-2 col-sm-offset-4 col-md-6">
+          <div class="col-xs-12 col-xs-offset-2 col-sm-offset-2 col-md-6">
             <h1><%= @universe.name.upcase %></h1>
           </div>
           <div class="col-xs-12 col-xs-offset-2 col-md-6 col-md-offset-6">
@@ -100,7 +100,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="universe <%= @universe.code %> job padded">
-      <div class="col-xs-12 col-xs-offset-1">
+      <div class="col-xs-11 col-xs-offset-1">
         <div class="universe <%= @universe.code %> surligned">
         </div>
         <h2><%= @universe.name %></h2>
@@ -113,29 +113,16 @@
 <div class="container-fluid">
   <div class="row">
     <div class="jobs">
-      <%# @universe.jobs.each do |job| %>
-      <div class="col-xs-12 col-sm-4">
-        <div class="card-job">
-          <%= image_tag 'http://placehold.it/430x330' %>
-          <!-- remplacer chaque titre par son @universe.job -->
-          <h3 class="text-center">Carpenter</h3>
+      <% @universe.jobs.each do |job| %>
+        <div class="col-xs-12 col-sm-4">
+          <div class="card-job">
+            <%= image_tag job.image.fullpath, height: 370, width: 300, crop: :fill %>
+            <h3 class="text-center">
+              <%= job.name %>
+            </h3>
+          </div>
         </div>
-      </div>
-      <div class="col-xs-12 col-sm-4">
-        <div class="card-job">
-          <%= image_tag 'http://placehold.it/430x330' %>
-          <!-- remplacer chaque titre par son @universe.job -->
-          <h3 class="text-center">Cabinetmaker</h3>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-4">
-        <div class="card-job">
-          <%= image_tag 'http://placehold.it/430x330' %>
-          <!-- remplacer chaque titre par son @universe.job -->
-          <h3 class="text-center">Framer</h3>
-        </div>
-      </div>
-      <%# end %>
+      <% end %>
     </div>
   </div>
 </div>
@@ -143,8 +130,8 @@
 <!-- CRAFTMEN -->
 <div class="container-fluid">
   <div class="row">
-    <div class="universe <%= @universe.code %> job padded">
-      <div class="col-xs-12 col-xs-offset-1">
+    <div class="col-xs-11 col-xs-offset-1">
+      <div class="universe <%= @universe.code %> job padded">
         <div class="universe <%= @universe.code %> surligned">
         </div>
         <h2>Meet ours</h2>
@@ -161,7 +148,7 @@
       <div class="col-xs-6 col-md-3 col-md-offset-1  ">
         <div class="presentation-pic">
           <div class="name">
-            <!-- introduire en ruby le nom du craftman -->
+            <!-- introduire en ruby first_name et last_name du craftman -->
             <h3>MAT JOHNSON</h3>
           </div>
           <div>
@@ -171,13 +158,13 @@
         </div>
       </div>
       <div class="col-xs-6 col-md-8">
-        <div class="presentation-text">
+        <div>
           <div class="craftman-presentation one">
-            <!-- texte de présentation -->
+            <!-- description -->
             <p>Chaque arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur</p>
           </div>
           <div class="left-surlign <%= @universe.code %> craftman-presentation two">
-            <!-- suite text de présentation -->
+            <!-- suite text de la description -->
             Révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur. Arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur.
           </div>
         </div>
@@ -189,8 +176,8 @@
 <div class="container-fluid">
   <div class="row">
     <div class="padded universe craftman">
-      <div class="col-xs-6 col-md-8">
-        <div class="presentation-text">
+      <div class="col-xs-6 col-md-4 col-md-offset-1">
+        <div>
           <div class="craftman-presentation three">
             <!-- texte de présentation -->
             <p>Chaque arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur</p>
@@ -201,7 +188,7 @@
           </div>
         </div>
       </div>
-      <div class="col-xs-6 col-md-3 col-md-offset-1  ">
+      <div class="col-xs-6 col-md-6">
         <div class="presentation-pic">
           <div>
             <!-- photo du craftman -->
@@ -232,7 +219,7 @@
         </div>
       </div>
       <div class="col-xs-6 col-md-8">
-        <div class="presentation-text">
+        <div>
           <div class="craftman-presentation one">
             <!-- texte de présentation -->
             <p>Chaque arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur</p>

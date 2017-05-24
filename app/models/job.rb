@@ -7,4 +7,8 @@ class Job < ApplicationRecord
 
   validates :name, presence: true
 
+  has_attachment :image
+
+  validates :image, presence: true
+
 end

@@ -12,19 +12,18 @@
 
 .position {
   position: relative;
-}
-.position h1 {
-  position: absolute;
-  bottom: -200px;
-}
-.position h5 {
-  position: absolute;
-  bottom: -300px;
-}
-.position img {
-  position: absolute;
-  width: 50%;
-  top: 350px;
+  h1 {
+    position: absolute;
+  }
+  h5 {
+    position: absolute;
+    bottom: -300px;
+  }
+  img {
+    position: absolute;
+    width: 50%;
+    top: 350px;
+  }
 }
 
 //UNIVERSE INSPIRATION
@@ -43,43 +42,16 @@
   height: 370px;
   width: 300px;
   border: 3px solid $wood;
-}
-
-.universe.wood.border img {
-  position: absolute;
-  left: -20px;
-  bottom: -20px;
-}
-
-// UNIVERSE PHOTOS
-.photos {
-  height: 600px;
-  position: relative;
-}
-
-.photo-1 {
-  position: absolute;
-  left: 40px;
-  top: 40px;
-}
-.photo-2 {
-  position: absolute;
-  right: 20px;
-}
-.photo-3 {
-  position: absolute;
-  top: 50px;
-  right: 10px;
-}
-.photo-4 {
-  position: absolute;
-  left: 40px;
-  bottom: 10px;
+  img {
+    position: absolute;
+    left: -20px;
+    bottom: -20px;
+  }
 }
 
 // UNIVERSE DESCRIPTION
 .universe-desciption {
-  height: 500px;
+  height: 400px;
 }
 
 .universe-text-top {
@@ -87,6 +59,7 @@
 }
 .universe-text-bottom {
   width: 500px;
+  padding-top: 2em;
 }
 
 // TRAIT DE COULEUR
@@ -109,24 +82,26 @@
 
 // JOBS
 .jobs {
-  // margin-top: 40px;
-  // margin-bottom: 40px;
   height: 330px;
-  // display: flex;
   position: relative;
-}
-// .card-job {
-//   flex: 1 1 auto;
-// }
 
-.card-job h3 {
-  color: white;
-  position: absolute;
-  top: 120px;
-  text-align: center;
-  vertical-align: middle;
-  width: 250px;
-  padding-left: 12%;
+  .col-sm-4 {
+    padding: 0;
+  }
+}
+
+.card-job {
+  img {
+    width: 100%;
+  }
+
+  h3 {
+    color: white;
+    position: absolute;
+    top: 150px;
+    width: 250px;
+    padding-left: 25%;
+  }
 }
 
 // CRAFTMEN
@@ -138,12 +113,7 @@
 //   left: 150px;
 
 // }
-.presentation-text {
-  // position: absolute;
-  // top: 150px;
-  // left: -100px;
-  height: 300px;
-}
+
 
 .left-surlign.wood {
   border-left: 6px solid $wood;
@@ -178,4 +148,8 @@
 
 
 
-
+@media (min-width: $screen-sm-min) {
+  .position h1 {
+    bottom: -200px;
+  }
+}

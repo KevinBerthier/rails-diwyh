@@ -61,13 +61,25 @@ wood.save!
 puts 'Wood universe created...'
 
 ##########################################
-carpenter = Job.new({ name: "Carpenter", universe: wood })
+carpenter = Job.new({
+  name: "Carpenter",
+  universe: wood,
+  image: open_photo("carpenter.jpg")
+  })
 carpenter.save
 
-cabinetmaker = Job.new({ name: "Cabinetmaker", universe: wood })
+cabinetmaker = Job.new({
+  name: "Cabinetmaker",
+  universe: wood,
+  image: open_photo("wood_univers.jpg")
+  })
 cabinetmaker.save
 
-framer = Job.new({ name: "Framer", universe: wood })
+framer = Job.new({
+  name: "Framer",
+  universe: wood,
+  image: open_photo("framer.jpg")
+  })
 framer.save
 puts '3 jobs created for wood universe...'
 
