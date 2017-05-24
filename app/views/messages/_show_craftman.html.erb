@@ -1,7 +1,9 @@
- <li class="message <%= message.craftman_left_right %> appeared">
-  <div class="avatar">
-
-  </div>
+ <li class="message <%= side = message.craftman_left_right %> appeared">
+    <% if side == "right" %>
+       <%= image_tag craftman_avatar(current_craftman), class: "avatar" %>
+     <% else %>
+     <%= image_tag user_avatar(message.user), class: "avatar" %>
+     <% end %>
   <div class="text_wrapper">
     <div class="text">
       <p><%= message.content %></p>
