@@ -95,10 +95,10 @@
       <div class="col-xs-12 col-md-6">
       <!-- photo -->
        <div class="adaptation-photo text-center" >
-         <% if @booking.workshop.photos.empty? %>
+         <% if @workshop.artisan_pic.blank? %>
            <%= image_tag("http://placehold.it/600x550") %>
          <% else %>
-           <%= cl_image_tag @booking.workshop.photos.first.path %>
+           <%= cl_image_tag @workshop.artisan_pic.path, width: 600, height: 600, crop: :crop %>
          <% end %>
        </div>
       </div>

@@ -19,6 +19,7 @@ class BookingsController < ApplicationController
 
   def edit
     @craftman = @booking.workshop.craftman
+    @workshop = @booking.workshop
   end
 
   def accept
