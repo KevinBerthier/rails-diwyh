@@ -1,23 +1,25 @@
 <!-- BANNER -->
 <%= render 'shared/universe_photo' %>
 
-<div class="container-fluid">
+
   <div class="banner-bk-gray banner-height">
-    <div class="row">
-      <div class="col-xs-10 col-xs-offset-1">
-        <h1 class="padded-top-lg"><%= @workshop.title %></h1>
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1">
+          <h1 class="padded-top-lg"><%= @workshop.title %></h1>
+        </div>
       </div>
-    </div>
   </div>
 
 
 <!-- THE WORKSHOP -->
-
+<div class="container-fluid">
     <div class="row">
-      <div class="col-md-10 col-md-offset-1">
-        <hr>
-        <h2 class="padded-top-md">the</h2>
-        <h2 class="padded-bottom-md">workshop</h2>
+      <div class="col-xs-10 col-xs-offset-1">
+        <div class="color-line-title-wood text-left padded-top-md">
+          <hr>
+        </div>
+        <h2>the</h2>
+        <h2 class="padded-bottom-lg">workshop</h2>
       </div>
     </div>
 
@@ -25,7 +27,7 @@
   <div class="row">
 
     <!-- Tableau DETAILS workshop -->
-    <div class="col-md-3 col-md-offset-1">
+    <div class="col-md-3 col-xs-offset-1">
 
       <!-- 1ère ligne ARTISAN -->
       <div class="row">
@@ -109,7 +111,7 @@
     </div>
 
       <!-- Description workshop -->
-      <div class="col-md-6 col-md-offset-1">
+      <div class="col-md-6 col-xs-offset-1">
         <p><%= @workshop.description %></p>
       </div>
 
@@ -120,7 +122,7 @@
   <!-- PHOTOS -->
   <div class="photos-group">
     <div class="row">
-      <div class="col-sm-10 col-md-offset-1">
+      <div class="col-xs-10 col-xs-offset-1">
 
         <div class="row sm-gutter padded-top-xs">
           <div class="col-sm-12">
@@ -156,36 +158,38 @@
   <!-- ARTISAN -->
 
   <div class="row">
-    <div class="col-md-10 col-md-offset-1">
-      <hr>
-      <div class="title">
-        <h2 class="padded-lg">the artisan</h2>
+    <div class="col-xs-10 col-xs-offset-1">
+
+      <div class="color-line-title-wood text-left padded-top-md">
+        <hr>
       </div>
+      <h2>the</h2>
+      <h2 class="padded-bottom-lg">workshop</h2>
 
       <div class="row">
-        <div class="col-sm-6">
+        <div class="col-xs-6">
           <%= @workshop.craftman.description %>
         </div>
-        <div class="col-sm-2 col-md-offset-1">
+        <div class="col-xs-2 col-xs-offset-1">
           <%= image_tag @workshop.universe.artisan_profile.fullpath, height: 400, width: 400, crop: :fill%>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-sm-2 col-sm-offset-5">
-          <%= image_tag @workshop.universe.artisan_hands.fullpath, height: 120, crop: :fill %>
+        <div class="col-xs-3 col-xs-offset-1 text-center">
+          <h4>“There is a magical, contemplative feeling in the forest.”</h4>
+        </div>
+        <div class="col-xs-2 col-xs-offset-2">
+          <%= image_tag @workshop.universe.artisan_hands.fullpath, height: 120, width: 120, crop: :fill %>
         </div>
       </div>
   </div>
 </div>
-  <div class="row">
-
-  </div>
 
 
 
   <!-- BUTTON -->
-  <div class="text-center padded-lg">
+  <div class="text-center padded">
     <%= link_to "Contact #{@workshop.craftman.first_name} #{@workshop.craftman.last_name}",
     new_workshop_message_path(@workshop), class: "btn-wood text-uppercase" %>
   </div>
@@ -194,7 +198,7 @@
 
   <!-- REVIEWS -->
   <div class="row">
-    <div class="col-md-10 col-md-offset-1">
+    <div class="col-xs-10 col-xs-offset-1">
       <div class="txt-heavy padded-lg">
         <h3>Reviews</h3>
       </div>
@@ -259,7 +263,7 @@
 
   <!-- OTHER WORKSHOPS -->
   <div class="row">
-    <div class="col-md-10 col-md-offset-1">
+    <div class="col-xs-10 col-xs-offset-1">
       <div class="txt-heavy padded-lg">
         <h3>Other workshops with <%= @workshop.craftman.first_name %> <%= @workshop.craftman.last_name %></h3>
       </div>

@@ -13,6 +13,7 @@ h2 {
   font-size: 80px;
   color: $gray;
   margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 // Titres intermédiares Noms des jobs (workshops#index), reviews(workshop#show),
@@ -35,7 +36,9 @@ h5 {
   color: white;
   font-size: 24px;
 }
-
+.roboto {
+  font-family: 'Roboto Condensed', sans-serif;
+}
 .txt-sm {
   font-size: 12px;
 }
@@ -62,6 +65,9 @@ h5 {
 }
 .txt-bold {
   font-weight: 600;
+}
+.txt-gras {
+  font-weight: 700;
 }
 .txt-heavy {
   font-weight: 800;

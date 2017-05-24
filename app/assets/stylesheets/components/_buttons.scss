@@ -1,8 +1,9 @@
 .btn-wood {
+  width: 150px;
   background-color: $gray;
-
   font-size: -rem(10px);
-  letter-spacing: .3em;
+  text-transform: uppercase;
+  // letter-spacing: .3em;
   color: rgba($gold1, .7);
   border-radius: 0;
   padding: 18px 80px 20px;
@@ -19,6 +20,7 @@
     color: white;
     border: 1px solid rgba($gold1, 0);
     background-position: 99% 50%;
+    text-decoration: none;
   }
 }
 

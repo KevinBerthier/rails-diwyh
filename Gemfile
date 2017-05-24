@@ -1,3 +1,4 @@
+
 source 'https://rubygems.org'
 ruby '2.3.3'
 
@@ -36,14 +37,19 @@ gem 'jquery-fileupload-rails'
 gem 'coffee-rails'
 
 group :development, :test do
-  gem 'binding_of_caller'
-  gem 'better_errors'
-
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'
   gem 'listen', '~> 3.0.5'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'launchy'
+  gem 'minitest-reporters'
 end
 
-
+group :development do # Stuff you do not want in :test env
+  # gem 'better_errors'
+  gem 'binding_of_caller'
+end
