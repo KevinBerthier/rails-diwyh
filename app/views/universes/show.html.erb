@@ -116,7 +116,7 @@
       <% @universe.jobs.each do |job| %>
         <div class="col-xs-12 col-sm-4">
           <div class="card-job">
-            <%= image_tag job.image.fullpath, height: 370, width: 300, crop: :fill %>
+            <%= cl_image_tag job.image.path, gravity: "xy_center", height: 370, width: 300, x:280, y: 327, crop: :crop %>
             <h3 class="text-center">
               <%= job.name %>
             </h3>
