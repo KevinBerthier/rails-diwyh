@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i(dashboard edit update destroy)
-  before_action :disable_nav, only: [:dashboard]
 
   # GET /users/1
   def dashboard
