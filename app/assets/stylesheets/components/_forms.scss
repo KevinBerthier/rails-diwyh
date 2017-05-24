@@ -1,0 +1,42 @@
+.banner-height-sm h2 {
+  color: white;
+  position: relative;
+  top: 45px;
+}
+
+.banner-height-sm.col-xs-12 {
+  padding: 0;
+}
+
+@media (max-width: $screen-xs-max) {
+ .banner-height-sm {
+    height: 264px;
+
+    h2 {
+      top: 0;
+    }
+  }
+}
+
+.background-form {
+  color: $gray;
+  display:flex;
+  flex-direction: column;
+  padding:30px;
+  margin: 0 auto;
+  width:100%;
+  height:auto;
+  font-size:em(14px);
+  background: white;
+  z-index: 900;
+}
+
+.border-form {
+  position: relative;
+  border: 3px solid $gray;
+  // form {
+  //   position: absolute;
+  //   left: -20px;
+  //   bottom: -20px;
+  // }
+}

@@ -1,9 +1,15 @@
 <div class="banner-form" style="background-image: linear-gradient(-225deg, rgba(0, 101, 168, 0.6) 0%, rgba(55, 101, 132, 0.4) 80%);">
   <div class="container">
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+        <h2 class="txt-bold text-center">Access to your account</h2>
+      </div>
+    </div>
+
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-sm-offset-3">
         <div class="background-form">
-          <h2 class="txt-bold text-center">Access to your account</h2>
 
           <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
             <div class="form-inputs">
