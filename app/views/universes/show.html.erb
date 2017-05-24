@@ -23,7 +23,7 @@
           <div class="col-xs-offset-3 col-lg-offset-3">
             <div class="details-photo universe">
               <!-- photo -->
-              <%= image_tag @universe.banner_bottom.fullpath %>
+              <%= cl_image_tag @universe.banner_bottom.path, :gravity=>"xy_center", :height=>240, :width=>470, :x=>200, :y=>100, :crop=>"crop" %>
             </div>
           </div>
         </div>
@@ -100,7 +100,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="universe <%= @universe.code %> job padded">
-      <div class="col-xs-11 col-xs-offset-1">
+      <div class="col-xs-10 col-xs-offset-1">
         <div class="universe <%= @universe.code %> surligned">
         </div>
         <h2><%= @universe.name %></h2>
@@ -115,8 +115,7 @@
     <div class="jobs">
       <% @universe.jobs.each do |job| %>
         <div class="col-xs-12 col-sm-4">
-          <div class="card-job">
-            <%= cl_image_tag job.image.path, gravity: "xy_center", height: 370, width: 300, x:280, y: 327, crop: :crop %>
+          <div class="card-job" style="background-image: url(<%= job_card_background_path(job) %>">
             <h3 class="text-center">
               <%= job.name %>
             </h3>
@@ -130,7 +129,7 @@
 <!-- CRAFTMEN -->
 <div class="container-fluid">
   <div class="row">
-    <div class="col-xs-11 col-xs-offset-1">
+    <div class="col-xs-10 col-xs-offset-1">
       <div class="universe <%= @universe.code %> job padded">
         <div class="universe <%= @universe.code %> surligned">
         </div>

@@ -25,6 +25,7 @@
   img {
     position: absolute;
     width: 50%;
+    height: 60%;
     top: 350px;
   }
 }
@@ -94,16 +95,15 @@
 }
 
 .card-job {
-  img {
-    width: 100%;
-  }
-
+    width: 440px;
+    height: 370px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
   h3 {
     color: white;
-    position: absolute;
     top: 150px;
-    width: 250px;
-    padding-left: 25%;
   }
 }
 
