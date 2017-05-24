@@ -52,7 +52,7 @@
       </div>
       <div class="col-xs-12 col-sm-offset-2 col-md-4 col-md-offset-2">
         <div class="universe <%= @universe.code %> border margin-lg">
-          <%= image_tag @universe.middle_gallery.last.fullpath, height: 370, width: 300, gravity: :center, crop: :fit %>
+          <%= cl_image_tag @universe.middle_gallery.last.path, :gravity=>"xy_center", :height=>400, :width=>300, :x=>250, :y=>200, :crop=>"crop" %>
         </div>
       </div>
 
