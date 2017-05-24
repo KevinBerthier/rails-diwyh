@@ -37,6 +37,8 @@ gem 'jquery-fileupload-rails'
 gem 'coffee-rails'
 
 group :development, :test do
+  
+# gem 'better_errors'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'

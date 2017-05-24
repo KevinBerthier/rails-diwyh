@@ -6,6 +6,7 @@ class User < ApplicationRecord
   devise :omniauthable, omniauth_providers: [:facebook]
   has_many :messages, dependent: :destroy
   has_many :bookings
+  has_many :workshops, through: :bookings
 
   has_attachment :avatar
 
