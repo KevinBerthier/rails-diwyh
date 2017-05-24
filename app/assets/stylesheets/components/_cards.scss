@@ -27,9 +27,6 @@
   left: 20px;
   margin-bottom: 0px;
 }
-.card-text {
-
-}
 .card-index-button {
   padding-top: 20px;
 }
@@ -41,15 +38,15 @@
   text-align: center;
 }
 
-.card-img .craftman-name {
+.craftman-name {
   position: absolute;
-  display: inline-block;
+  top: 50px;
+  color: white;
+  font-weight: 400;
 }
-
-.card-img .craftman-name p {
-  position: absolute;
+.craftman-name p {
+  text-align: center;
 }
-
 // Cards pour les reviews
 .card-white {
   background-color: white;
