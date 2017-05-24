@@ -1,6 +1,6 @@
 class MessagesController < ApplicationController
   skip_before_action :authenticate_user!
-  # A CORRIGER pour athenticate craftman
+
   before_action :authenticate_user! , only: [ :index, :create, :new ]
   before_action :authenticate_craftman! , only: [ :index_craftman, :create_craftman, :new_craftman ]
 
@@ -34,9 +34,15 @@ class MessagesController < ApplicationController
     @message.user = current_user
     @message.author_type = :user
     if @message.save
-      redirect_to workshop_messages_path(@workshop), notice: 'Your message was successfully sent.'
+      respond_to do |format|
+        format.html { redirect_to workshop_messages_path(@workshop), notice: 'Your message was successfully sent.' }
+        format.js
+      end
     else
-      render :new
+      respond_to do |format|
+        format.html { render :new }
+        format.js
+      end
     end
   end
 
@@ -51,10 +57,16 @@ class MessagesController < ApplicationController
     @message.author_type = :craftman
 
     if @message.save
-      redirect_to workshop_user_messages_path, notice: 'Your message was successfully sent.'
+      respond_to do |format|
+        format.html { redirect_to workshop_user_messages_path, notice: 'Your message was successfully sent.' }
+        format.js
+      end
     else
-      @messages = current_craftman.messages_by_workshop_and_user(@workshop.id, @user.id)
-      render :index_craftman
+      @messages = current_craftman.messages_for_workshop_and_user(@workshop.id, @user.id)
+      respond_to do |format|
+        format.html { render :index_craftman}
+        format.js
+      end
     end
   end
 
