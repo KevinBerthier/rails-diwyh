@@ -36,7 +36,9 @@ h5 {
   color: white;
   font-size: 24px;
 }
-
+.roboto {
+  font-family: 'Roboto Condensed', sans-serif;
+}
 .txt-sm {
   font-size: 12px;
 }
@@ -63,6 +65,9 @@ h5 {
 }
 .txt-bold {
   font-weight: 600;
+}
+.txt-gras {
+  font-weight: 700;
 }
 .txt-heavy {
   font-weight: 800;

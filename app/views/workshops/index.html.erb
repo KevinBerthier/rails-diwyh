@@ -1,10 +1,18 @@
-<div class="banner-photo" style="background-image: url(<%= @universe.banner.fullpath %>)">
+<!-- BANNER -->
+<%= render 'shared/universe_photo' %>
+
+<div class="banner-bk-gray banner-height">
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1">
+        <h1 class="padded-top-lg"><%= @universe.name %> workshops</h1>
+      </div>
+    </div>
 </div>
-<h1 class="text-center"><%= @universe.name %> workshops</h1>
+
 
 <div class="container">
   <% @jobs.each do |job| %>
-    <h2><%= job.name %></h2>
+    <h3 class="padded-lg"><%= job.name %></h3>
       <div class="row">
     <% job.workshops.each do |wksp| %>
         <div class="col-xs-12 col-sm-4">
@@ -17,8 +25,8 @@
               </div>
             </div>
             <div class="card-block">
-              <h2 class="card-title"><%= wksp.title %></h2>
-              <p class="card-text"><%= wksp.description[0..80] %>...</p>
+              <p class="card-title roboto txt-gras txt-md text-uppercase"><%= wksp.title %></p>
+              <p class="card-text roboto txt-description txt-light padded-bottom-m"><%= wksp.description[0..80] %>...</p>
               <div>
                 <div class="row">
                   <div class="col-md-3">
@@ -34,14 +42,16 @@
                   <div class="col-md-3">
                     <div class="upper-line"><hr></div>
                     <h6 class="txt-regular">Price</h6>
+                    <div class="final-line"><hr></div>
                   </div>
                   <div class="col-md-9">
                     <div class="upper-line-left"><hr></div>
                     <h6 class="txt-light"><%= wksp.price.to_i %>€/day</h6>
+                    <div class="final-line-left"><hr></div>
                   </div>
                 </div>
               </div>
-              <div class="text-center">
+              <div class="text-center card-index-button">
                 <%= link_to "DETAILS", workshop_path(wksp), class: "btn btn-lg btn-default" %>
               </div>
             </div>
