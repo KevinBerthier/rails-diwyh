@@ -49,8 +49,33 @@
             </div>
 
             <!-- card -->
-            <!-- <div class="tab_content">
-             <div class="class tabs-item"> -->
+
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                  <div class="card-item frame">
+
+                    <div class="row">
+                      <div class="col-xs-4 col-sm-4">
+                       <div class="photo-box"></div>
+                      </div>
+
+                      <div class="col-xs-4 col-sm-4">
+                        <div class="list-box"></div>
+                      </div>
+
+                      <div class="col-xs-4 col-sm-4">
+                        <div class="button-box"></div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
 
               <% @user.workshops.each do |wksp| %>
                 <div class="row">
@@ -102,44 +127,67 @@
         </div>
 
       <!-- notifs + messages + quots  -->
+
         <div class="col-xs-12 col-sm-6 padded-top-md ">
 
-          <div class="color-line-wood text-left bar-size-lg"><hr></div>
-          <h4 class="txt-md txt-heavy no-margin-top">notifications</h4>
-          <p class="txt-light">Vérifiez votre pièce d'identité</p>
-          <p class="txt-light">Notez votre dernière location</p>
-          <hr>
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6">
+                  <div class="color-line-wood text-left bar-size-lg"><hr></div>
+                  <h4 class="txt-md txt-heavy no-margin-top">notifications</h4>
+                  <p class="txt-light">Vérifiez votre pièce d'identité</p>
+                  <p class="txt-light">Notez votre dernière location</p>
+                  <hr>
+              </div>
+            </div>
+          </div>
 
           <!-- messages  -->
-          <div class="color-line-wood text-left bar-size-sm"><hr></div>
-          <h4 class="txt-md txt-heavy no-margin-top">messages</h4>
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6">
 
-          <div class="quotation_item">
-           <% if @threads == nil %>
-              <% @threads.each do |(workshop, user), message| %>
-              <p>
-              <%= link_to "#{workshop.title} with #{workshop.craftman.first_name}", workshop_messages_path(workshop) %>
-              </p>
-              <% end %>
-           <% else %>
-              <p class="txt-light">No conversation yet</p>
-           <% end %>
+                <div class="color-line-wood text-left bar-size-sm"><hr></div>
+                <h4 class="txt-md txt-heavy no-margin-top">messages</h4>
+
+                <div class="quotation_item">
+                 <% if @threads != nil %> <!-- error to fix !!!!!!!!!!!!  -->
+                    <p class="txt-light">No conversation yet</p>
+                 <% else %>
+                    <% @threads.each do |(workshop, user), message| %>
+                    <p>
+                    <%= link_to "#{workshop.title} with #{workshop.craftman.first_name}", workshop_messages_path(workshop) %>
+                    </p>
+                    <% end %>
+                 <% end %>
+                </div>
+
+              </div>
+            </div>
           </div>
 
           <!-- quotations  -->
-          <div class="color-line-wood text-left bar-size-sm"><hr></div>
-          <h4 class="txt-md txt-heavy no-margin-top">quotations</h4>
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6">
 
-          <div class="quotation_item">
-           <% if @user.bookings != nil %>
-              <% @user.bookings.each_with_index do |booking, index| %>
-              <p>
-              <%= link_to "Quotation ##{index + 1} - #{booking.workshop.title} - by #{booking.workshop.craftman.first_name} - #{booking.status}", edit_booking_path(booking) %>
-              </p>
-              <% end %>
-           <% else %>
-              <p class="txt-light">No quotation yet</p>
-           <% end %>
+                <div class="color-line-wood text-left bar-size-sm"><hr></div>
+                <h4 class="txt-md txt-heavy no-margin-top">quotations</h4>
+
+                <div class="quotation_item">
+                 <% if @user.bookings != nil %>
+                    <% @user.bookings.each_with_index do |booking, index| %>
+                    <p>
+                    <%= link_to "Quotation ##{index + 1} - #{booking.workshop.title} - by #{booking.workshop.craftman.first_name} - #{booking.status}", edit_booking_path(booking) %>
+                    </p>
+                    <% end %>
+                 <% else %>
+                    <p class="txt-light">No quotation yet</p>
+                 <% end %>
+                </div>
+
+              </div>
+            </div>
           </div>
 
         </div>
