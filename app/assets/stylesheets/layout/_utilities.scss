@@ -56,14 +56,6 @@
   margin-left: 0px;
   margin-bottom: 14px;
 }
-.color-line-red hr {
-  background-color: red;
-  height: 4px;
-  width: 100px;
-  text-align: left;
-  margin-left: 0px;
-  margin-bottom: 5px;
-}
 
 // margins
 .margin-md {
@@ -74,6 +66,10 @@
 .margin-verti-fat {
   margin-top: 40px;
   margin-bottom: 40px;
+}
+
+.no-margin-top {
+  margin-top: 0;
 }
 
 // Paddings

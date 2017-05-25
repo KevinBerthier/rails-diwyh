@@ -5,87 +5,54 @@
        <h1 class="padded-md-ds">Hello <%= @user.first_name %></h1>
      </div>
    </div>
- </div>
-
- <div class="container">
-  <div class="col-xs-12 col-md-10 col-md-offset-1">
-    <!-- profile pic block w/ edit  -->
-    <div class="row">
-      <div class="col-xs-12 col-sm-6 padded-top-md margin-verti-fat">
-          <div class="text-center dashboard-pictures">
-            <%= image_tag 'marbre.jpg', height: 150, width: 150, crop: :fill, class: "marble" %>
-
-             <% if current_user.avatar? %>
-              <%= cl_image_tag current_user.avatar.path, height: 150, width: 150, crop: :fill, class: "profil-pic" %>
-             <% elsif current_user.facebook_picture_url %>
-              <%= image_tag current_user.facebook_picture_url,height: 150, width: 150, crop: :fill, class: "profil-pic"%>
-             <% else %>
-              <%= image_tag "loic.png", height: 150, width: 150, crop: :fill, class: "profil-pic" %>
-             <% end %>
-
-          </div>
-
-           <div class="txt-md txt-light text-center padded-top">
-            <h3><%= @user.first_name %></h3>
-           </div>
-
-           <div class="txt-md txt-light text-center">
-            <h3><%= @user.last_name %></h3>
-           </div>
-           <!-- button -->
-           <div class="text-center">
-             <%= link_to "Editez profile", edit_profile_path, class: "btn default margin-md" %>
-           </div>
-
-      </div>
-
-
-      <!-- Notifications + inbox  -->
-      <div class="col-xs-12 col-sm-6 padded-top-md ">
-        <div class="color-line-red text-left"><hr></div>
-        <h4 class="txt-md txt-heavy">notifications</h4>
-        <p class="txt-light">Vérifiez votre pièce d'identité</p>
-        <p class="txt-light">Notez votre dernière location</p>
-        <hr>
-
-          <div class="color-line-red text-left"><hr></div>
-          <h4 class="txt-md txt-heavy">messages</h4>
-          <% @threads.each do |(workshop, user), message| %>
-          <p>
-          <%= link_to "#{workshop.title} with #{workshop.craftman.first_name}", workshop_messages_path(workshop) %>
-          </p>
-          <% end %>
-
-          <div class="color-line-red text-left"><hr></div>
-          <h4 class="txt-md txt-heavy">quotations</h4>
-          <% @user.bookings.each do |booking| %>
-          <p>
-          <%= link_to "#{booking.workshop.title} - by #{booking.workshop.craftman.first_name} - #{booking.status}", edit_booking_path(booking) %>
-          </p>
-          <% end %>
-      </div>
-
-    </div>
-
-  </div>
 </div>
 
 <div class="container">
-   <div class="col-xs-12 col-md-10 col-md-offset-1">
-      <div class="row">
+  <div class="row">
+    <!-- first row w/ profil pic and notifs + messages + quotations -->
 
-        <div class="tab margin-bottom-md">
-            <ul class="tabs text-center">
-              <div class="row">
-                <li class="col-xs-12 col-md-4"><a href="#">Past Workshops</a></li>
-                <li class="col-xs-12 col-md-4"><a href="#">Workshops to come</a></li>
-              </div>
-            </ul>
-        </div>
+        <div class="col-xs-12 col-sm-6 padded-top-md margin-verti-fat">
 
-<!-- Workshops -->
-        <div class="container">
-            <% @user.workshops.each do |wksp| %>
+            <div class="text-center dashboard-pictures">
+            <!-- profil pic bloc  -->
+              <%= image_tag 'marbre.jpg', height: 150, width: 150, crop: :fill, class: "marble" %>
+               <% if current_user.avatar? %>
+                <%= cl_image_tag current_user.avatar.path, height: 150, width: 150, crop: :fill, class: "profil-pic" %>
+               <% elsif current_user.facebook_picture_url %>
+                <%= image_tag current_user.facebook_picture_url,height: 150, width: 150, crop: :fill, class: "profil-pic"%>
+               <% else %>
+                <%= image_tag "loic.png", height: 150, width: 150, crop: :fill, class: "profil-pic" %>
+               <% end %>
+            </div>
+
+            <!-- usernames  -->
+            <div class="txt-md txt-light text-center padded-top">
+              <h3><%= @user.first_name %></h3>
+            </div>
+
+            <div class="txt-md txt-light text-center">
+              <h3><%= @user.last_name %></h3>
+            </div>
+             <!-- button -->
+            <div class="text-center">
+               <%= link_to "Edit profile", edit_profile_path, class: "btn btn-default margin-md" %>
+            </div>
+
+            <!-- tabs -->
+            <div class="tab margin-bottom-md margin-verti-fat">
+                <ul class="tabs text-center">
+                    <div class="row">
+                      <li class="col-xs-12 col-md-4"><a href="#">Past Workshops</a></li>
+                      <li class="col-xs-12 col-md-4"><a href="#">Workshops to come</a></li>
+                    </div>
+                </ul>
+            </div>
+
+            <!-- card -->
+            <!-- <div class="tab_content">
+             <div class="class tabs-item"> -->
+
+              <% @user.workshops.each do |wksp| %>
                 <div class="row">
                   <div class="col-xs-12 col-sm-4">
                     <div class="card-index">
@@ -125,14 +92,58 @@
                       <div class="text-center">
                         <%= link_to "DETAILS", workshop_path(wksp), class: "btn btn-lg btn-default" %>
                       </div>
+
+                     </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          <% end %>
+              <% end %>
+
         </div>
 
-    </div>
+      <!-- notifs + messages + quots  -->
+        <div class="col-xs-12 col-sm-6 padded-top-md ">
+
+          <div class="color-line-wood text-left bar-size-lg"><hr></div>
+          <h4 class="txt-md txt-heavy no-margin-top">notifications</h4>
+          <p class="txt-light">Vérifiez votre pièce d'identité</p>
+          <p class="txt-light">Notez votre dernière location</p>
+          <hr>
+
+          <!-- messages  -->
+          <div class="color-line-wood text-left bar-size-sm"><hr></div>
+          <h4 class="txt-md txt-heavy no-margin-top">messages</h4>
+
+          <div class="quotation_item">
+           <% if @threads == nil %>
+              <% @threads.each do |(workshop, user), message| %>
+              <p>
+              <%= link_to "#{workshop.title} with #{workshop.craftman.first_name}", workshop_messages_path(workshop) %>
+              </p>
+              <% end %>
+           <% else %>
+              <p class="txt-light">No conversation yet</p>
+           <% end %>
+          </div>
+
+          <!-- quotations  -->
+          <div class="color-line-wood text-left bar-size-sm"><hr></div>
+          <h4 class="txt-md txt-heavy no-margin-top">quotations</h4>
+
+          <div class="quotation_item">
+           <% if @user.bookings != nil %>
+              <% @user.bookings.each_with_index do |booking, index| %>
+              <p>
+              <%= link_to "Quotation ##{index + 1} - #{booking.workshop.title} - by #{booking.workshop.craftman.first_name} - #{booking.status}", edit_booking_path(booking) %>
+              </p>
+              <% end %>
+           <% else %>
+              <p class="txt-light">No quotation yet</p>
+           <% end %>
+          </div>
+
+        </div>
+
   </div>
 </div>
 

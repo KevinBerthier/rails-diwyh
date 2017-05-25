@@ -4,7 +4,7 @@
 
 .profil-pic {
  position: absolute;
- box-shadow: 1px 1px 3px grey;
+ box-shadow: 1px 1px 3px $gray;
  z-index: 11;
  left: calc(50% - 150px/2);
 }
@@ -26,5 +26,22 @@
   padding-bottom: 30px;
 }
 
+.color-line-wood hr {
+  background-color: $wood;
+  border-top: 1px solid $wood;
+  height: 4px;
+  text-align: let;
+  margin-left: 0px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.bar-size-lg hr {
+width: 120px;
+}
+
+.bar-size-sm hr {
+width: 100px;
+}
 
 
