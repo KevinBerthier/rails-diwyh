@@ -11,7 +11,7 @@
   <div class="row">
     <!-- first row w/ profil pic and notifs + messages + quotations -->
 
-        <div class="col-xs-12 col-sm-6 padded-top-md margin-verti-fat">
+        <div class="col-xs-12 col-sm-6 padded-top-md ">
 
             <div class="text-center dashboard-pictures">
             <!-- profil pic bloc  -->
@@ -39,7 +39,7 @@
             </div>
 
             <!-- tabs -->
-            <div class="tab margin-bottom-md margin-verti-fat">
+            <!-- <div class="tab margin-bottom-md margin-verti-fat">
                 <ul class="tabs text-center">
                     <div class="row">
                       <li class="col-xs-12 col-md-4"><a href="#">Past Workshops</a></li>
@@ -47,92 +47,62 @@
                     </div>
                 </ul>
             </div>
-
+ -->
             <!-- card -->
 
-            <div class="container">
+            <!-- <div class="container">
               <div class="row">
                 <div class="col-xs-12 col-sm-6">
                   <div class="card-item frame">
 
                     <div class="row">
                       <div class="col-xs-4 col-sm-4">
-                       <div class="photo-box"></div>
+                       <div class="photo-box card-frame">biaqbfiarbgieaib</div>
                       </div>
 
                       <div class="col-xs-4 col-sm-4">
-                        <div class="list-box"></div>
+                        <div class="list-box card-frame">fijabgievhafeghibkev</div>
                       </div>
 
                       <div class="col-xs-4 col-sm-4">
-                        <div class="button-box"></div>
+                        <div class="button-box card-frame">fbazobgjeabjg</div>
                       </div>
                     </div>
 
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
 
-
-
-
+            <!-- <div>
               <% @user.workshops.each do |wksp| %>
-                <div class="row">
-                  <div class="col-xs-12 col-sm-4">
-                    <div class="card-index">
-                      <div class="card-img">
-                        <%= cl_image_tag wksp.photos.first, height: 150, width: 358, crop: :fill, style: "background: rgba(0,36,61,0.6)" %>
-                        <div class="col-xs-12 text-center craftman-name">
-                          <p class="white"><%= wksp.craftman.first_name %></p>
-                          <p class="white"><%= wksp.craftman.last_name %></p>
-                        </div>
-                      </div>
-                      <div class="card-block">
-                        <h2 class="card-title"><%= wksp.title %></h2>
-                        <p class="card-text"><%= truncate(wksp.description, length: 80, separator: '.') %>
-                        </p>
-                      <div>
-                       <div class="row">
-                        <div class="col-md-3">
-                          <div class="upper-line"><hr></div>
-                          <h6 class="txt-regular">Where</h6>
-                        </div>
-                        <div class="col-md-9">
-                          <div class="upper-line-left"><hr></div>
-                          <h6 class="txt-light"><%= wksp.craftman.address %></h6>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-3">
-                            <div class="upper-line"><hr></div>
-                            <h6 class="txt-regular">Price</h6>
-                          </div>
-                          <div class="col-md-9">
-                            <div class="upper-line-left"><hr></div>
-                            <h6 class="txt-light"><%= humanized_money_with_symbol(wksp.price)%>/day</h6>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="text-center">
-                        <%= link_to "DETAILS", workshop_path(wksp), class: "btn btn-lg btn-default" %>
-                      </div>
+                <%= cl_image_tag wksp.photos.first, height: 150, width: 358, crop: :fill, style: "background: rgba(0,36,61,0.6)" %>
+                  <p class="white"><%= wksp.craftman.first_name %></p>
+                  <p class="white"><%= wksp.craftman.last_name %></p>
 
-                     </div>
-                    </div>
-                  </div>
-                </div>
+                <h2 class="card-title"><%= wksp.title %></h2>
+                <p class="card-text"><%= truncate(wksp.description, length: 80, separator: '.') %>
+                </p>
+                  <div class="upper-line"><hr></div>
+                  <h6 class="txt-regular">Where</h6>
+                  <div class="upper-line-left"><hr></div>
+                  <h6 class="txt-light"><%= wksp.craftman.address %></h6>
+                    <div class="upper-line"><hr></div>
+                    <h6 class="txt-regular">Price</h6>
+                    <div class="upper-line-left"><hr></div>
+                    <h6 class="txt-light"><%= humanized_money_with_symbol(wksp.price)%>/day</h6>
+                <%= link_to "DETAILS", workshop_path(wksp), class: "btn btn-lg btn-default" %>
               <% end %>
-
+              </div> -->
         </div>
 
       <!-- notifs + messages + quots  -->
 
-        <div class="col-xs-12 col-sm-6 padded-top-md ">
+        <div class="col-xs-12 col-sm-6">
 
-          <div class="container">
+          <div class="container-notif">
             <div class="row">
-              <div class="col-xs-12 col-sm-6">
+              <div class="col-xs-12 col-sm-12">
                   <div class="color-line-wood text-left bar-size-lg"><hr></div>
                   <h4 class="txt-md txt-heavy no-margin-top">notifications</h4>
                   <p class="txt-light">Vérifiez votre pièce d'identité</p>
@@ -143,9 +113,9 @@
           </div>
 
           <!-- messages  -->
-          <div class="container">
+          <div class="container-mess">
             <div class="row">
-              <div class="col-xs-12 col-sm-6">
+              <div class="col-xs-12 col-sm-12">
 
                 <div class="color-line-wood text-left bar-size-sm"><hr></div>
                 <h4 class="txt-md txt-heavy no-margin-top">messages</h4>
@@ -167,23 +137,31 @@
           </div>
 
           <!-- quotations  -->
-          <div class="container">
+          <div class="container-quotation">
             <div class="row">
-              <div class="col-xs-12 col-sm-6">
+              <div class="col-xs-12 col-sm-12">
 
                 <div class="color-line-wood text-left bar-size-sm"><hr></div>
                 <h4 class="txt-md txt-heavy no-margin-top">quotations</h4>
 
-                <div class="quotation_item">
-                 <% if @user.bookings != nil %>
-                    <% @user.bookings.each_with_index do |booking, index| %>
-                    <p>
-                    <%= link_to "Quotation ##{index + 1} - #{booking.workshop.title} - by #{booking.workshop.craftman.first_name} - #{booking.status}", edit_booking_path(booking) %>
-                    </p>
-                    <% end %>
-                 <% else %>
-                    <p class="txt-light">No quotation yet</p>
-                 <% end %>
+                <div class="quotation_item text-center">
+                   <% if @user.bookings != nil %>
+                      <% @user.bookings.all.each_with_index do |booking, index| %>
+                        <div class="hashtag">
+                          <%= "##{index + 1}" %>
+                        </div>
+                          <%= link_to "#{booking.workshop.title} - by #{booking.workshop.craftman.first_name}", edit_booking_path(booking), class: "padded-sm" %>
+                          <% if booking.status == "submitted" %>
+                            <div class="orange-circle"></div>
+                          <% elsif booking.status == "accepted" %>
+                            <div class="green-circle"><%= "#{booking.status}" %></div>
+                          <% else %>
+                            <div class="red-circle"><%= "#{booking.status}" %></div>
+                          <% end %>
+                      <% end %>
+                   <% else %>
+                      <p class="txt-light">No quotation yet</p>
+                   <% end %>
                 </div>
 
               </div>
