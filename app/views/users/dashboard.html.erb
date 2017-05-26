@@ -150,7 +150,9 @@
                         <div class="hashtag">
                           <%= "##{index + 1}" %>
                         </div>
+                          <p>
                           <%= link_to "#{booking.workshop.title} - by #{booking.workshop.craftman.first_name}", edit_booking_path(booking), class: "padded-sm" %>
+                          </p>
                           <% if booking.status == "submitted" %>
                             <div class="orange-circle"></div>
                           <% elsif booking.status == "accepted" %>
