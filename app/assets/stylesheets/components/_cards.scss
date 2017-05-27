@@ -1,3 +1,27 @@
+ .workshop-card {
+  position: absolute;
+  padding: 30px 0px 0px 0px;
+  left: 50%;
+  width: 823.33px;
+  transform: translateX(-50%) translateY(-25%);
+  background-color: #FFFFFF;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  color: $gray;
+}
+.left {
+  padding-left: 60px;
+  padding-bottom: 30px;
+  display: inline-block;
+  width: 60%;
+}
+.right {
+  display: inline-block;
+  width: 38%;
+  padding-left: 50px;
+  padding-top: 60px;
+  float: right;
+}
 .card-index {
   background-size: cover !important;
   height: 500px;
@@ -40,14 +64,14 @@
   left: 0px;
   text-align: center;
 }
-
-.card-img .craftman-name {
+.craftman-name {
   position: absolute;
-  display: inline-block;
+  top: 50px;
+  color: white;
+  font-weight: 400;
 }
-
-.card-img .craftman-name p {
-  position: absolute;
+.craftman-name p {
+  text-align: center;
 }
 
 // Cards pour les reviews

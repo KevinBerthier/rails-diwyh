@@ -2,15 +2,13 @@
 // WOOD (universe#show), WOOD workshops(workshops#index),
 // Workshop name(workshop#show), user.name(dashboard)
 h1 {
-  font-family: 'Vidaloka', serif;
   font-size: 80px;
   color: white;
 }
 
 // Titre gris : universe#show, workshop#show
 h2 {
-  font-family: 'Vidaloka', serif;
-  font-size: 80px;
+  font-size: 42px;
   color: $gray;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -38,6 +36,12 @@ h5 {
 }
 .roboto {
   font-family: 'Roboto Condensed', sans-serif;
+}
+.chivo {
+  font-family: 'Chivo', sans-serif;
+}
+.asul {
+  font-family: 'Asul', sans-serif;
 }
 .txt-sm {
   font-size: 12px;
