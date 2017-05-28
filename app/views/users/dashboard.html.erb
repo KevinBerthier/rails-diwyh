@@ -38,63 +38,8 @@
                <%= link_to "Edit profile", edit_profile_path, class: "btn btn-default margin-md" %>
             </div>
 
-            <!-- tabs -->
-            <!-- <div class="tab margin-bottom-md margin-verti-fat">
-                <ul class="tabs text-center">
-                    <div class="row">
-                      <li class="col-xs-12 col-md-4"><a href="#">Past Workshops</a></li>
-                      <li class="col-xs-12 col-md-4"><a href="#">Workshops to come</a></li>
-                    </div>
-                </ul>
-            </div>
- -->
-            <!-- card -->
-
-            <!-- <div class="container">
-              <div class="row">
-                <div class="col-xs-12 col-sm-6">
-                  <div class="card-item frame">
-
-                    <div class="row">
-                      <div class="col-xs-4 col-sm-4">
-                       <div class="photo-box card-frame">biaqbfiarbgieaib</div>
-                      </div>
-
-                      <div class="col-xs-4 col-sm-4">
-                        <div class="list-box card-frame">fijabgievhafeghibkev</div>
-                      </div>
-
-                      <div class="col-xs-4 col-sm-4">
-                        <div class="button-box card-frame">fbazobgjeabjg</div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div> -->
-
-            <!-- <div>
-              <% @user.workshops.each do |wksp| %>
-                <%= cl_image_tag wksp.photos.first, height: 150, width: 358, crop: :fill, style: "background: rgba(0,36,61,0.6)" %>
-                  <p class="white"><%= wksp.craftman.first_name %></p>
-                  <p class="white"><%= wksp.craftman.last_name %></p>
-
-                <h2 class="card-title"><%= wksp.title %></h2>
-                <p class="card-text"><%= truncate(wksp.description, length: 80, separator: '.') %>
-                </p>
-                  <div class="upper-line"><hr></div>
-                  <h6 class="txt-regular">Where</h6>
-                  <div class="upper-line-left"><hr></div>
-                  <h6 class="txt-light"><%= wksp.craftman.address %></h6>
-                    <div class="upper-line"><hr></div>
-                    <h6 class="txt-regular">Price</h6>
-                    <div class="upper-line-left"><hr></div>
-                    <h6 class="txt-light"><%= humanized_money_with_symbol(wksp.price)%>/day</h6>
-                <%= link_to "DETAILS", workshop_path(wksp), class: "btn btn-lg btn-default" %>
-              <% end %>
-              </div> -->
         </div>
+
 
       <!-- notifs + messages + quots  -->
 
@@ -122,12 +67,12 @@
 
 
                  <% if @threads != nil %>
-                    <div class="quotation_item">
+                    <div class="dash_item">
                       <p class="txt-light">No conversation yet</p>
                     </div>
                  <% else %>
                     <% @threads.each do |(workshop, user), message| %>
-                    <div class="quotation_item">
+                    <div class="dash_item">
                       <p>
                       <%= link_to "#{workshop.title} with #{workshop.craftman.first_name}", workshop_messages_path(workshop) %>
                       </p>
@@ -150,7 +95,7 @@
                    <% if @user.bookings != nil %>
 
                       <% @user.bookings.all.each_with_index do |booking, index| %>
-                        <div class="quotation_item ">
+                        <div class="dash_item">
                           <div class="row">
 
                             <div class="col-xs-1">
@@ -188,7 +133,7 @@
                         </div>
                       <% end %>
                    <% else %>
-                     <div class="quotation_item text-center">
+                     <div class="dash_item text-center">
                        <p class="txt-light">No quotation yet</p>
                      </div>
                    <% end %>
@@ -200,6 +145,8 @@
 
   </div>
 </div>
+
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="javascripts/tabs.js"></script>
