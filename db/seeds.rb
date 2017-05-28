@@ -276,7 +276,17 @@ first_booking = Booking.new({
   total_price: 3000,
   })
 first_booking.save
-puts '1 first_booking created...'
+
+second_booking = Booking.new({
+  user: loic,
+  workshop: Workshop.last,
+  date_check_in: Date.today,
+  date_check_out: Date.tomorrow + 1,
+  status: :accepted,
+  total_price: 4000,
+  })
+second_booking.save
+puts '2 bookings created...'
 
 ###############################
 # SEEDS FOR OTHER UNIVERSE... #
