@@ -1,6 +1,10 @@
 class BookingsController < ApplicationController
+  skip_before_action :authenticate_user!
   before_action :set_booking, only: %i(show edit accept reject destroy)
   before_action :disable_nav, only: [:edit]
+
+  before_action :authenticate_user! , only: [ :accept, :reject ]
+  before_action :authenticate_craftman! , only: [ :new, :create ]
 
 
   def show
@@ -11,10 +15,19 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
-    @booking.date_check_in = params[:date_check_in].to_date
-    @booking.date_check_out = params[:date_check_out].to_date
-    @booking.total_price =
-    @booking.workshop.price * (@booking.date_check_out - @booking.date_check_in + 1)
+
+  end
+
+  def create
+    @booking = Booking.new(booking_params)
+    @booking.status = "submitted"
+    @booking.workshop = Workshop.friendly.find(params[:workshop_id])
+    @booking.user = User.find(params[:user_id])
+    if @booking.save
+      redirect_to workshop_user_messages_path(@booking.workshop, @booking.user), notice: 'Your proposal was successfully sent.'
+    else
+      redirect_to workshop_user_messages_path(@booking.workshop, @booking.user), alert: "Something went wrong. We can't send your proposal"
+    end
   end
 
   def edit
@@ -36,10 +49,6 @@ class BookingsController < ApplicationController
     redirect_to dashboard_path, notice: "The quotation for the workshop ' #{@booking.workshop.title} ' has been rejected"
   end
 
-  def create
-    @booking = Booking.new(booking_params)
-  end
-
   # DELETE /bookings/1
   def destroy
     @booking.destroy
@@ -56,6 +65,6 @@ class BookingsController < ApplicationController
   # Only allow a trusted parameter "white list" through.
   def booking_params
     params.require(:booking).permit(:date_check_in, :date_check_out,
-    :total_price, :status)
+    :total_price, :status, :description)
   end
 end

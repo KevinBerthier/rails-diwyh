@@ -1,7 +1,7 @@
 class MessagesController < ApplicationController
   skip_before_action :authenticate_user!
 
-  before_action :authenticate_user! , only: [ :index, :create, :new ]
+  before_action :authenticate_user! , only: [ :index, :create, :new, :create_first ]
   before_action :authenticate_craftman! , only: [ :index_craftman, :create_craftman, :new_craftman ]
 
   def index
@@ -16,13 +16,30 @@ class MessagesController < ApplicationController
     @workshop = Workshop.friendly.find(params[:workshop_id])
     @messages = current_craftman.messages_for_workshop_and_user(@workshop.id, @user.id)
     @message = Message.new
-    # raise
+    @booking = Booking.new
   end
 
   # GET /messages/new
   def new
     @message = Message.new
     @workshop = Workshop.friendly.find(params[:workshop_id])
+  end
+
+  def create_first
+    @workshop = Workshop.friendly.find(params[:workshop_id])
+    @message = Message.new(content:
+      "#{current_user.first_name} contacted you for the workshop :
+      #{@workshop.title} from #{message_params['date_checkin']}
+      to #{message_params['date_checkin']}. #{message_params['content']}")
+    @message.workshop = @workshop
+    @message.craftman = @workshop.craftman
+    @message.user = current_user
+    @message.author_type = :user
+    if @message.save
+      redirect_to workshop_messages_path(@workshop), notice: 'Your message was successfully sent.'
+    else
+      render :new
+    end
   end
 
   # POST /messages
@@ -40,7 +57,7 @@ class MessagesController < ApplicationController
       end
     else
       respond_to do |format|
-        format.html { render :new }
+        format.html { render :index }
         format.js
       end
     end
@@ -73,6 +90,6 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:content)
+    params.require(:message).permit(:content, :date_checkin, :date_checkout)
   end
 end
