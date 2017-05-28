@@ -68,53 +68,38 @@ border: 1px solid #cac9d1;
 .button-box {
 border: 1px solid #cac9d1;
 }
-.frame {
-display: flex;
-border: 1px solid #cac9d1;
-padding: 20px;
-height: 60px;
-width: 100%;
-}
-.card-frame {
-flex: 1 1 auto;
-}
 .green-circle {
   background: #5cb85c;
   border-radius:50%;
   width:10px;
   height:10px;
-  position: absolute;
-  right: 16px;
-  bottom: 16px;
+  margin-top: 6px;
 }
 .orange-circle {
   background: #f0ad4e;
   border-radius:50%;
   width:10px;
   height:10px;
-  position: absolute;
-  right: 16px;
-  bottom: 16px;
+  margin-top: 6px;
 }
 .red-circle {
   background: #d9534f;
   border-radius:50%;
   width:10px;
   height:10px;
-  position: absolute;
-  right: 16px;
-  bottom: 16px;
+  margin-top: 6px;
 }
-.hashtag {
-  position: absolute;
-  left: 16px;
-  bottom: 10px;
-}
-
 .container {
 margin-top: 50px;
 margin-bottom: 50px;
 }
+.quotation-text {
+color: $gray;
+font-size: 13px;
+}
+
+
+
 
 
 
