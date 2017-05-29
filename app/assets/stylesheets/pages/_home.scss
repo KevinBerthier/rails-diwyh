@@ -2,3 +2,46 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+
+.grid {
+  padding: 20px 20px 100px 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+}
+
+.grid li {
+  display: inline-block;
+  width: 440px;
+  margin: 0;
+  padding: 20px;
+  text-align: left;
+  position: relative;
+}
+.cs-style-5 figure img {
+  z-index: 10;
+  transition: transform 0.4s;
+}
+.no-touch .cs-style-5 figure:hover img,
+.cs-style-5 figure.cs-hover img {
+  transform: scale(0.4);
+}
+.cs-style-5 figcaption {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transform: scale(0.7);
+  backface-visibility: hidden;
+  transition: transform 0.4s, opacity 0.4s;
+}
+.no-touch .cs-style-5 figure:hover figcaption,
+.cs-style-5 figure.cs-hover figcaption {
+  transform: scale(1);
+  opacity: 1;
+}
+.cs-style-5 figure a {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
