@@ -68,7 +68,7 @@
 
 // universe jobs
 .universe.wood.job {
-  height: 270px;
+  height: 165px;
 }
 
 // JOBS
@@ -95,15 +95,6 @@
 }
 
 // CRAFTMEN
-// .universe.craftman {
-//   position: relative;
-// }
-// .presentation-pic {
-//   position: absolute;
-//   left: 150px;
-
-// }
-
 
 .left-surlign.wood {
   border-left: 6px solid $wood;
@@ -117,20 +108,7 @@
   height: 110px;
   width: 350px;
 }
-.craftman-presentation.one {
-  // padding-left: 20px;
-}
 
-.craftman-presentation.two {
-  // padding-left: 20px;
-}
-
-.craftman-presentation.three {
-
-}
-.craftman-presentation.four {
-
-}
 .name-one {
   // width: 150px;
   position: relative;
@@ -155,9 +133,9 @@
 
 .name-three {
   position: relative;
-}
-.picture-three img {
-  position: absolute;
+  top: 150px;
+  right: 50px;
+  z-index: 2;
 }
 
 

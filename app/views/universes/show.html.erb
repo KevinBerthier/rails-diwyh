@@ -128,7 +128,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-xs-10 col-xs-offset-1">
-      <div class="universe <%= @universe.code %> job padded">
+      <div class="universe <%= @universe.code %> job padded-top-md">
         <div class="color-line-title-<%= @universe.code %>">
           <hr>
         </div>
@@ -205,10 +205,10 @@
   <!-- Artisan #3 -->
 <div class="container-fluid">
   <div class="row">
-    <div class="padded universe craftman">
-      <div class="col-xs-6 col-md-3 col-md-offset-1  ">
+    <div class="padded-top-xs universe craftman">
+      <div class="col-xs-12 col-md-4 col-md-offset-2">
         <div class="presentation-pic">
-          <div class="name-one">
+          <div class="name-three">
             <!-- introduire en ruby le nom du craftman -->
             <h3><%= @third_craftman.first_name %></h3>
             <h3><%= @third_craftman.last_name %></h3>
@@ -219,13 +219,13 @@
           </div>
         </div>
       </div>
-      <div class="col-xs-6 col-md-8">
-        <div>
-          <div class="craftman-presentation one">
+      <div class="col-xs-12 col-md-6">
+        <div class="padded-top-xl">
+          <div class="craftman-presentation one padding-left-xs">
             <!-- texte de présentation -->
             <p><%= @third_craftman.description %></p>
           </div>
-          <div class="left-surlign <%= @universe.code %> craftman-presentation two">
+          <div class="left-surlign <%= @universe.code %> craftman-presentation two padding-left-xs">
             <!-- suite text de présentation -->
             <%= @third_craftman.second_description %>
           </div>
