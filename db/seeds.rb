@@ -96,7 +96,7 @@ colin = Craftman.new(
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
     address: "Place Pey Berland, 33000 Bordeaux",
-    city: "Bordeaux",
+    locality: "Bordeaux",
     birth_date: "01/12/1940",
     job: carpenter
   })
@@ -112,7 +112,7 @@ vincent = Craftman.new(
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
     address: "Piazza del Duomo, 56126 Pisa PI, Italie",
-    city: "Pise",
+    locality: "Pise",
     birth_date: "11/11/1987",
     job: carpenter
   })
@@ -128,7 +128,7 @@ emile = Craftman.new(
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
     address: "1 Rue de Kiel, 29200 Brest",
-    city: "Brest",
+    locality: "Brest",
     birth_date: "03/08/1956",
     job: cabinetmaker
   })
@@ -144,7 +144,7 @@ jaqueline = Craftman.new(
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
     address: "Patio de Banderas, s/n, 41004 Sevilla, Espagne",
-    city: "Seville",
+    locality: "Seville",
     birth_date: "10/12/1987",
     job: cabinetmaker
   })
@@ -160,7 +160,7 @@ francis = Craftman.new(
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
   address: "55 Rue du Faubourg Saint-Honoré, 75008 Paris",
-  city: "Paris",
+  locality: "Paris",
   birth_date: "10/10/2000",
   job: framer
   })
@@ -176,7 +176,7 @@ thomas = Craftman.new(
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
   address: "17 Rue des Braves, 13007 Marseille",
-  city: "Marseille",
+  locality: "Marseille",
   birth_date: "12/12/1937",
   job: framer
   })
