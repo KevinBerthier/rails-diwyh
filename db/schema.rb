@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20170529105458) do
 
   # These are extensions that must be enabled in order to support this database
@@ -163,6 +164,7 @@ ActiveRecord::Schema.define(version: 20170529105458) do
     t.datetime "updated_at", null: false
     t.integer "price_cents", default: 0, null: false
     t.string "slug"
+    t.string "skills"
     t.index ["craftman_id"], name: "index_workshops_on_craftman_id"
     t.index ["slug"], name: "index_workshops_on_slug", unique: true
   end
