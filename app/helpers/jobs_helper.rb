@@ -4,8 +4,8 @@ module JobsHelper
       gravity: "xy_center",
       height: 370,
       width: 440,
-      x: 280,
-      y: 327,
+      x: 260,
+      y:440,
       crop: :crop,
     })
   end
