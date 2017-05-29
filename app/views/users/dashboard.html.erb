@@ -38,6 +38,66 @@
                <%= link_to "Edit profile", edit_profile_path, class: "btn btn-default margin-md" %>
             </div>
 
+
+
+        <!-- workshops tabs  -->
+
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 padded-top-md">
+
+                <div class="color-line-wood text-left bar-size-lg"><hr></div>
+                <h4 class="txt-md txt-heavy no-margin-top">workshops</h4>
+
+                <% if @user.bookings == nil %>
+                  <div class="dash_item">
+                    <p class="txt-light">No workshop</p>
+                  </div>
+                <% else %>
+                  <% @user.workshops.each do |wksp| %>
+                    <div class="dash_item">
+                      <!-- workshops card  -->
+                      <div class="row">
+                        <div class="col-xs-4 col-sm-4">
+                        <!-- photo  -->
+                          <%= cl_image_tag wksp.photos.first, height: 150, width: 358, crop: :fill, style: "background: rgba(0,36,61,0.6)" %>
+                          <p class="white"><%= wksp.craftman.first_name %></p>
+                          <p class="white"><%= wksp.craftman.last_name %></p>
+                        </div>
+
+
+                        <div class="col-xs-4 col-sm-4">
+                        <!-- infos in the middle  -->
+                          <h2 class="card-title"><%= wksp.title %></h2>
+                          <p><%= wksp.description %></p>
+
+                          <div class="upper-line"><hr></div>
+                          <h6 class="txt-regular">Where</h6>
+                          <div class="upper-line-left"><hr></div>
+                          <h6 class="txt-light"><%= wksp.craftman.address %></h6>
+                          <div class="upper-line"><hr></div>
+                          <h6 class="txt-regular">Price</h6>
+                          <div class="upper-line-left"><hr></div>
+                          <h6 class="txt-light"><%= humanized_money_with_symbol(wksp.price)%>/day</h6>
+                        </div>
+
+                        <div class="col-xs-4 col-sm-4">
+                        <!-- buttons  -->
+                          <%= link_to "DETAILS", workshop_path(wksp), class: "btn btn-lg btn-default" %>
+
+                          <%= link_to "MODIFY", workshop_path(wksp), class: "btn btn-lg btn-default" %>
+
+                          <a href="#" class="btn btn-lg btn-default" >CONTACT</a>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  <% end %>
+                <% end %>
+
+              </div>
+            </div>
+
         </div>
 
 
