@@ -10,6 +10,7 @@
             <%= f.input :first_name %>
             <%= f.input :last_name %>
             <%= f.input :address, placeholder: "Start typing your address", id: "user_input_autocomplete_address" %>
+            <%= f.input :city %>
             <%= f.input :phone %>
             <%= f.input :job, collection: Job::JOBS, prompt: "Select your job" %>
             <%= f.input :birth_date %>
