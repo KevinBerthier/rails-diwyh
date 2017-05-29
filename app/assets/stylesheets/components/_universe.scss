@@ -131,8 +131,32 @@
 .craftman-presentation.four {
 
 }
-.name h3 {
-  width: 150px;
+.name-one {
+  // width: 150px;
+  position: relative;
+  z-index: 2;
+  top: 25px;
+  left: 66px;
+}
+
+.picture-one img {
+  position: absolute;
+}
+
+
+.name-two {
+  position:relative;
+
+}
+.picture-two {
+  position: absolute;
+}
+
+.name-three {
+  position: relative;
+}
+.picture-three img {
+  position: absolute;
 }
 
 

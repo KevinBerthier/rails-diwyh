@@ -143,20 +143,21 @@
 <div class="container-fluid">
   <div class="row">
     <div class="padded universe craftman">
-      <div class="col-xs-6 col-md-3 col-md-offset-1  ">
+      <div class="col-xs-6 col-md-4 col-md-offset-2  ">
         <div class="presentation-pic">
-          <div class="name">
+          <div class="name-one">
             <!-- introduire en ruby first_name et last_name du craftman -->
-            <h3><%= @first_craftman.first_name %> <%= @first_craftman.last_name %></h3>
+            <h3><%= @first_craftman.first_name %></h3>
+            <h3><%= @first_craftman.last_name %></h3>
           </div>
-          <div>
+          <div class="picture-one">
             <!-- photo du craftman -->
-            <%= cl_image_tag craftman_avatar(@first_craftman), width: 220, height: 220, crop: :fill %>
+            <%= cl_image_tag craftman_avatar(@first_craftman), width: 220, height: 220, crop: :full %>
           </div>
         </div>
       </div>
-      <div class="col-xs-6 col-md-8">
-        <div>
+      <div class="col-xs-6 col-md-6">
+        <div class="padded-top-xl">
           <div class="craftman-presentation one">
             <!-- description -->
             <p><%= @first_craftman.description %></p>
@@ -188,13 +189,14 @@
       </div>
       <div class="col-xs-6 col-md-6">
         <div class="presentation-pic">
-          <div>
+          <div class="picture-two">
             <!-- photo du craftman -->
             <%= cl_image_tag craftman_avatar(@second_craftman), width: 220, height: 220, crop: :fill %>
           </div>
-          <div class=" name bottom-surlign <%= @universe.code %>">
+          <div class=" name-two bottom-surlign <%= @universe.code %>">
             <!-- introduire en ruby le nom du craftman -->
-            <h3><%= @second_craftman.first_name %> <%= @second_craftman.last_name %></h3>
+            <h3><%= @second_craftman.first_name %></h3>
+            <h3><%= @second_craftman.last_name %></h3>
           </div>
         </div>
       </div>
@@ -206,11 +208,12 @@
     <div class="padded universe craftman">
       <div class="col-xs-6 col-md-3 col-md-offset-1  ">
         <div class="presentation-pic">
-          <div class="name">
+          <div class="name-one">
             <!-- introduire en ruby le nom du craftman -->
-            <h3><%= @third_craftman.first_name %> <%= @third_craftman.last_name %></h3>
+            <h3><%= @third_craftman.first_name %></h3>
+            <h3><%= @third_craftman.last_name %></h3>
           </div>
-          <div>
+          <div class="picture-one">
             <!-- photo du craftman -->
             <%= cl_image_tag craftman_avatar(@third_craftman), width: 220, height: 220, crop: :fill %>
           </div>
