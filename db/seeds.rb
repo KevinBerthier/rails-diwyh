@@ -203,7 +203,8 @@ workshop_attributes = [
     description:  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
     craftman:     jaqueline,
-    artisan_pic:  open_photo("wood_workshop.jpg")
+    artisan_pic:  open_photo("wood_workshop.jpg"),
+    skills:       "Morphology of wood, Recognize woods, Materials & tools, Different turning techniques."
   },
   {
     title:        "Create you jewelery box in marquettry ",
@@ -211,7 +212,8 @@ workshop_attributes = [
     description:  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
     craftman:     emile,
-    artisan_pic:  open_photo("wood_workshop.jpg")
+    artisan_pic:  open_photo("wood_workshop.jpg"),
+    skills:       "Morphology of wood, Recognize woods, Materials & tools, Different turning techniques."
   },
   {
     title:        "Design and manufacture your own desktop",
@@ -219,7 +221,8 @@ workshop_attributes = [
     description:  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
     craftman:     emile,
-    artisan_pic:  open_photo("wood_workshop.jpg")
+    artisan_pic:  open_photo("wood_workshop.jpg"),
+    skills:       "Morphology of wood, Recognize woods, Materials & tools, Different turning techniques."
   },
   {
     title:        "Create wooden play for your kid",
@@ -227,7 +230,8 @@ workshop_attributes = [
     description:  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
     craftman:     colin,
-    artisan_pic:  open_photo("wood_workshop.jpg")
+    artisan_pic:  open_photo("wood_workshop.jpg"),
+    skills:       "Morphology of wood, Recognize woods, Materials & tools, Different turning techniques."
   },
   {
     title:        "Create your dream furnitures in wood",
@@ -235,7 +239,8 @@ workshop_attributes = [
     description:  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
     craftman:     colin,
-    artisan_pic:  open_photo("wood_workshop.jpg")
+    artisan_pic:  open_photo("wood_workshop.jpg"),
+    skills:       "Morphology of wood, Recognize woods, Materials & tools, Different turning techniques."
   },
   {
     title:        "Manufacture a bench for your garden",
@@ -243,7 +248,8 @@ workshop_attributes = [
     description:  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
     craftman:     vincent,
-    artisan_pic:  open_photo("wood_workshop.jpg")
+    artisan_pic:  open_photo("wood_workshop.jpg"),
+    skills:       "Morphology of wood, Recognize woods, Materials & tools, Different turning techniques."
   },
   {
     title:        "Learn to sculpt wood",
@@ -251,7 +257,8 @@ workshop_attributes = [
     description:  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
     craftman:     colin,
-    artisan_pic:  open_photo("wood_workshop.jpg")
+    artisan_pic:  open_photo("wood_workshop.jpg"),
+    skills:       "Morphology of wood, Recognize woods, Materials & tools, Different turning techniques."
   },
   {
     title:        "Minimalist framing for your pics",
@@ -259,7 +266,8 @@ workshop_attributes = [
     description:  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
     craftman:     francis,
-    artisan_pic:  open_photo("wood_workshop.jpg")
+    artisan_pic:  open_photo("wood_workshop.jpg"),
+    skills:       "Morphology of wood, Recognize woods, Materials & tools, Different turning techniques."
   },
   {
     title:        "Frame yourself your paintings",
@@ -267,7 +275,8 @@ workshop_attributes = [
     description:  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
     craftman:     francis,
-    artisan_pic:  open_photo("wood_workshop.jpg")
+    artisan_pic:  open_photo("wood_workshop.jpg"),
+    skills:       "Morphology of wood, Recognize woods, Materials & tools, Different turning techniques."
   },
   {
     title:        "Frame your bedroom mirror",
@@ -275,7 +284,8 @@ workshop_attributes = [
     description:  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
     craftman:     thomas,
-    artisan_pic:  open_photo("wood_workshop.jpg")
+    artisan_pic:  open_photo("wood_workshop.jpg"),
+    skills:       "Morphology of wood, Recognize woods, Materials & tools, Different turning techniques."
   }
 
 ]
