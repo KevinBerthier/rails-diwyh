@@ -12,13 +12,15 @@
 
 <div class="container">
   <% @jobs.each do |job| %>
-    <h3 class="padded-lg"><%= job.name %></h3>
+    <h3 class="padded-lg" id="<%= job.name %>">
+      <%= job.name %>
+    </h3>
       <div class="row">
     <% job.workshops.each do |wksp| %>
         <div class="col-xs-12 col-sm-4">
           <div class="card-index">
             <div class="card-img">
-              <%= cl_image_tag wksp.photos.first, height: 150, width: 358, crop: :fill, style: "background: rgba(0,36,61,0.6)" %>
+              <%= cl_image_tag workshop_avatar(wksp), height: 150, width: 358, crop: :fill %>
               <div class="col-xs-12 text-center craftman-name">
                 <p class="roboto txt-gras white"><%= wksp.craftman.first_name.capitalize %></p>
                 <p class="roboto txt-gras white"><%= wksp.craftman.last_name.capitalize %></p>
