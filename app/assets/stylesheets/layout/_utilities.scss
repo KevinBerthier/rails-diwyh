@@ -166,7 +166,7 @@
 
 // Height & Width formulaires
 .form-height-width-small {
-  height: 450px;
+  height: auto;
   width: 400px;
 }
 
@@ -176,6 +176,11 @@
 }
 
 .form-height-width-xs {
-  height: 440px;
+  height: 420px;
   width: 440px;
+}
+
+.form-height-width-lg {
+  height: auto;
+  width: 470px;
 }

@@ -1,19 +1,29 @@
-<div class="padded-md" style="background-image: linear-gradient(-225deg, rgba(0, 101, 168, 0.6) 0%, rgba(55, 101, 132, 0.4) 80%);">
+<div class="padded-md">
   <div class="container">
+
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-        <div class="background-form">
-          <h1 class="text-center">Your Profile</h1>
-          <%= simple_form_for @user, url: edit_profile_path do |f| %>
-            <%= f.error_notification %>
+        <h2 class="txt-bold text-center">Your Profile</h2>
+      </div>
+    </div>
 
-            <%= f.input :first_name %>
-            <%= f.input :last_name %>
-            <%= f.input :phone %>
-            <%= f.input :avatar, as: :attachinary %>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-4">
+        <div class="border-form margin-top-sm form-height-width-small background-color">
+          <div class="background-form top-left-form border-color">
+            <%= simple_form_for @user, url: edit_profile_path do |f| %>
+              <%= f.error_notification %>
 
-            <%= f.button :submit %>
-          <% end %>
+              <%= f.input :first_name %>
+              <%= f.input :last_name %>
+              <%= f.input :phone %>
+              <%= f.input :avatar, as: :attachinary %>
+
+              <div class="form-actions text-center">
+                <%= f.button :submit, "Update your profile" %>
+              </div>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
