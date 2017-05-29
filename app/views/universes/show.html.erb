@@ -14,7 +14,7 @@
           <div class="col-xs-12 col-xs-offset-2 col-md-6 col-md-offset-6">
             <h5>
             <!-- @universe.slug -->
-              Wood is a soft and living material rich in a multitude of essences. A natural product that must dry slowly before being shaped.
+              <%= @universe.description %>
             </h5>
           </div>
         </div>
@@ -40,13 +40,7 @@
       <div class="col-xs-12 col-sm-offset-2 col-md-3 col-md-offset-2 ">
         <div class="universe-presentation margin-lg">
         <h4>
-          “There is a magical, contemplative feeling
-          in the forest. We encourage people to visit,
-          to take this journey, and over the decades,
-          watch the forest grow and change. Year by
-          year, the writers' words forming invisible
-          chapters in the trees whose narratives will
-          be reconstituted a century later.”
+          <%= @universe.second_description %>
         </h4>
         </div>
       </div>
@@ -73,12 +67,12 @@
     <div class="universe-desciption">
       <div class="col-xs-12 col-md-6 col-md-offset-2">
         <p class="text-left universe-text-top">
-          Since prehistoric times, wood has allowed the man to make fire, to build shelters or to make tools and weapons. Some of the most important inventions of the civilized world - the wheel, the printing press and the first computer, the abacus - were first made of wood. Nowadays, the uses of this material remain as varied as in the past.
+          <%= @universe.third_description %>
         </p>
       </div>
       <div class="col-xs-12 col-md-6 col-md-offset-5">
         <p class="text-left universe-text-bottom">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          <%= @universe.fourth_description %>
         </p>
       </div>
     </div>
@@ -116,11 +110,14 @@
     <div class="jobs">
       <% @universe.jobs.each do |job| %>
         <div class="col-xs-12 col-sm-4">
-          <div class="card-job" style="background-image: url(<%= job_card_background_path(job) %>">
-            <h3 class="text-center">
-              <%= job.name %>
-            </h3>
-          </div>
+          <!-- ajouter l'ancre -->
+          <%= link_to universe_workshops_path(@universe, anchor: job.name) do  %>
+            <div class="card-job" style="background-image: url(<%= job_card_background_path(job) %>">
+              <h3 class="text-center">
+                <%= job.name %>
+              </h3>
+            </div>
+          <% end %>
         </div>
       <% end %>
     </div>
@@ -150,11 +147,11 @@
         <div class="presentation-pic">
           <div class="name">
             <!-- introduire en ruby first_name et last_name du craftman -->
-            <h3>MAT JOHNSON</h3>
+            <h3><%= @first_craftman.first_name %> <%= @first_craftman.last_name %></h3>
           </div>
           <div>
             <!-- photo du craftman -->
-            <%= image_tag 'http://placehold.it/220x220' %>
+            <%= cl_image_tag craftman_avatar(@first_craftman), width: 220, height: 220, crop: :fill %>
           </div>
         </div>
       </div>
@@ -162,11 +159,11 @@
         <div>
           <div class="craftman-presentation one">
             <!-- description -->
-            <p>Chaque arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur</p>
+            <p><%= @first_craftman.description %></p>
           </div>
           <div class="left-surlign <%= @universe.code %> craftman-presentation two">
             <!-- suite text de la description -->
-            Révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur. Arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur.
+            <%= @first_craftman.second_description %>
           </div>
         </div>
       </div>
@@ -181,11 +178,11 @@
         <div>
           <div class="craftman-presentation three">
             <!-- texte de présentation -->
-            <p>Chaque arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur</p>
+            <p><%= @second_craftman.description %></p>
           </div>
           <div class="craftman-presentation four">
             <!-- suite text de présentation -->
-            Révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur. Arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur.
+            <%= @second_craftman.second_description %>
           </div>
         </div>
       </div>
@@ -193,11 +190,11 @@
         <div class="presentation-pic">
           <div>
             <!-- photo du craftman -->
-            <%= image_tag 'http://placehold.it/220x220' %>
+            <%= cl_image_tag craftman_avatar(@second_craftman), width: 220, height: 220, crop: :fill %>
           </div>
           <div class=" name bottom-surlign <%= @universe.code %>">
             <!-- introduire en ruby le nom du craftman -->
-            <h3>MAT JOHNSON</h3>
+            <h3><%= @second_craftman.first_name %> <%= @second_craftman.last_name %></h3>
           </div>
         </div>
       </div>
@@ -211,11 +208,11 @@
         <div class="presentation-pic">
           <div class="name">
             <!-- introduire en ruby le nom du craftman -->
-            <h3>MAT JOHNSON</h3>
+            <h3><%= @third_craftman.first_name %> <%= @third_craftman.last_name %></h3>
           </div>
           <div>
             <!-- photo du craftman -->
-            <%= image_tag 'http://placehold.it/220x220' %>
+            <%= cl_image_tag craftman_avatar(@third_craftman), width: 220, height: 220, crop: :fill %>
           </div>
         </div>
       </div>
@@ -223,11 +220,11 @@
         <div>
           <div class="craftman-presentation one">
             <!-- texte de présentation -->
-            <p>Chaque arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur</p>
+            <p><%= @third_craftman.description %></p>
           </div>
           <div class="left-surlign <%= @universe.code %> craftman-presentation two">
             <!-- suite text de présentation -->
-            Révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur. Arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur.
+            <%= @third_craftman.second_description %>
           </div>
         </div>
       </div>

@@ -1,13 +1,35 @@
 <br>
 <!-- NE SURTOUT PAS CHANGER LES CLASS -->
-<div class="chat_window">
-  <ul class="messages" id="messages">
-    <% @messages.each do |message| %>
-      <%= render "messages/show_craftman", message: message %>
-    <% end %>
-  </ul>
-  <div class="bottom_wrapper clearfix">
-    <%= render 'messages/form_craftman', workshop: @workshop, user: @user, message: @message %>
+
+<div class="container">
+  <div class="row">
+    <div class="chat_window col-xs-12 col-md-10 col-md-offset-1">
+      <ul class="messages" id="messages">
+        <% @messages.each do |message| %>
+          <%= render "messages/show_craftman", message: message %>
+        <% end %>
+      </ul>
+      <div class="bottom_wrapper clearfix">
+        <%= render 'messages/form_craftman', workshop: @workshop, user: @user, message: @message %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-md-10 col-md-offset-1">
+      <div class="new-booking">
+        <%= simple_form_for @booking, url: workshop_create_user_booking_path(@workshop, @user) do |f| %>
+          <%= f.error_notification %>
+            <div class="form-group row form-inline">
+          <%= f.input :date_check_in, as: :string, input_html:{type: "date"} %>
+          <%= f.input :date_check_out, as: :string, input_html:{type: "date"} %>
+            </div>
+          <%= f.input :description %>
+          <%= f.input :total_price %>
+
+          <%= f.button :submit, class: "btn, btn-block" %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
-

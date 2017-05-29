@@ -4,9 +4,10 @@
       <div class="col-xs-12 col-sm-6 col-sm-offset-3">
         <div class="background-form">
           <h1 class="text-center">New Message</h1>
-          <%= simple_form_for [@workshop, @message] do |f| %>
+          <%= simple_form_for [@workshop, @message], url: workshop_create_first_message_path(@workshop, current_user) do |f| %>
             <%= f.error_notification %>
-
+            <%= f.input :date_checkin, as: :string, input_html:{type: "date"} %>
+            <%= f.input :date_checkout, as: :string, input_html:{type: "date"} %>
             <%= f.input :content %>
 
             <%= f.button :submit, class: "btn btn-default btn-block" %>
