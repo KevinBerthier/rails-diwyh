@@ -134,9 +134,8 @@
 
 
                  <% if @threads != nil %>
-                    <div class="dash_item">
                       <p class="txt-light">No conversation yet</p>
-                    </div>
+
                  <% else %>
                     <% @threads.each do |(workshop, user), message| %>
                     <div class="dash_item">
@@ -162,7 +161,8 @@
                    <% if @user.bookings != nil %>
 
                       <% @user.bookings.all.each_with_index do |booking, index| %>
-                        <div class="dash_item">
+                        <%= link_to edit_booking_path(booking) do %>
+                        <div class="dash_item padded-sm quotation-text btn btn-default">
                           <div class="row">
 
                             <div class="col-xs-1">
@@ -170,12 +170,11 @@
                             </div>
 
                             <div class="col-xs-8">
-                              <p>
-                              <%= link_to "#{booking.workshop.title}, from #{booking.workshop.craftman.first_name}", edit_booking_path(booking), class: "padded-sm quotation-text" %>
-                              </p>
+                              <%= "#{booking.workshop.title}, from #{booking.workshop.craftman.first_name}"
+                              %>
                             </div>
 
-                            <div class="col-xs-2 quotation-text text-right">
+                            <div class="col-xs-2 quotation-text text-right no-padding">
                               <% if booking.status == "submitted" %>
                                 <p>pending</p>
                               <% elsif booking.status == "accepted" %>
@@ -198,6 +197,7 @@
                           </div>
 
                         </div>
+                        <% end %>
                       <% end %>
                    <% else %>
                      <div class="dash_item text-center">
