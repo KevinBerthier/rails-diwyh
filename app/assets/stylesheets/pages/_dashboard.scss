@@ -1,31 +1,31 @@
 .dashboard-pictures {
   position: relative;
 }
-
 .profil-pic {
  position: absolute;
  box-shadow: 1px 1px 3px #cac9d1;
  z-index: 11;
  left: calc(50% - 150px/2);
 }
-
 .marble {
  position: relative;
  left: -20px;
  top: -20px;
  z-index: 10;
 }
-
 .banner-bk-gray-small{
   background: $gray;
-  height: 250px;
+  height: 180px;
+  position: relative;
 }
-
+.first-name-balise{
+  position: absolute;
+  top: -35px;
+}
 .padded-md-ds {
   padding-top: 60px;
   padding-bottom: 30px;
 }
-
 .color-line-wood hr {
   background-color: $wood;
   border-top: 1px solid $wood;
@@ -35,39 +35,32 @@
   margin-bottom: 0;
   padding-bottom: 0;
 }
-
 .bar-size-lg hr {
 width: 120px;
 }
-
 .bar-size-sm hr {
 width: 100px;
 }
-
 .dash_item {
 width: 100%;
 height:100%;
-border: 1px solid #cac9d1;
-margin-top: 10px;
-margin-bottom: 10px;
+border-top: 1px solid #cac9d1;
 padding-top: 10px;
 padding-left: 20px;
 padding-right: 20px;
-box-shadow: 1px 1px 2px #cac9d1;
-border-radius: 2px;
 position: relative;
 }
 
+.dash_item:hover {
+background-color: #FAFAFA;
+width: 100%;
+height:100%;
+border-top: 1px solid #cac9d1;
+padding-top: 10px;
+padding-left: 20px;
+padding-right: 20px;
+}
 // tests sur la card
-.photo-box {
-border: 1px solid #cac9d1;
-}
-.list-box {
-border: 1px solid #cac9d1;
-}
-.button-box {
-border: 1px solid #cac9d1;
-}
 .green-circle {
   background: #5cb85c;
   border-radius:50%;
@@ -95,25 +88,23 @@ margin-bottom: 50px;
 }
 .quotation-text {
 color: $gray;
-font-size: 13px;
+font-size: 16px;
 }
-
 .image-card {
   position: relative;
   width: 100%;
 }
-
 .text-in-card {
-   position: absolute;
-   width: 110px;
-   top: 50px;
-   color: white;
+ position: absolute;
+ left: 100px;
+ top: 60px;
+ color: white;
 }
-
 .no-padding {
   padding: 0;
   margin: 0;
 }
+
 
 
 
