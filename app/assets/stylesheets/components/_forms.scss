@@ -21,6 +21,10 @@
   bottom: 12px;
   left: 17px;
 }
+.top-right-form {
+  top: 20px;
+  right: 20px;
+}
 
 .border-form {
   position: absolute;
@@ -50,4 +54,12 @@
 }
 .border-glass {
   border: 2px solid #C1D1E1;
+}
+
+.background-metal {
+  background-size: cover;
+  background-image: url('metal_univers.jpg');
+}
+.border-metal {
+  border: 2px solid #8A846C;
 }
