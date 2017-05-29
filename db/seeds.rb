@@ -49,6 +49,16 @@ puts '2 users created...'
 wood = Universe.new({
   name: "Wood",
   code: "wood",
+  description: "Wood is a soft and living material rich in a multitude of essences. A natural product that must dry slowly before being shaped.",
+  second_description: "“There is a magical, contemplative feeling
+          in the forest. We encourage people to visit,
+          to take this journey, and over the decades,
+          watch the forest grow and change. Year by
+          year, the writers' words forming invisible
+          chapters in the trees whose narratives will
+          be reconstituted a century later.”",
+  third_description: "Since prehistoric times, wood has allowed the man to make fire, to build shelters or to make tools and weapons. Some of the most important inventions of the civilized world - the wheel, the printing press and the first computer, the abacus - were first made of wood. Nowadays, the uses of this material remain as varied as in the past.",
+  fourth_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   banner: open_photo("wood_univers.jpg"),
   banner_bottom: open_photo("copeaux.jpg"),
   top_gallery: open_photo("wood_dentelle.jpg"),
@@ -93,8 +103,8 @@ colin = Craftman.new(
     first_name: "Colin",
     last_name: "Farel-williams",
     phone: "07 85 45 34 78",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
+    description: "Chaque arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur",
+    second_description: "Révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur. Arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur.",
     address: "Place Pey Berland, 33000 Bordeaux",
     birth_date: "01/12/1940",
     job: carpenter
@@ -108,8 +118,8 @@ vincent = Craftman.new(
     first_name: "Vincent",
     last_name: "Timent",
     phone: "07 85 45 34 78",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
+    description: "Chaque arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur",
+    second_description: "Révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur. Arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur.",
     address: "Piazza del Duomo, 56126 Pisa PI, Italie",
     birth_date: "11/11/1987",
     job: carpenter
@@ -123,8 +133,8 @@ emile = Craftman.new(
     first_name: "Emile",
     last_name: "Etimage",
     phone: "06 23 34 78 09",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
+    description: "Chaque arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur",
+    second_description: "Révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur. Arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur.",
     address: "1 Rue de Kiel, 29200 Brest",
     birth_date: "03/08/1956",
     job: cabinetmaker
@@ -138,8 +148,8 @@ jaqueline = Craftman.new(
     first_name: "Jaqueline",
     last_name: "startoup",
     phone: "06 23 34 78 09",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
+    description: "Chaque arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur",
+    second_description: "Révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur. Arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur.",
     address: "Patio de Banderas, s/n, 41004 Sevilla, Espagne",
     birth_date: "10/12/1987",
     job: cabinetmaker
@@ -153,8 +163,8 @@ francis = Craftman.new(
   first_name: "Francis",
   last_name: "Caterelle",
   phone: "07 56 45 23 11",
-  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
+    description: "Chaque arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur",
+    second_description: "Révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur. Arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur.",
   address: "55 Rue du Faubourg Saint-Honoré, 75008 Paris",
   birth_date: "10/10/2000",
   job: framer
@@ -168,8 +178,8 @@ thomas = Craftman.new(
   first_name: "Thomas",
   last_name: "Tauton",
   phone: "06 16 55 23 21",
-  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
+    description: "Chaque arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur",
+    second_description: "Révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur. Arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur.",
   address: "17 Rue des Braves, 13007 Marseille",
   birth_date: "12/12/1937",
   job: framer
