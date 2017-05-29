@@ -50,6 +50,7 @@ wood = Universe.new({
   name: "Wood",
   code: "wood",
   banner: open_photo("wood_univers.jpg"),
+  banner_bottom: open_photo("copeaux.jpg"),
   top_gallery: open_photo("wood_dentelle.jpg"),
   middle_gallery: [open_photo("wood_workshop.jpg"),open_photo("wood_sciure.jpg")],
   gallery: [open_photo("wood_art.jpg"), open_photo("wood_art.jpg"), open_photo("wood_art.jpg")],
@@ -59,14 +60,27 @@ wood = Universe.new({
 wood.save!
 puts 'Wood universe created...'
 
+
 ##########################################
-carpenter = Job.new({ name: "Carpenter", universe: wood })
+carpenter = Job.new({
+  name: "Carpenter",
+  universe: wood,
+  image: open_photo("carpenter.jpg")
+  })
 carpenter.save
 
-cabinetmaker = Job.new({ name: "Cabinetmaker", universe: wood })
+cabinetmaker = Job.new({
+  name: "Cabinetmaker",
+  universe: wood,
+  image: open_photo("wood_univers.jpg")
+  })
 cabinetmaker.save
 
-framer = Job.new({ name: "Framer", universe: wood })
+framer = Job.new({
+  name: "Framer",
+  universe: wood,
+  image: open_photo("framer.jpg")
+  })
 framer.save
 puts '3 jobs created for wood universe...'
 
@@ -172,70 +186,80 @@ workshop_attributes = [
     price:        500,
     description:  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
-    craftman:     jaqueline
+    craftman:     jaqueline,
+    artisan_pic:  open_photo("wood_workshop.jpg")
   },
   {
     title:        "Create you jewelery box in marquettry ",
     price:        600,
     description:  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
-    craftman:     emile
+    craftman:     emile,
+    artisan_pic:  open_photo("wood_workshop.jpg")
   },
   {
     title:        "Design and manufacture your own desktop",
     price:        1000,
     description:  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
-    craftman:     emile
+    craftman:     emile,
+    artisan_pic:  open_photo("wood_workshop.jpg")
   },
   {
     title:        "Create wooden play for your kid",
     price:        600,
     description:  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
-    craftman:     colin
+    craftman:     colin,
+    artisan_pic:  open_photo("wood_workshop.jpg")
   },
   {
     title:        "Create your dream furnitures in wood",
     price:        400,
     description:  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
-    craftman:     colin
+    craftman:     colin,
+    artisan_pic:  open_photo("wood_workshop.jpg")
   },
   {
     title:        "Manufacture a bench for your garden",
     price:        400,
     description:  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
-    craftman:     vincent
+    craftman:     vincent,
+    artisan_pic:  open_photo("wood_workshop.jpg")
   },
   {
     title:        "Learn to sculpt wood",
     price:        500,
     description:  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
-    craftman:     colin
+    craftman:     colin,
+    artisan_pic:  open_photo("wood_workshop.jpg")
   },
   {
     title:        "Minimalist framing for your pics",
     price:        100,
     description:  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
-    craftman:     francis
+    craftman:     francis,
+    artisan_pic:  open_photo("wood_workshop.jpg")
   },
   {
     title:        "Frame yourself your paintings",
     price:        300,
     description:  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
-    craftman:     francis
+    craftman:     francis,
+    artisan_pic:  open_photo("wood_workshop.jpg")
   },
   {
     title:        "Frame your bedroom mirror",
     price:        300,
     description:  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
-    craftman:     thomas
+    craftman:     thomas,
+    artisan_pic:  open_photo("wood_workshop.jpg")
   }
 
 ]
@@ -252,12 +276,80 @@ first_booking = Booking.new({
   total_price: 3000,
   })
 first_booking.save
-puts '1 first_booking created...'
 
-
+second_booking = Booking.new({
+  user: loic,
+  workshop: Workshop.last,
+  date_check_in: Date.today,
+  date_check_out: Date.tomorrow + 1,
+  status: :accepted,
+  total_price: 4000,
+  })
+second_booking.save
+puts '2 bookings created...'
 
 ###############################
 # SEEDS FOR OTHER UNIVERSE... #
+###############################
+
+glass = Universe.new({
+  name: "Glass",
+  code: "glass",
+  banner: open_photo("glass_univers.jpg"),
+})
+glass.save!
+puts 'Glass universe created...'
+
+###############################
+
+metal = Universe.new({
+  name: "Metal",
+  code: "metal",
+  banner: open_photo("metal_univers.jpg"),
+})
+metal.save!
+puts 'Metal universe created...'
+
+###############################
+
+clay = Universe.new({
+  name: "Clay",
+  code: "clay",
+  banner: open_photo("clay_univers.jpg"),
+})
+clay.save!
+puts 'Clay universe created...'
+
+###############################
+
+stone = Universe.new({
+  name: "Stone",
+  code: "stone",
+  banner: open_photo("stone_univers.jpg"),
+})
+stone.save!
+puts 'Stone universe created...'
+
+###############################
+
+fabric = Universe.new({
+  name: "Fabric",
+  code: "fabric",
+  banner: open_photo("fabric_univers.jpg"),
+})
+fabric.save!
+puts 'Fabric universe created...'
+
+###############################
+
+leather = Universe.new({
+  name: "Leather",
+  code: "leather",
+  banner: open_photo("leather_univers.jpg"),
+})
+leather.save!
+puts 'Leather universe created...'
+
 ###############################
 
 puts 'Finished!'

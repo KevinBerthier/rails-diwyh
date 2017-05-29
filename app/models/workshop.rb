@@ -4,6 +4,7 @@ class Workshop < ApplicationRecord
   has_many :bookings
 
   has_attachments :photos, maximum: 10
+  has_attachment :artisan_pic
 
   monetize :price_cents,
   :numericality => {
@@ -14,6 +15,7 @@ class Workshop < ApplicationRecord
   validates :title, presence: true
   validates :description, presence: true
   validates :price, presence: true
+  validates :artisan_pic, presence: true
 
 
   def universe
