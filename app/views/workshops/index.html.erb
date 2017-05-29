@@ -19,9 +19,9 @@
           <div class="card-index">
             <div class="card-img">
               <%= cl_image_tag wksp.photos.first, height: 150, width: 358, crop: :fill, style: "background: rgba(0,36,61,0.6)" %>
-              <div class="text-center craftman-name">
-                <p class="roboto txt-gras white"><%= wksp.craftman.first_name %></p>
-                <p class="roboto txt-gras white"><%= wksp.craftman.last_name %></p>
+              <div class="col-xs-12 text-center craftman-name">
+                <p class="roboto txt-gras white"><%= wksp.craftman.first_name.capitalize %></p>
+                <p class="roboto txt-gras white"><%= wksp.craftman.last_name.capitalize %></p>
               </div>
             </div>
             <div class="card-block">
@@ -61,19 +61,6 @@
       </div>
   <% end %>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!-- map de ouf -->

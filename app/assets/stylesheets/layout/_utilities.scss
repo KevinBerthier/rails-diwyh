@@ -56,19 +56,25 @@
   margin-left: 0px;
   margin-bottom: 14px;
 }
-.color-line-red hr {
-  background-color: red;
-  height: 4px;
-  width: 100px;
-  text-align: left;
-  margin-left: 0px;
+
+// margins
+.margin-md {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.margin-sm {
+  margin-top: 5px;
   margin-bottom: 5px;
 }
 
-// margins
 .margin-verti-fat {
   margin-top: 40px;
   margin-bottom: 40px;
+}
+
+.no-margin-top {
+  margin-top: 0;
 }
 
 // Paddings
@@ -136,11 +142,11 @@
 
 .padded-full-lg {
   padding: 40px;
-
 }
-
-
-
+.padded-side-sm {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
 // Backgrounds
 .bg-black {

@@ -96,6 +96,7 @@ colin = Craftman.new(
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
     address: "Place Pey Berland, 33000 Bordeaux",
+    city: "Bordeaux",
     birth_date: "01/12/1940",
     job: carpenter
   })
@@ -111,6 +112,7 @@ vincent = Craftman.new(
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
     address: "Piazza del Duomo, 56126 Pisa PI, Italie",
+    city: "Pise",
     birth_date: "11/11/1987",
     job: carpenter
   })
@@ -126,6 +128,7 @@ emile = Craftman.new(
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
     address: "1 Rue de Kiel, 29200 Brest",
+    city: "Brest",
     birth_date: "03/08/1956",
     job: cabinetmaker
   })
@@ -141,6 +144,7 @@ jaqueline = Craftman.new(
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
     address: "Patio de Banderas, s/n, 41004 Sevilla, Espagne",
+    city: "Seville",
     birth_date: "10/12/1987",
     job: cabinetmaker
   })
@@ -156,6 +160,7 @@ francis = Craftman.new(
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
   address: "55 Rue du Faubourg Saint-Honoré, 75008 Paris",
+  city: "Paris",
   birth_date: "10/10/2000",
   job: framer
   })
@@ -171,6 +176,7 @@ thomas = Craftman.new(
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum adipisci rerum ratione eius nobis eveniet officiis at animi. Rem libero eum recusandae sit corporis voluptas, eos consectetur possimus suscipit!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima odit, nostrum tenetur maiores sint odio aspernatur. Enim repudiandae dignissimos totam accusantium voluptates maiores earum quia. Non nemo explicabo dignissimos!",
   address: "17 Rue des Braves, 13007 Marseille",
+  city: "Marseille",
   birth_date: "12/12/1937",
   job: framer
   })
@@ -276,7 +282,17 @@ first_booking = Booking.new({
   total_price: 3000,
   })
 first_booking.save
-puts '1 first_booking created...'
+
+second_booking = Booking.new({
+  user: loic,
+  workshop: Workshop.last,
+  date_check_in: Date.today,
+  date_check_out: Date.tomorrow + 1,
+  status: :accepted,
+  total_price: 4000,
+  })
+second_booking.save
+puts '2 bookings created...'
 
 ###############################
 # SEEDS FOR OTHER UNIVERSE... #
