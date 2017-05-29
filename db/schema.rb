@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170522085952) do
+ActiveRecord::Schema.define(version: 20170528193139) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20170522085952) do
     t.datetime "updated_at", null: false
     t.integer "status"
     t.integer "total_price_cents", default: 0, null: false
+    t.text "description"
     t.index ["user_id"], name: "index_bookings_on_user_id"
     t.index ["workshop_id"], name: "index_bookings_on_workshop_id"
   end
@@ -98,6 +99,8 @@ ActiveRecord::Schema.define(version: 20170522085952) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "author_type"
+    t.date "date_checkin"
+    t.date "date_checkout"
     t.index ["craftman_id"], name: "index_messages_on_craftman_id"
     t.index ["user_id"], name: "index_messages_on_user_id"
     t.index ["workshop_id"], name: "index_messages_on_workshop_id"
@@ -141,6 +144,7 @@ ActiveRecord::Schema.define(version: 20170522085952) do
     t.string "facebook_picture_url"
     t.string "token"
     t.datetime "token_expiry"
+    t.text "description"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

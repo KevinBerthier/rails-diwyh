@@ -1,14 +1,13 @@
 
 .chat_window {
-  position: absolute;
-  width: calc(100% - 20px);
-  max-width: 800px;
+  // position: absolute;
+  // width: calc(100% - 20px);
+  // max-width: 800px;
   height: 500px;
   border-radius: 10px;
   background-color: #fff;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  margin-top: 100px;
+  // transform: translateX(-50%) translateY(-50%);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   background-color: #f8f8f8;
   overflow: hidden;
@@ -133,12 +132,13 @@
 }
 
 .bottom_wrapper {
-  position: relative;
+  // position: relative;
   width: 100%;
   background-color: #fff;
   padding: 20px 20px;
   position: absolute;
   bottom: 0;
+  left: 0;
 }
 .bottom_wrapper .message_input_wrapper {
   display: inline-block;
@@ -184,4 +184,8 @@
 
 .message_template {
   display: none;
+}
+
+.new-booking {
+  position: absolute;
 }

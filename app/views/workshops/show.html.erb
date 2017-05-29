@@ -1,178 +1,223 @@
 <!-- BANNER -->
-<%= render 'shared/universe_photo' %>
+<%# render 'shared/universe_photo' %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="banner-photo-workshop" style="background-image: url(<%= @universe.banner.fullpath %>)">
+    </div>
+  </div>
+</div>
 
-
-  <div class="banner-bk-gray banner-height">
+  <!-- <div class="banner-bk-gray banner-height">
       <div class="row">
         <div class="col-xs-10 col-xs-offset-1">
           <h1 class="padded-top-lg"><%= @workshop.title %></h1>
         </div>
       </div>
-  </div>
+  </div> -->
 
+  <div class="information">
+    <div class="workshop-card">
+      <div class="left">
+        <h2 class="roboto"><%= @workshop.title %></h2>
+        <div class="txt-light padded-top-xs">by <%= @craftman.first_name %> <%= @craftman.last_name.capitalize %></div>
+
+        <div class="txt-light"> <%= link_to "#{@workshop.universe.name}", universe_path(@workshop.universe), class: "text-uppercase" %> > <%= link_to "#{@workshop.craftman.job.name}", universe_path(@workshop.universe) %> </div>
+      </div>
+      <div class="right">
+        <%= link_to "Contact the artisan", new_workshop_message_path(@workshop), class: "btn btn-default" %>
+      </div>
+    </div>
+  </div>
 
 <!-- THE WORKSHOP -->
+
 <div class="container-fluid">
+  <div class="workshop-description padded-bottom-lg">
     <div class="row">
-      <div class="col-xs-10 col-xs-offset-1">
-        <div class="color-line-title-wood text-left padded-top-md">
-          <hr>
+      <div class="col-md-12">
+        <div class="col-md-2">
+          <div class="vertical-lines0" id="line-center"></div>
         </div>
-        <h2>the</h2>
-        <h2 class="padded-bottom-lg">workshop</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="trait">
+        <div class="col-xs-8 col-xs-offset-2">
+          <div class="color-line-title-wood text-left padded-top-md">
+            <hr>
+          </div>
+          <!-- <h2>the</h2> -->
+          <h2 class="padded-bottom-lg">The workshop</h2>
+        </div>
       </div>
     </div>
 
 
-  <div class="row">
 
-    <!-- Tableau DETAILS workshop -->
-    <div class="col-md-3 col-xs-offset-1">
+    <div class="row">
 
-      <!-- 1ère ligne ARTISAN -->
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="upper-line"><hr></div>
-          <h6 class="txt-regular">Artisan</h6>
-        </div>
-        <div class="col-sm-9">
-          <div class="upper-line-left"><hr></div>
-          <h6 class="txt-light"><%= @workshop.craftman.first_name %> <%= @workshop.craftman.last_name %></h6>
-        </div>
-      </div>
+      <!-- Tableau DETAILS workshop -->
+      <div class="col-md-3 col-xs-offset-2">
 
-      <!-- 2ème ligne / TECHNIQUES -->
-      <div class="row">
-        <div class="col-md-3">
-          <div class="upper-line"><hr></div>
-          <h6 class="txt-regular">Techniques you will learn</h6>
+        <!-- 1ère ligne ARTISAN -->
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="upper-line"><hr></div>
+            <p class="txt-sm txt-regular chivo">Artisan</p>
+          </div>
+          <div class="col-sm-9">
+            <div class="upper-line-left"><hr></div>
+            <p class="txt-sm txt-light chivo"><%= @workshop.craftman.first_name.capitalize %> <%= @workshop.craftman.last_name.capitalize %></p>
+          </div>
         </div>
-        <div class="col-md-9">
-          <div class="upper-line-left"><hr></div>
-          <h6 class="txt-light">Morphology of wood, Recognize woods, Materials & tools, Different turning techniques.</h6>
-        </div>
-      </div>
 
-      <!-- 3ème ligne / PRICE -->
-      <div class="row">
-        <div class="col-md-3">
-          <div class="upper-line"><hr></div>
-          <h6 class="txt-regular">Price</h6>
+        <!-- 2ème ligne / TECHNIQUES -->
+        <div class="row">
+          <div class="col-md-3">
+            <div class="upper-line"><hr></div>
+            <p class="txt-sm txt-regular chivo">Techni-  ques you will learn</p>
+          </div>
+          <div class="col-md-9">
+            <div class="upper-line-left"><hr></div>
+            <p class="txt-sm txt-light chivo">Morphology of wood, Recognize woods, Materials & tools, Different turning techniques.</p>
+          </div>
         </div>
-        <div class="col-md-9">
-          <div class="upper-line-left"><hr></div>
-          <h6 class="txt-light">from <%= @workshop.price.to_i %> €/day</h6>
-        </div>
-      </div>
 
-      <!-- Dernière ligne / WHERE -->
-      <div class="row">
-        <div class="col-md-3">
-          <div class="upper-line"><hr></div>
-          <h6 class="txt-regular">Where</h6>
-          <div class="final-line"><hr></div>
+        <!-- 3ème ligne / PRICE -->
+        <div class="row">
+          <div class="col-md-3">
+            <div class="upper-line"><hr></div>
+            <p class="txt-sm txt-regular chivo">Price</p>
+          </div>
+          <div class="col-md-9">
+            <div class="upper-line-left"><hr></div>
+            <p class="txt-sm txt-light chivo">from <%= @workshop.price.to_i %> €/day</p>
+          </div>
         </div>
-        <div class="col-md-9">
-          <div class="upper-line-left"><hr></div>
-          <h6 class="txt-light">address</h6>
-          <div class="final-line-left"><hr></div>
+
+        <!-- Dernière ligne / WHERE -->
+        <div class="row">
+          <div class="col-md-3">
+            <div class="upper-line"><hr></div>
+            <p class="txt-sm txt-regular chivo">Where</p>
+            <div class="final-line"><hr></div>
+          </div>
+          <div class="col-md-9">
+            <div class="upper-line-left"><hr></div>
+            <p class="txt-sm txt-light chivo">address</p>
+            <div class="final-line-left"><hr></div>
+          </div>
         </div>
-      </div>
 
-      <!-- mini map -->
-      <div class="padded-md">
-        <div id="map" style="width: 290px; height: 290px;"></div>
+        <!-- mini map -->
+        <div class="padded-md">
+          <div id="map" style="width: 290px; height: 290px;"></div>
 
-        <% content_for(:after_js) do %>
-          <script>
-            $(document).ready(function() {
-              var handler = Gmaps.build('Google');
-              handler.buildMap({
-                provider: {
-                  styles: Diwyh.map_styles
-                  // possibility to pass other gmap options here
-                },
-                internal: { id: 'map' } }, function() {
-                markers = handler.addMarkers(<%= raw @hash.to_json %>
-                );
-                handler.bounds.extendWith(markers);
-                handler.fitMapToBounds();
-                if (markers.length == 0) {
-                  handler.getMap().setZoom(2);
-                } else if (markers.length == 1) {
-                  handler.getMap().setZoom(14);
-                }
+          <% content_for(:after_js) do %>
+            <script>
+              $(document).ready(function() {
+                var handler = Gmaps.build('Google');
+                handler.buildMap({
+                  provider: {
+                    styles: Diwyh.map_styles
+                    // possibility to pass other gmap options here
+                  },
+                  internal: { id: 'map' } }, function() {
+                  markers = handler.addMarkers(<%= raw @hash.to_json %>);
+                  handler.bounds.extendWith(markers);
+                  handler.fitMapToBounds();
+                  if (markers.length == 0) {
+                    handler.getMap().setZoom(2);
+                  } else if (markers.length == 1) {
+                    handler.getMap().setZoom(14);
+                  }
+                });
               });
-            });
-          </script>
-        <% end %>
-      </div>
+            </script>
+          <% end %>
+        </div>
 
-    <!-- Fin du tableau de détails -->
-    </div>
+      <!-- Fin du tableau de détails -->
+      </div>
 
       <!-- Description workshop -->
-      <div class="col-md-6 col-xs-offset-1">
-        <p><%= @workshop.description %></p>
+      <div class="col-md-5 margin-left">
+        <p class="txt-light"><%= @workshop.description %></p>
       </div>
 
+    </div>
   </div>
+<!-- Fin de container -->
+</div>
 
 
+<!-- PHOTO ATELIER -->
+<section id="hero2" class="hero" style="background-image: url(<%= image_path @workshop.universe.middle_gallery.first.fullpath %>);">
+  <div class="inner">
+    <div class="copy">
+      <h2 class="white">Experiment</h2>
+      <p>You could probably fit in there ;)</p>
+    </div>
+  </div>
+</section>
 
-  <!-- PHOTOS -->
+
+<!-- PHOTOS -->
+<!-- <div class="container-fluid">
   <div class="photos-group">
     <div class="row">
       <div class="col-xs-10 col-xs-offset-1">
 
-        <div class="row sm-gutter padded-top-xs">
-          <div class="col-sm-12">
-            <%= image_tag @workshop.universe.top_gallery.fullpath, height: 150, crop: :fill %>
+        <div id="myAffix">
+          <div class="row sm-gutter padded-top-xs">
+            <div class="col-sm-12"> -->
+              <%# image_tag @workshop.universe.top_gallery.fullpath, height: 150, crop: :fill %>
+            <!-- </div>
           </div>
         </div>
         <div class="row sm-gutter padded-top-xs">
           <div class="col-sm-8">
-            <%= image_tag @workshop.universe.middle_gallery.first.fullpath, height: 400, crop: :fill %>
+            <%# image_tag @workshop.universe.middle_gallery.first.fullpath, height: 400, crop: :fill %>
           </div>
           <div class="col-sm-4">
-            <%= image_tag @workshop.universe.middle_gallery.last.fullpath, height: 400, crop: :fill %>
+            <%# image_tag @workshop.universe.middle_gallery.last.fullpath, height: 400, crop: :fill %>
           </div>
         </div>
         <div class="row sm-gutter padded-top-xs">
           <div class="col-sm-12 col-md-4">
-            <%= image_tag @workshop.universe.gallery[0].fullpath %>
+            <%# image_tag @workshop.universe.gallery[0].fullpath %>
           </div>
           <div class="col-sm-12 col-md-4">
-            <%= image_tag @workshop.universe.gallery[1].fullpath %>
+            <%# image_tag @workshop.universe.gallery[1].fullpath %>
           </div>
           <div class="col-sm-12 col-md-4">
-            <%= image_tag @workshop.universe.gallery[2].fullpath %>
+            <%# image_tag @workshop.universe.gallery[2].fullpath %>
           </div>
         </div>
 
       </div>
     </div>
-  </div>
+  </div> -->
 
 
 
   <!-- ARTISAN -->
-
+<div class="container-fluid">
   <div class="row">
-    <div class="col-xs-10 col-xs-offset-1">
+    <div class="col-xs-8 col-xs-offset-2">
 
-      <div class="color-line-title-wood text-left padded-top-md">
+      <div class="color-line-title-wood text-left padded-top-lg">
         <hr>
       </div>
-      <h2>the</h2>
-      <h2 class="padded-bottom-lg">workshop</h2>
+      <!-- <h2>the</h2> -->
+      <h2 class="padded-bottom-lg">The artisan</h2>
 
       <div class="row">
         <div class="col-xs-6">
-          <%= @workshop.craftman.description %>
+          <p class="txt-light"> <%= @workshop.craftman.description %> </p>
         </div>
         <div class="col-xs-2 col-xs-offset-1">
-          <%= image_tag @workshop.universe.artisan_profile.fullpath, height: 400, width: 400, crop: :fill%>
+          <%= image_tag @workshop.universe.artisan_profile.fullpath, height: 400, width: 280, crop: :fill%>
         </div>
       </div>
 
@@ -190,7 +235,7 @@
 
 
   <!-- BUTTON -->
-  <div class="text-center padded">
+  <div class="text-center padded-top-lg padded-bottom-lg">
     <%= link_to "Contact #{@workshop.craftman.first_name} #{@workshop.craftman.last_name}",
     new_workshop_message_path(@workshop), class: "btn-wood text-uppercase" %>
   </div>
@@ -198,64 +243,66 @@
 
 
   <!-- REVIEWS -->
-  <div class="row">
-    <div class="col-xs-10 col-xs-offset-1">
-      <div class="txt-heavy padded-lg">
-        <h3>Reviews</h3>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12 col-sm-4 padded-sm">
-          <div class="card-white">
-            <div class="card-white-quote">
-              <p class="txt-xl">“</p>
-            </div>
-            <div>
-              <p class="txt-description txt-light text-center">This workshop confirmed I like working with wood. It is a perfect way of artistic expression for me. I plan to go to another one.</p>
-            </div>
-            <div class="color-line text-right">
-              <hr>
-            </div>
-            <div>
-              <h4 class="txt-description txt-bold text-right">Kévin</h4>
-            </div>
-          </div>
+  <div class="reviews padded-bottom-lg">
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1">
+        <div class="padded-lg">
+          <h3>Reviews</h3>
         </div>
 
-        <div class="col-xs-12 col-sm-4 padded-sm">
-          <div class="card-white">
-            <div class="card-white-quote">
-              <p class="txt-xl">“</p>
-            </div>
-            <div>
-              <p class="txt-description txt-light text-center">I had a very good time creating and making my own furniture. I didn't know I was able to do such an amazing piece.</p>
-            </div>
-            <div class="color-line text-right">
-              <hr>
-            </div>
-            <div>
-              <h4 class="txt-description txt-bold text-right">Loic</h4>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-4 padded-sm">
-          <div class="card-white">
-            <div class="card-white-quote">
-              <p class="txt-xl">“</p>
-            </div>
-            <div>
-              <p class="txt-description txt-light text-center">What a workshop! I specifically recommand you to live this awesome experience. The piece I made is a great souvenir.</p>
-            </div>
-            <div class="color-line text-right">
-              <hr>
-            </div>
-            <div>
-              <h4 class="txt-description txt-bold text-right">Odaia</h4>
+        <div class="row">
+          <div class="col-xs-12 col-sm-4 padded-sm">
+            <div class="card-white">
+              <div class="card-white-quote">
+                <p class="txt-xl">“</p>
+              </div>
+              <div>
+                <p class="txt-description txt-light text-center">This workshop confirmed I like working with wood. It is a perfect way of artistic expression for me. I plan to go to another one.</p>
+              </div>
+              <div class="color-line text-right">
+                <hr>
+              </div>
+              <div>
+                <h4 class="txt-description txt-bold text-right">Kévin</h4>
+              </div>
             </div>
           </div>
-        </div>
 
+          <div class="col-xs-12 col-sm-4 padded-sm">
+            <div class="card-white">
+              <div class="card-white-quote">
+                <p class="txt-xl">“</p>
+              </div>
+              <div>
+                <p class="txt-description txt-light text-center">I had a very good time creating and making my own furniture. I didn't know I was able to do such an amazing piece.</p>
+              </div>
+              <div class="color-line text-right">
+                <hr>
+              </div>
+              <div>
+                <h4 class="txt-description txt-bold text-right">Loic</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-4 padded-sm">
+            <div class="card-white">
+              <div class="card-white-quote">
+                <p class="txt-xl">“</p>
+              </div>
+              <div>
+                <p class="txt-description txt-light text-center">What a workshop! I specifically recommand you to live this awesome experience. The piece I made is a great souvenir.</p>
+              </div>
+              <div class="color-line text-right">
+                <hr>
+              </div>
+              <div>
+                <h4 class="txt-description txt-bold text-right">Odaia</h4>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   </div>
@@ -265,13 +312,13 @@
   <!-- OTHER WORKSHOPS -->
   <div class="row">
     <div class="col-xs-10 col-xs-offset-1">
-      <div class="txt-heavy padded-lg">
+      <div class="padded-lg">
         <h3>Other workshops with <%= @workshop.craftman.first_name %> <%= @workshop.craftman.last_name %></h3>
       </div>
     </div>
   </div>
 
-
 <!-- Fin de container -->
 </div>
+
 

@@ -132,8 +132,9 @@
                 <div class="color-line-wood text-left bar-size-sm"><hr></div>
                 <h4 class="txt-md txt-heavy no-margin-top">messages</h4>
 
+                 <% if @threads == nil %>
+                    <div class="quotation_item">
 
-                 <% if @threads != nil %>
                       <p class="txt-light">No conversation yet</p>
 
                  <% else %>
@@ -145,7 +146,6 @@
                     </div>
                     <% end %>
                  <% end %>
-
               </div>
             </div>
           </div>

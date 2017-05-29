@@ -52,4 +52,5 @@ end
 group :development do # Stuff you do not want in :test env
   # gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'web-console'
 end
