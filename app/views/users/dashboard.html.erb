@@ -45,7 +45,7 @@
             <div class="row">
               <div class="col-xs-12 col-sm-12 padded-top-md">
 
-                <div class="color-line-wood text-left bar-size-lg"><hr></div>
+                <div class="color-line-wood text-left bar-size-sm"><hr></div>
                 <h4 class="txt-md txt-heavy no-margin-top">workshops</h4>
 
                 <% if @user.bookings == nil %>
@@ -59,34 +59,41 @@
                       <div class="row">
                         <div class="col-xs-4 col-sm-4">
                         <!-- photo  -->
-                          <%= cl_image_tag wksp.photos.first, height: 150, width: 358, crop: :fill, style: "background: rgba(0,36,61,0.6)" %>
-                          <p class="white"><%= wksp.craftman.first_name %></p>
-                          <p class="white"><%= wksp.craftman.last_name %></p>
+                          <div class="image-card padded-top-xs padded-bottom-xs">
+                            <%= cl_image_tag wksp.photos.first, height: 120, width: 110, crop: :fill, style: "background: rgba(0,36,61,0.6)" %>
+                          </div>
+                          <p class="text-in-card text-center"><%= wksp.craftman.first_name %> </p>
+                          <p class="text-in-card text-center"><br><%= wksp.craftman.last_name %></p>
                         </div>
 
 
-                        <div class="col-xs-4 col-sm-4">
+                        <div class="col-xs-5 col-sm-5">
                         <!-- infos in the middle  -->
-                          <h2 class="card-title"><%= wksp.title %></h2>
-                          <p><%= wksp.description %></p>
-
-                          <div class="upper-line"><hr></div>
-                          <h6 class="txt-regular">Where</h6>
-                          <div class="upper-line-left"><hr></div>
-                          <h6 class="txt-light"><%= wksp.craftman.address %></h6>
-                          <div class="upper-line"><hr></div>
-                          <h6 class="txt-regular">Price</h6>
-                          <div class="upper-line-left"><hr></div>
-                          <h6 class="txt-light"><%= humanized_money_with_symbol(wksp.price)%>/day</h6>
+                          <h2 class="card-title txt-description padded-top-xs padded-bottom-xs"><%= wksp.title %></h2>
+                          <p class="txt-sm"><%= truncate(wksp.description, length: 120, separator: '.') %></p>
+                          <div class="row">
+                            <div class="col-xs-4 col-sm-4">
+                              <div class="upper-line"><hr></div>
+                              <h6 class="txt-sm">Price</h6>
+                              <div class="upper-line"><hr></div>
+                              <h6 class="txt-sm">Where</h6>
+                            </div>
+                            <div class="col-xs-8 col-sm-8">
+                              <div class="upper-line-left"><hr></div>
+                              <h6 class="txt-light"><%= humanized_money_with_symbol(wksp.price)%>/day</h6>
+                              <div class="upper-line-left"><hr></div>
+                              <h6 class="txt-light"><%= %></h6>
+                            </div>
+                          </div>
                         </div>
 
-                        <div class="col-xs-4 col-sm-4">
+                        <div class="col-xs-3 col-sm-3 text-center">
                         <!-- buttons  -->
-                          <%= link_to "DETAILS", workshop_path(wksp), class: "btn btn-lg btn-default" %>
+                          <%= link_to "details", workshop_path(wksp), class: "btn btn-sm btn-default margin-sm" %>
 
-                          <%= link_to "MODIFY", workshop_path(wksp), class: "btn btn-lg btn-default" %>
+                          <%= link_to "modify", workshop_path(wksp), class: "btn btn-sm btn-default margin-sm" %>
 
-                          <a href="#" class="btn btn-lg btn-default" >CONTACT</a>
+                          <a href="#" class="btn btn-sm btn-default margin-sm" >contact</a>
                         </div>
 
                       </div>

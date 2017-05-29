@@ -98,6 +98,18 @@ color: $gray;
 font-size: 13px;
 }
 
+.image-card {
+  position: relative;
+  width: 100%;
+}
+
+.text-in-card {
+   position: absolute;
+   width: 110px;
+   top: 50px;
+   color: white;
+}
+
 
 
 
