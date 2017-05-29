@@ -14,14 +14,17 @@
             <%= simple_form_for @craftman, url: craftmen_edit_profile_path do |f| %>
               <%= f.error_notification %>
 
-              <%= f.input :first_name %>
-              <%= f.input :last_name %>
-              <%= f.input :address %>
-              <%= f.input :phone %>
-              <%= f.input :job, collection: Job::JOBS, prompt: "Select your job" %>
-              <%= f.input :birth_date %>
-              <%= f.input :description %>
-              <%= f.input :avatar, as: :attachinary %>
+
+            <%= f.input :first_name %>
+            <%= f.input :last_name %>
+            <%= f.input :address, placeholder: "Start typing your address", input_html: {id: "user_input_autocomplete_address"} %>
+            <%= f.input :locality, input_html: {id: "locality"} %>
+            <%= f.input :phone %>
+            <%= f.input :job, collection: Job::JOBS, prompt: "Select your job" %>
+            <%= f.input :birth_date %>
+            <%= f.input :description %>
+            <%= f.input :avatar, as: :attachinary %>
+
 
               <div class="form-actions text-center">
                 <%= f.button :submit, "Update your profile" %>

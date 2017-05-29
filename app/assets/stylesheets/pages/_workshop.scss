@@ -3,9 +3,86 @@
   background-size: cover;
   background-attachment: fixed;
 }
+.banner-photo-workshop {
+  height: 375px;
+  background-size: cover;
+  background-attachment: fixed;
+}
 .photos-group {
   img {
     width: 100%;
   }
 }
+.workshop-description {
+  margin-top: 200px;
+}
 
+// TRAIT
+// .trait {
+//   border: 1px solid $gray;
+// }
+
+.vertical-lines0 {
+  width: 4px;
+  height: 0;
+  background-color: $gold1;
+  animation-name: vertical-linezero;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  position: fixed;
+  left: 17.7%;
+  top: 375px;
+  transform: translate(-50%);
+}
+
+@keyframes vertical-linezero {
+   0% {
+    height: 0;
+  }
+  50%{
+    height: 100%;
+    left: 17.7%;
+  }
+  100% {
+    height: 24%;
+    left: 17.7%;
+  }
+}
+
+// PHOTO FIXE DE L'ATELIER
+#hero2 {
+  //background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/21555/Melissani-cave-natural.jpg);
+  background-size:cover;
+  background-position:center center;
+  background-attachment:fixed;
+  color: white;
+}
+#hero2 h2 {
+  color: white;
+}
+.hero, .content{
+  text-align:center;
+  position:relative;
+  width: 100%;
+}
+.inner{
+  min-height:500px;
+  position: relative;
+}
+.hero .inner{
+  background: rgba(13,13,13,0.4);
+}
+.copy {
+  position:absolute;
+  top:50%;
+  height:10em;
+  margin-top:-5em;
+  width:100%;
+}
+
+// REVIEWS
+.reviews {
+  background-color: #FAFAFA;
+}
