@@ -63,6 +63,11 @@
   margin-bottom: 20px;
 }
 
+.margin-sm {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 .margin-verti-fat {
   margin-top: 40px;
   margin-bottom: 40px;
@@ -137,11 +142,11 @@
 
 .padded-full-lg {
   padding: 40px;
-
 }
-
-
-
+.padded-side-sm {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
 // Backgrounds
 .bg-black {

@@ -106,6 +106,7 @@ colin = Craftman.new(
     description: "Chaque arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur",
     second_description: "Révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur. Arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur.",
     address: "Place Pey Berland, 33000 Bordeaux",
+    locality: "Bordeaux",
     birth_date: "01/12/1940",
     job: carpenter
   })
@@ -121,6 +122,7 @@ vincent = Craftman.new(
     description: "Chaque arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur",
     second_description: "Révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur. Arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur.",
     address: "Piazza del Duomo, 56126 Pisa PI, Italie",
+    locality: "Pise",
     birth_date: "11/11/1987",
     job: carpenter
   })
@@ -136,6 +138,7 @@ emile = Craftman.new(
     description: "Chaque arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur",
     second_description: "Révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur. Arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur.",
     address: "1 Rue de Kiel, 29200 Brest",
+    locality: "Brest",
     birth_date: "03/08/1956",
     job: cabinetmaker
   })
@@ -151,6 +154,7 @@ jaqueline = Craftman.new(
     description: "Chaque arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur",
     second_description: "Révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur. Arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur.",
     address: "Patio de Banderas, s/n, 41004 Sevilla, Espagne",
+    locality: "Seville",
     birth_date: "10/12/1987",
     job: cabinetmaker
   })
@@ -166,6 +170,7 @@ francis = Craftman.new(
     description: "Chaque arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur",
     second_description: "Révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur. Arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur.",
   address: "55 Rue du Faubourg Saint-Honoré, 75008 Paris",
+  locality: "Paris",
   birth_date: "10/10/2000",
   job: framer
   })
@@ -181,6 +186,7 @@ thomas = Craftman.new(
     description: "Chaque arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur",
     second_description: "Révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur. Arbre révèle les méandres de ses veines et les secrets de son cœur pour mon plus grand bonheur.",
   address: "17 Rue des Braves, 13007 Marseille",
+  locality: "Marseille",
   birth_date: "12/12/1937",
   job: framer
   })

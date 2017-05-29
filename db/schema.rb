@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(version: 20170529102239) do
     t.float "latitude"
     t.float "longitude"
     t.text "second_description"
+    t.string "locality"
     t.index ["email"], name: "index_craftmen_on_email", unique: true
     t.index ["job_id"], name: "index_craftmen_on_job_id"
     t.index ["reset_password_token"], name: "index_craftmen_on_reset_password_token", unique: true
