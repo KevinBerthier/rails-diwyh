@@ -146,3 +146,20 @@
     bottom: -200px;
   }
 }
+
+@media (max-width: $screen-xs-max) {
+  .padded-top-xl-sm-min {
+    padding-top: 240px;
+  }
+  .padding-top-xs-min {
+    padding-top: 120px;
+  }
+  .padding-top-xs-min-medium {
+    padding-top: 90px;
+  }
+  .paddind-top-xs-min-small {
+    padding-top: 20px;
+  }
+}
+
+
