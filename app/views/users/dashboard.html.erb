@@ -113,7 +113,7 @@
                 <div class="color-line-wood text-left bar-size-sm"><hr></div>
                 <h4 class="txt-md txt-heavy no-margin-top">messages</h4>
 
-                 <% if @threads != nil %>
+                 <% if @threads == nil %>
                     <div class="quotation_item">
                       <p class="txt-light">No conversation yet</p>
                     </div>
@@ -203,9 +203,4 @@
 
   </div>
 </div>
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="javascripts/tabs.js"></script>
 
