@@ -11,7 +11,7 @@
           <div class="col-xs-12 col-xs-offset-2 col-sm-offset-2 col-md-6">
             <h1><%= @universe.name.upcase %></h1>
           </div>
-          <div class="col-xs-12 col-xs-offset-2 col-md-6 col-md-offset-6">
+          <div class="col-xs-12 col-xs-offset-1 col-md-6 col-md-offset-6">
             <h5>
             <!-- @universe.slug -->
               <%= @universe.description %>
@@ -20,10 +20,10 @@
         </div>
 
         <div class="row">
-          <div class="col-xs-offset-3 col-lg-offset-3">
-            <div class="details-photo universe">
+          <div class="col-xs-12">
+            <div class="universe adaptation">
               <!-- photo -->
-              <%= cl_image_tag @universe.banner_bottom.path, :gravity=>"xy_center", :height=>240, :width=>470, :x=>200, :y=>100, :crop=>"crop" %>
+              <%= cl_image_tag @universe.banner_bottom.path, :height=>350, :width=>600, crop: :crop %>
             </div>
           </div>
         </div>
@@ -44,9 +44,9 @@
         </h4>
         </div>
       </div>
-      <div class="col-xs-12 col-sm-offset-2 col-md-4 col-md-offset-2">
+      <div class="col-xs-12 col-xs-offset-1 col-sm-offset-2 col-md-4 col-md-offset-2">
         <div class="universe <%= @universe.code %> border margin-lg">
-          <%= cl_image_tag @universe.middle_gallery.last.path, :gravity=>"xy_center", :height=>400, :width=>300, :x=>250, :y=>200, :crop=>"crop" %>
+          <%= cl_image_tag @universe.middle_gallery.last.path, :gravity=>"xy_center", :height=>300, :width=>300, :x=>250, :y=>200, :crop=>"crop" %>
         </div>
       </div>
 
@@ -66,12 +66,12 @@
   <div class="row">
     <div class="universe-desciption">
       <div class="col-xs-12 col-md-6 col-md-offset-2">
-        <p class="text-left universe-text-top">
+        <p class="text-left universe-text-top txt-light">
           <%= @universe.third_description %>
         </p>
       </div>
       <div class="col-xs-12 col-md-6 col-md-offset-5">
-        <p class="text-left universe-text-bottom">
+        <p class="text-left universe-text-bottom txt-light">
           <%= @universe.fourth_description %>
         </p>
       </div>
@@ -143,7 +143,8 @@
 <div class="container-fluid">
   <div class="row">
     <div class="padded-top-md universe craftman">
-      <div class="col-xs-12 col-md-4 col-md-offset-2  ">
+
+      <div class="col-xs-12 col-xs-offset-2  col-md-4 col-md-offset-2  ">
         <div class="presentation-pic">
           <div class="name-one">
             <!-- introduire en ruby first_name et last_name du craftman -->
@@ -152,17 +153,17 @@
           </div>
           <div class="picture-one">
             <!-- photo du craftman -->
-            <%= cl_image_tag craftman_avatar(@first_craftman), width: 220, height: 220, crop: :full %>
+            <%= cl_image_tag craftman_avatar(@first_craftman), width: 240, height: 240, crop: :fill %>
           </div>
         </div>
       </div>
       <div class="col-xs-12 col-md-6">
-        <div class="padded-top-xl padded-top-xl-sm-min">
-          <div class="craftman-presentation one padding-left-xs">
+        <div class="padded-top-btstrap padded-top-xl-sm-min">
+          <div class="craftman-presentation one padding-left-xs txt-light">
             <!-- description -->
             <p><%= @first_craftman.description %></p>
           </div>
-          <div class="left-surlign <%= @universe.code %> craftman-presentation two padding-left-xs">
+          <div class="left-surlign <%= @universe.code %> craftman-presentation two padding-left-xs txt-light">
             <!-- suite text de la description -->
             <%= @first_craftman.second_description %>
           </div>
@@ -177,21 +178,21 @@
     <div class="padded-top-xl padding-top-xs-min-medium universe craftman">
       <div class="col-xs-12 col-md-4 col-md-offset-2">
         <div>
-          <div class="craftman-presentation three">
+          <div class="craftman-presentation three txt-light">
             <!-- texte de présentation -->
             <p><%= @second_craftman.description %></p>
           </div>
-          <div class="craftman-presentation four">
+          <div class="craftman-presentation four txt-light">
             <!-- suite text de présentation -->
             <%= @second_craftman.second_description %>
           </div>
         </div>
       </div>
-      <div class="col-xs-12 col-md-5 col-md-offset-1">
+      <div class="col-xs-12 col-xs-offset-2 col-md-5 col-md-offset-1">
         <div class="presentation-pic">
           <div class="picture-two">
             <!-- photo du craftman -->
-            <%= cl_image_tag craftman_avatar(@second_craftman), width: 220, height: 220, crop: :fill %>
+            <%= cl_image_tag craftman_avatar(@second_craftman), width: 240, height: 240, crop: :fill %>
           </div>
           <div class=" name-two bottom-surlign <%= @universe.code %>">
             <!-- introduire en ruby le nom du craftman -->
@@ -202,11 +203,12 @@
       </div>
     </div>
   </div>
+
   <!-- Artisan #3 -->
 <div class="container-fluid">
   <div class="row">
     <div class="padded-top-ld universe craftman padding-top-xs-min">
-      <div class="col-xs-12 col-md-4 col-md-offset-2">
+      <div class="col-xs-12 col-xs-offset-2 col-md-4 col-md-offset-2">
         <div class="presentation-pic">
           <div class="name-three">
             <!-- introduire en ruby le nom du craftman -->
@@ -220,12 +222,12 @@
         </div>
       </div>
       <div class="col-xs-12 col-md-6">
-        <div class="padded-top-xl padded-top-xl-sm-min">
-          <div class="craftman-presentation one padding-left-xs paddind-top-xs-min-small">
+        <div class="padded-top-btstrap padded-top-xl-sm-min">
+          <div class="craftman-presentation one padding-left-xs paddind-top-xs-min-small txt-light">
             <!-- texte de présentation -->
             <p><%= @third_craftman.description %></p>
           </div>
-          <div class="left-surlign <%= @universe.code %> craftman-presentation two padding-left-xs">
+          <div class="left-surlign <%= @universe.code %> craftman-presentation two padding-left-xs txt-light">
             <!-- suite text de présentation -->
             <%= @third_craftman.second_description %>
           </div>
