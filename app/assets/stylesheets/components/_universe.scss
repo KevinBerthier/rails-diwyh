@@ -22,12 +22,14 @@
     position: absolute;
     bottom: -300px;
   }
-  img {
-    position: absolute;
-    width: 50%;
-    height: 60%;
-    top: 350px;
-  }
+}
+.adaptation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 420px;
+  left: 0%;
 }
 
 //UNIVERSE INSPIRATION
@@ -43,7 +45,7 @@
 
 .universe.wood.border {
   position: relative;
-  height: 400px;
+  height: 300px;
   width: 300px;
   border: 3px solid $wood;
   img {
@@ -165,6 +167,10 @@ a:hover {
   .paddind-top-xs-min-small {
     padding-top: 20px;
   }
+}
+
+.padded-top-btstrap {
+  padding-top: 90px;
 }
 
 
