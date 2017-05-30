@@ -14,7 +14,7 @@
                 <%= cl_image_tag universe.banner.fullpath, height: 300, width: 480, crop: :crop %>
                 <h2> <%= universe.name %> </h2>
               </div>
-              <figcaption style="background-image: url('<%=image_path "background_stone.png"%>')";>
+              <figcaption style="background-image: url('<%= cl_image_path universe.collage.path %>')";>
               </figcaption>
             </figure>
           <% end %>
