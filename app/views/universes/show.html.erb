@@ -44,7 +44,7 @@
         </h4>
         </div>
       </div>
-      <div class="col-xs-12 col-sm-offset-2 col-md-4 col-md-offset-2">
+      <div class="col-xs-12 col-xs-offset-1 col-sm-offset-2 col-md-4 col-md-offset-2">
         <div class="universe <%= @universe.code %> border margin-lg">
           <%= cl_image_tag @universe.middle_gallery.last.path, :gravity=>"xy_center", :height=>300, :width=>300, :x=>250, :y=>200, :crop=>"crop" %>
         </div>
@@ -66,12 +66,12 @@
   <div class="row">
     <div class="universe-desciption">
       <div class="col-xs-12 col-md-6 col-md-offset-2">
-        <p class="text-left universe-text-top">
+        <p class="text-left universe-text-top txt-light">
           <%= @universe.third_description %>
         </p>
       </div>
       <div class="col-xs-12 col-md-6 col-md-offset-5">
-        <p class="text-left universe-text-bottom">
+        <p class="text-left universe-text-bottom txt-light">
           <%= @universe.fourth_description %>
         </p>
       </div>
@@ -158,11 +158,11 @@
       </div>
       <div class="col-xs-12 col-md-6">
         <div class="padded-top-xl padded-top-xl-sm-min">
-          <div class="craftman-presentation one padding-left-xs">
+          <div class="craftman-presentation one padding-left-xs txt-light">
             <!-- description -->
             <p><%= @first_craftman.description %></p>
           </div>
-          <div class="left-surlign <%= @universe.code %> craftman-presentation two padding-left-xs">
+          <div class="left-surlign <%= @universe.code %> craftman-presentation two padding-left-xs txt-light">
             <!-- suite text de la description -->
             <%= @first_craftman.second_description %>
           </div>
@@ -177,11 +177,11 @@
     <div class="padded-top-xl padding-top-xs-min-medium universe craftman">
       <div class="col-xs-12 col-md-4 col-md-offset-2">
         <div>
-          <div class="craftman-presentation three">
+          <div class="craftman-presentation three txt-light">
             <!-- texte de présentation -->
             <p><%= @second_craftman.description %></p>
           </div>
-          <div class="craftman-presentation four">
+          <div class="craftman-presentation four txt-light">
             <!-- suite text de présentation -->
             <%= @second_craftman.second_description %>
           </div>
@@ -221,11 +221,11 @@
       </div>
       <div class="col-xs-12 col-md-6">
         <div class="padded-top-xl padded-top-xl-sm-min">
-          <div class="craftman-presentation one padding-left-xs paddind-top-xs-min-small">
+          <div class="craftman-presentation one padding-left-xs paddind-top-xs-min-small txt-light">
             <!-- texte de présentation -->
             <p><%= @third_craftman.description %></p>
           </div>
-          <div class="left-surlign <%= @universe.code %> craftman-presentation two padding-left-xs">
+          <div class="left-surlign <%= @universe.code %> craftman-presentation two padding-left-xs txt-light">
             <!-- suite text de présentation -->
             <%= @third_craftman.second_description %>
           </div>
