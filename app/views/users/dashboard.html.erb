@@ -164,7 +164,7 @@
 
                       <% @user.bookings.all.each_with_index do |booking, index| %>
                         <%= link_to edit_booking_path(booking) do %>
-                        <div class="dash_item padded-sm quotation-text btn ">
+                        <div class="dash_item padded-sm quotation-text btn "> <!-- J'ai enlevé ici le btn-default -->
                           <div class="row">
 
                             <div class="col-xs-1">
