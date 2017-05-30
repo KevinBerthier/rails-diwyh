@@ -8,21 +8,15 @@
   </div>
 </div>
 
-  <!-- <div class="banner-bk-gray banner-height">
-      <div class="row">
-        <div class="col-xs-10 col-xs-offset-1">
-          <h1 class="padded-top-lg"><%= @workshop.title %></h1>
-        </div>
-      </div>
-  </div> -->
 
+  <!-- Carde blanche de titre de workshop -->
   <div class="information">
     <div class="workshop-card">
       <div class="left">
         <h2 class="roboto"><%= @workshop.title %></h2>
         <div class="txt-light padded-top-xs">by <%= @craftman.first_name %> <%= @craftman.last_name.capitalize %></div>
 
-        <div class="txt-light"> <%= link_to "#{@workshop.universe.name}", universe_path(@workshop.universe), class: "text-uppercase" %> > <%= link_to "#{@workshop.craftman.job.name}", universe_workshops_path(@workshop.universe, anchor: @workshop.craftman.job.name) %> </div>
+        <div class="txt-light"> <%= link_to "#{@workshop.universe.name}", universe_path(@workshop.universe), class: "text-uppercase link-back" %> > <%= link_to "#{@workshop.craftman.job.name}", universe_workshops_path(@workshop.universe, anchor: @workshop.craftman.job.name), class: "link-back" %> </div>
       </div>
       <div class="right">
         <%= link_to "Contact the craftsman", new_workshop_message_path(@workshop), class: "btn btn-default" %>
@@ -156,8 +150,8 @@
 <section id="hero2" class="hero" style="background-image: url(<%= image_path @workshop.universe.middle_gallery.first.fullpath %>);">
   <div class="inner">
     <div class="copy">
-      <h2 class="white">Experiment</h2>
-      <p>You could probably fit in there ;)</p>
+      <h2 class="white roboto">Meet <%= @craftman.first_name %> <%= @craftman.last_name.capitalize %> </h2>
+      <p>Learn with passion</p>
     </div>
   </div>
 </section>
@@ -320,6 +314,7 @@
 
     <!-- Other workshops from this craftsman -->
     <div class="row">
+    <div class="margin-end-page">
       <% @workshop.craftman.workshops.each do |wksp| %>
           <div class="col-xs-12 col-sm-4">
             <div class="card-index">
@@ -363,8 +358,10 @@
           </div>
       <% end %>
     </div>
+    </div>
   </div>
+
 <!-- Fin de container -->
 </div>
 
-
+<div id="white-margin"></div>
