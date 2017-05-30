@@ -61,6 +61,7 @@ wood = Universe.new({
   fourth_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   banner: open_photo("wood_univers.jpg"),
   banner_bottom: open_photo("copeaux.jpg"),
+  collage: open_photo("background_wood.png"),
   top_gallery: open_photo("wood_dentelle.jpg"),
   middle_gallery: [open_photo("wood_workshop.jpg"),open_photo("wood_sciure.jpg")],
   gallery: [open_photo("wood_art.jpg"), open_photo("wood_art.jpg"), open_photo("wood_art.jpg")],
@@ -322,6 +323,7 @@ glass = Universe.new({
   name: "Glass",
   code: "glass",
   banner: open_photo("glass_univers.jpg"),
+  collage: open_photo("background_glass.png"),
 })
 glass.save!
 puts 'Glass universe created...'
@@ -332,6 +334,7 @@ metal = Universe.new({
   name: "Metal",
   code: "metal",
   banner: open_photo("metal_univers.jpg"),
+  collage: open_photo("background_metal.png"),
 })
 metal.save!
 puts 'Metal universe created...'
@@ -342,6 +345,7 @@ clay = Universe.new({
   name: "Clay",
   code: "clay",
   banner: open_photo("clay_univers.jpg"),
+  collage: open_photo("background_clay.png"),
 })
 clay.save!
 puts 'Clay universe created...'
@@ -352,6 +356,7 @@ stone = Universe.new({
   name: "Stone",
   code: "stone",
   banner: open_photo("stone_univers.jpg"),
+  collage: open_photo("background_stone.png"),
 })
 stone.save!
 puts 'Stone universe created...'
@@ -362,6 +367,7 @@ fabric = Universe.new({
   name: "Fabric",
   code: "fabric",
   banner: open_photo("fabric_univers.jpg"),
+  collage: open_photo("background_fabric.png"),
 })
 fabric.save!
 puts 'Fabric universe created...'
@@ -372,6 +378,7 @@ leather = Universe.new({
   name: "Leather",
   code: "leather",
   banner: open_photo("leather_univers.jpg"),
+  collage: open_photo("background_stone.png"),
 })
 leather.save!
 puts 'Leather universe created...'

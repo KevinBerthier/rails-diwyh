@@ -10,6 +10,7 @@ class Universe < ApplicationRecord
 
   has_attachment :banner
   has_attachment :banner_bottom
+  has_attachment :collage
   has_attachment :top_gallery
   has_attachments :middle_gallery, maximum: 2
   has_attachments :gallery, maximum: 3
