@@ -23,7 +23,7 @@
           <div class="col-xs-offset-3 col-lg-offset-3">
             <div class="details-photo universe">
               <!-- photo -->
-              <%= image_tag @universe.banner_bottom.fullpath %>
+              <%= cl_image_tag @universe.banner_bottom.path, :gravity=>"xy_center", :height=>240, :width=>470, :x=>200, :y=>100, :crop=>"crop" %>
             </div>
           </div>
         </div>
@@ -46,7 +46,7 @@
       </div>
       <div class="col-xs-12 col-sm-offset-2 col-md-4 col-md-offset-2">
         <div class="universe <%= @universe.code %> border margin-lg">
-          <%= image_tag @universe.middle_gallery.last.fullpath, height: 370, width: 300, gravity: :center, crop: :fit %>
+          <%= cl_image_tag @universe.middle_gallery.last.path, :gravity=>"xy_center", :height=>400, :width=>300, :x=>250, :y=>200, :crop=>"crop" %>
         </div>
       </div>
 
@@ -93,12 +93,13 @@
 <!-- JOBS -->
 <div class="container-fluid">
   <div class="row">
-    <div class="universe <%= @universe.code %> job padded">
-      <div class="col-xs-11 col-xs-offset-1">
-        <div class="universe <%= @universe.code %> surligned">
+    <div class="universe <%= @universe.code %> job">
+      <div class="col-xs-10 col-xs-offset-2">
+        <div class="color-line-title-<%= @universe.code %> padded-top-lg">
+          <hr>
         </div>
-        <h2><%= @universe.name %></h2>
-        <h2 class="padding-left-xl">jobs</h2>
+        <h2 class="padded-bottom-lg"><%= @universe.name %> jobs</h2>
+        <!-- <h2 class="padding-left-xl">jobs</h2> -->
       </div>
     </div>
   </div>
@@ -111,8 +112,7 @@
         <div class="col-xs-12 col-sm-4">
           <!-- ajouter l'ancre -->
           <%= link_to universe_workshops_path(@universe, anchor: job.name) do  %>
-            <div class="card-job">
-              <%= image_tag job.image.fullpath, height: 370, width: 300, crop: :fill %>
+            <div class="card-job" style="background-image: url(<%= job_card_background_path(job) %>">
               <h3 class="text-center">
                 <%= job.name %>
               </h3>
@@ -127,12 +127,13 @@
 <!-- CRAFTMEN -->
 <div class="container-fluid">
   <div class="row">
-    <div class="col-xs-11 col-xs-offset-1">
-      <div class="universe <%= @universe.code %> job padded">
-        <div class="universe <%= @universe.code %> surligned">
+    <div class="col-xs-10 col-xs-offset-2">
+      <div class="universe <%= @universe.code %>">
+        <div class="color-line-title-<%= @universe.code %> padded-top-lg">
+          <hr>
         </div>
-        <h2>Meet ours</h2>
-        <h2 class="padding-left-xl">craftmen</h2>
+        <h2 class="padded-bottom-lg">Meet ours craftsman</h2>
+        <!-- <h2 class="padding-left-xl">craftmen</h2> -->
       </div>
     </div>
   </div>
@@ -141,26 +142,27 @@
 <!-- Artisan #1 -->
 <div class="container-fluid">
   <div class="row">
-    <div class="padded universe craftman">
-      <div class="col-xs-6 col-md-3 col-md-offset-1  ">
+    <div class="padded-top-md universe craftman">
+      <div class="col-xs-12 col-md-4 col-md-offset-2  ">
         <div class="presentation-pic">
-          <div class="name">
+          <div class="name-one">
             <!-- introduire en ruby first_name et last_name du craftman -->
-            <h3><%= @first_craftman.first_name %> <%= @first_craftman.last_name %></h3>
+            <h3><%= @first_craftman.first_name %></h3>
+            <h3><%= @first_craftman.last_name %></h3>
           </div>
-          <div>
+          <div class="picture-one">
             <!-- photo du craftman -->
-            <%= cl_image_tag craftman_avatar(@first_craftman), width: 220, height: 220, crop: :fill %>
+            <%= cl_image_tag craftman_avatar(@first_craftman), width: 220, height: 220, crop: :full %>
           </div>
         </div>
       </div>
-      <div class="col-xs-6 col-md-8">
-        <div>
-          <div class="craftman-presentation one">
+      <div class="col-xs-12 col-md-6">
+        <div class="padded-top-xl padded-top-xl-sm-min">
+          <div class="craftman-presentation one padding-left-xs">
             <!-- description -->
             <p><%= @first_craftman.description %></p>
           </div>
-          <div class="left-surlign <%= @universe.code %> craftman-presentation two">
+          <div class="left-surlign <%= @universe.code %> craftman-presentation two padding-left-xs">
             <!-- suite text de la description -->
             <%= @first_craftman.second_description %>
           </div>
@@ -172,8 +174,8 @@
   <!-- Artisan #2 -->
 <div class="container-fluid">
   <div class="row">
-    <div class="padded universe craftman">
-      <div class="col-xs-6 col-md-4 col-md-offset-1">
+    <div class="padded-top-xl padding-top-xs-min-medium universe craftman">
+      <div class="col-xs-12 col-md-4 col-md-offset-2">
         <div>
           <div class="craftman-presentation three">
             <!-- texte de présentation -->
@@ -185,15 +187,16 @@
           </div>
         </div>
       </div>
-      <div class="col-xs-6 col-md-6">
+      <div class="col-xs-12 col-md-5 col-md-offset-1">
         <div class="presentation-pic">
-          <div>
+          <div class="picture-two">
             <!-- photo du craftman -->
             <%= cl_image_tag craftman_avatar(@second_craftman), width: 220, height: 220, crop: :fill %>
           </div>
-          <div class=" name bottom-surlign <%= @universe.code %>">
+          <div class=" name-two bottom-surlign <%= @universe.code %>">
             <!-- introduire en ruby le nom du craftman -->
-            <h3><%= @second_craftman.first_name %> <%= @second_craftman.last_name %></h3>
+            <h3><%= @second_craftman.first_name %></h3>
+            <h3><%= @second_craftman.last_name %></h3>
           </div>
         </div>
       </div>
@@ -202,26 +205,27 @@
   <!-- Artisan #3 -->
 <div class="container-fluid">
   <div class="row">
-    <div class="padded universe craftman">
-      <div class="col-xs-6 col-md-3 col-md-offset-1  ">
+    <div class="padded-top-ld universe craftman padding-top-xs-min">
+      <div class="col-xs-12 col-md-4 col-md-offset-2">
         <div class="presentation-pic">
-          <div class="name">
+          <div class="name-three">
             <!-- introduire en ruby le nom du craftman -->
-            <h3><%= @third_craftman.first_name %> <%= @third_craftman.last_name %></h3>
+            <h3><%= @third_craftman.first_name %></h3>
+            <h3><%= @third_craftman.last_name %></h3>
           </div>
-          <div>
+          <div class="picture-one">
             <!-- photo du craftman -->
-            <%= cl_image_tag craftman_avatar(@third_craftman), width: 220, height: 220, crop: :fill %>
+            <%= cl_image_tag craftman_avatar(@third_craftman), width: 240, height: 240, crop: :fill %>
           </div>
         </div>
       </div>
-      <div class="col-xs-6 col-md-8">
-        <div>
-          <div class="craftman-presentation one">
+      <div class="col-xs-12 col-md-6">
+        <div class="padded-top-xl padded-top-xl-sm-min">
+          <div class="craftman-presentation one padding-left-xs paddind-top-xs-min-small">
             <!-- texte de présentation -->
             <p><%= @third_craftman.description %></p>
           </div>
-          <div class="left-surlign <%= @universe.code %> craftman-presentation two">
+          <div class="left-surlign <%= @universe.code %> craftman-presentation two padding-left-xs">
             <!-- suite text de présentation -->
             <%= @third_craftman.second_description %>
           </div>

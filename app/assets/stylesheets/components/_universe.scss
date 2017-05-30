@@ -25,6 +25,7 @@
   img {
     position: absolute;
     width: 50%;
+    height: 60%;
     top: 350px;
   }
 }
@@ -42,7 +43,7 @@
 
 .universe.wood.border {
   position: relative;
-  height: 370px;
+  height: 400px;
   width: 300px;
   border: 3px solid $wood;
   img {
@@ -65,22 +66,9 @@
   padding-top: 2em;
 }
 
-// TRAIT DE COULEUR
-.universe.wood.surligned {
-  border-top: 6px solid $wood;
-  width: 170px; // dépends de la taille de la police
-}
-
+// universe jobs
 .universe.wood.job {
-  height: 270px;
-}
-
-.universe.wood h2 {
-}
-
-.wood.two {
-  position: absolute;
-  left: 80px;
+  height: 165px;
 }
 
 // JOBS
@@ -94,29 +82,19 @@
 }
 
 .card-job {
-  img {
-    width: 100%;
-  }
-
+    width: 440px;
+    height: 370px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
   h3 {
     color: white;
-    position: absolute;
     top: 150px;
-    width: 250px;
-    padding-left: 25%;
   }
 }
 
 // CRAFTMEN
-// .universe.craftman {
-//   position: relative;
-// }
-// .presentation-pic {
-//   position: absolute;
-//   left: 150px;
-
-// }
-
 
 .left-surlign.wood {
   border-left: 6px solid $wood;
@@ -130,22 +108,34 @@
   height: 110px;
   width: 350px;
 }
-.craftman-presentation.one {
-  // padding-left: 20px;
+
+.name-one {
+  // width: 150px;
+  position: relative;
+  z-index: 2;
+  top: 25px;
+  left: 66px;
 }
 
-.craftman-presentation.two {
-  // padding-left: 20px;
+.picture-one img {
+  position: absolute;
 }
 
-.craftman-presentation.three {
 
+.name-two {
+  position:relative;
+  top: 120px;
+  left: 175px;
 }
-.craftman-presentation.four {
+.picture-two {
+  position: absolute;
+}
 
-}
-.name h3 {
-  width: 150px;
+.name-three {
+  position: relative;
+  top: 150px;
+  right: 50px;
+  z-index: 2;
 }
 
 
@@ -156,3 +146,20 @@
     bottom: -200px;
   }
 }
+
+@media (max-width: $screen-xs-max) {
+  .padded-top-xl-sm-min {
+    padding-top: 240px;
+  }
+  .padding-top-xs-min {
+    padding-top: 120px;
+  }
+  .padding-top-xs-min-medium {
+    padding-top: 90px;
+  }
+  .paddind-top-xs-min-small {
+    padding-top: 20px;
+  }
+}
+
+
