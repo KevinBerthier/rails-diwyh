@@ -94,14 +94,24 @@ font-size: 16px;
 text-decoration: none;
 }
 .image-card {
-  position: relative;
   width: 100%;
+  position: relative;
 }
-.text-in-card {
- position: absolute;
- left: 100px;
- top: 60px;
- color: white;
+.flex-card-1 {
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  left: 0%;
+  width: 100%;
+  color: white;
+}
+.flex-card-2 {
+  position: absolute;
+  text-align: center;
+  top: 55%;
+  left: 0%;
+  width: 100%;
+  color: white;
 }
 .no-padding {
   padding: 0;
