@@ -9,7 +9,7 @@
 
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-      <div class="border-form form-height-width-lg background-color">
+      <div class="border-form form-height-width-lg" style="background-size: cover !important;background-image: url('<%= image_url "glass.jpg" %>');">
           <div class="background-form top-left-form border-color">
             <%= simple_form_for @craftman, url: craftmen_edit_profile_path do |f| %>
               <%= f.error_notification %>
