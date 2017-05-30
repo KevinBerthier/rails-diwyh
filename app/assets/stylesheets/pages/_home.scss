@@ -2,3 +2,82 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+.grid {
+  padding: 20px 20px 100px 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+}
+.grid li {
+  display: inline-block;
+  width: 480px;
+  margin: 0;
+  padding: 20px;
+  // text-align: left;
+  position: relative;
+}
+.grid figure {
+  margin: 0;
+  position: relative;
+}
+.grid figure h2 {
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  top: 40%;
+  left: 37%;
+  z-index: 9000;
+}
+.grid figure img {
+  max-width: 100%;
+  display: block;
+  position: relative;
+}
+.grid figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  //padding: 20px;
+  //background: $gray;
+  background-size: cover;
+  color: $gray;
+}
+.cs-style-5 figure img {
+  z-index: 10;
+  transition: transform 0.4s;
+}
+.no-touch .cs-style-5 figure:hover img,
+.cs-style-5 figure.cs-hover img {
+  transform: scale(0.4);
+}
+.cs-style-5 figcaption {
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transform: scale(0.7);
+  // backface-visibility: hidden;
+  transition: transform 0.4s, opacity 0.4s;
+  text-decoration: none;
+  font-family: Asul;
+  font-size: 40px;
+}
+.no-touch .cs-style-5 figure:hover figcaption,
+.cs-style-5 figure.cs-hover figcaption {
+  transform: scale(1);
+  opacity: 1;
+}
+@media screen and (max-width: 31.5em) {
+  .grid {
+    padding: 10px 10px 100px 10px;
+  }
+  .grid li {
+    width: 100%;
+    min-width: 300px;
+  }
+}
+// .cs-style-5 figure a {
+//   position: absolute;
+//   bottom: 20px;
+//   right: 20px;
+// }

@@ -1,19 +1,26 @@
 <br><br><br>
 
 
-<div class="container-fluid">
-  <div class=row >
-    <div class="col-xs-10 col-xs-offset-1">
 
-    <% @universes.each do |universe| %>
-      <div class="col-xs-12 col-sm-6">
-        <%= link_to universe_path(universe) do  %>
-          <div class="card-universe" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 40%), url('<%= cl_image_path universe.banner.fullpath height: 275, crop: :fit %>');">
-              <p class="card-universe-title text-uppercase white"><%= universe.name %></p>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
-    </div>
-  </div>
+<div class="row">
+
+    <ul class="grid cs-style-5">
+      <% @universes.each do |universe| %>
+
+        <li>
+          <%= link_to universe_path(universe) do  %>
+            <figure>
+              <div>
+                <%= cl_image_tag universe.banner.fullpath, height: 300, width: 480, crop: :crop %>
+                <h2> <%= universe.name %> </h2>
+              </div>
+              <figcaption style="background-image: url('<%=image_path "background_stone.png"%>')";>
+              </figcaption>
+            </figure>
+          <% end %>
+        </li>
+
+      <% end %>
+    </ul>
+
 </div>
