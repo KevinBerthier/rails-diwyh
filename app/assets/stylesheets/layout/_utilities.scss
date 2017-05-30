@@ -73,6 +73,13 @@
   margin-bottom: 40px;
 }
 
+.margin-top-xs {
+  margin-top: 17px;
+}
+
+.margin-top-sm {
+  margin-top: 22px;
+}
 .no-margin-top {
   margin-top: 0;
 }
@@ -168,4 +175,23 @@
   background: #3b5998;
 }
 
+// Height & Width formulaires
+.form-height-width-small {
+  height: auto;
+  width: 400px;
+}
 
+.form-height-width-md {
+  height: 480px;
+  width: 430px;
+}
+
+.form-height-width-xs {
+  height: 420px;
+  width: 440px;
+}
+
+.form-height-width-lg {
+  height: auto;
+  width: 470px;
+}

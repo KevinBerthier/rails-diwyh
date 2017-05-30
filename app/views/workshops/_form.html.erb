@@ -1,19 +1,29 @@
-<div class="padded-md" style="background-image: linear-gradient(-225deg, rgba(0, 101, 168, 0.6) 0%, rgba(55, 101, 132, 0.4) 80%);">
+<div class="padded-md">
   <div class="container">
+
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-        <div class="background-form">
-          <h1 class="text-center">Create a workshop</h1>
-          <%= simple_form_for(@workshop) do |f| %>
-            <%= f.error_notification %>
+        <h2 class="text-center txt-bold">Create a workshop</h2>
+      </div>
+    </div>
 
-            <%= f.input :title %>
-            <%= f.input :description %>
-            <%= f.input :price %>
-            <%= f.input :photos, as: :attachinary %>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-4">
+        <div class="border-form margin-top-sm form-height-width-xs background-metal">
+          <div class="background-form top-right-form border-metal">
+            <%= simple_form_for(@workshop) do |f| %>
+              <%= f.error_notification %>
 
-            <%= f.button :submit %>
-          <% end %>
+              <%= f.input :title %>
+              <%= f.input :description %>
+              <%= f.input :price %>
+              <%= f.input :photos, as: :attachinary %>
+
+              <div class="form-actions text-center">
+              <%= f.button :submit %>
+              </div>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>

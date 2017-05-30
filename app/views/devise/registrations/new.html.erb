@@ -1,24 +1,33 @@
-<div class="banner-form" style="background-image: linear-gradient(-225deg, rgba(0, 101, 168, 0.6) 0%, rgba(55, 101, 132, 0.4) 80%);">
+<div class="banner-form">
   <div class="container">
+
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-        <div class="background-form">
-          <h2 class="txt-bold text-center">Create an account</h2>
-          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-            <%= f.error_notification %>
+        <h2 class="txt-bold text-center">Create an account</h2>
+      </div>
+    </div>
 
-            <div class="form-inputs">
-              <%= f.input :email, required: true, autofocus: true %>
-              <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-              <%= f.input :password_confirmation, required: true %>
-            </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-4">
+        <div class="border-form margin-top-xs form-height-width-md background-glass">
+          <div class="background-form bottom-left-form border-glass">
 
-            <div class="form-actions text-center">
-              <%= f.button :submit, "Sign up" %>
+            <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+              <%= f.error_notification %>
+
+              <div class="form-inputs">
+                <%= f.input :email, required: true, autofocus: true %>
+                <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+                <%= f.input :password_confirmation, required: true %>
+              </div>
+
+              <div class="form-actions text-center">
+                <%= f.button :submit, "Sign up" %>
+              </div>
+            <% end %>
+            <div class="padded text-center">
+             <%= render "devise/shared/links" %>
             </div>
-          <% end %>
-          <div class="padded text-center">
-           <%= render "devise/shared/links" %>
           </div>
         </div>
       </div>
