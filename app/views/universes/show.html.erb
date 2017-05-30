@@ -20,10 +20,10 @@
         </div>
 
         <div class="row">
-          <div class="col-xs-offset-3 col-lg-offset-3">
-            <div class="details-photo universe">
+          <div class="col-xs-12">
+            <div class="universe adaptation">
               <!-- photo -->
-              <%= cl_image_tag @universe.banner_bottom.path, :gravity=>"xy_center", :height=>240, :width=>470, :x=>200, :y=>100, :crop=>"crop" %>
+              <%= cl_image_tag @universe.banner_bottom.path, :height=>300, :width=>500, crop: :crop %>
             </div>
           </div>
         </div>
