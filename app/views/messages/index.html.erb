@@ -26,7 +26,9 @@
 
       <!-- chat -->
       <div>
-        <%= render "messages/messages" %>
+        <div id="chat_window">
+          <%= render "messages/messages", messages: @messages %>
+        </div>
         <div class="bottom_wrapper clearfix">
           <%= render 'messages/form', workshop: @workshop, message: @message %>
         </div>
