@@ -8,6 +8,10 @@
   padding: 0px 30px;
   align-items: center;
   justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  z-index: 9999999;
+  top: 0px;
 }
 
 /* Optional class to fix the navbar on top */
@@ -46,7 +50,7 @@
   font-size: 14px;
 }
 .navbar-wagon-link:hover {
-  color: #da552f;
+  color: #3d3b3b;
   text-decoration: none;
 }
 

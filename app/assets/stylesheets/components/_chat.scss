@@ -60,6 +60,8 @@
   margin-bottom: 20px;
   transition: all 0.5s linear;
   opacity: 0;
+  max-width: 80%;
+  min-width: 51%;
 }
 .messages .message.left .avatar {
   background-color: white;
@@ -111,6 +113,7 @@
   // border-radius: 6px;
   width: calc(100% - 85px);
   min-width: 100px;
+  max-width: 100%;
   position: relative;
 }
 .messages .message .text_wrapper::after, .messages .message .text_wrapper:before {
