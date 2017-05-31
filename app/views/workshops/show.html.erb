@@ -159,7 +159,7 @@
 
 
 <!-- PHOTO ATELIER -->
-<section id="hero2" class="hero" style="background-image: url(<%= image_path @workshop.universe.middle_gallery.first.fullpath %>);">
+<section id="hero2" class="hero" style="background-image: url('<%= cl_image_path @workshop.photos.first.path %>');">
   <div class="inner">
     <div class="copy">
       <h2 class="white roboto">Meet <%= @craftman.first_name %> <%= @craftman.last_name.capitalize %> </h2>
@@ -331,7 +331,7 @@
           <div class="col-xs-12 col-sm-4">
             <div class="card-index">
               <div class="card-img">
-                <%= cl_image_tag workshop_avatar(wksp), height: 150, width: 315, crop: :fill %>
+                <%= cl_image_tag workshop_pic(wksp), height: 150, width: 315, crop: :fill %>
                 <div class="col-xs-12 text-center craftman-name">
                 </div>
               </div>

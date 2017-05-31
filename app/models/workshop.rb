@@ -15,7 +15,7 @@ class Workshop < ApplicationRecord
   validates :title, presence: true
   validates :description, presence: true
   validates :price, presence: true
-  validates :artisan_pic, presence: true
+  validates :photos, presence: true
 
 
   def universe
