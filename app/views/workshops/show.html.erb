@@ -147,8 +147,7 @@
 
 
 <!-- PHOTO ATELIER -->
-<!-- A MODIFIER (l'image ne veut pas s'afficher) -->
-<section id="hero2" class="hero" style="background-image: url(<%= cl_image_tag @workshop.photos %>);">
+<section id="hero2" class="hero" style="background-image: url('<%= cl_image_path @workshop.photos.first.path %>');">
   <div class="inner">
     <div class="copy">
       <h2 class="white roboto">Meet <%= @craftman.first_name %> <%= @craftman.last_name.capitalize %> </h2>
