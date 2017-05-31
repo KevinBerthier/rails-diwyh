@@ -147,7 +147,8 @@
 
 
 <!-- PHOTO ATELIER -->
-<section id="hero2" class="hero" style="background-image: url(<%= image_path @workshop.universe.middle_gallery.first.fullpath %>);">
+<!-- A MODIFIER (l'image ne veut pas s'afficher) -->
+<section id="hero2" class="hero" style="background-image: url(<%= cl_image_tag @workshop.photos %>);">
   <div class="inner">
     <div class="copy">
       <h2 class="white roboto">Meet <%= @craftman.first_name %> <%= @craftman.last_name.capitalize %> </h2>
@@ -212,7 +213,8 @@
           <p class="txt-light"> <%= @workshop.craftman.description %> </p>
         </div>
         <div class="col-xs-2 col-xs-offset-1">
-          <%= image_tag @workshop.universe.artisan_profile.fullpath, height: 400, width: 280, crop: :fill%>
+        <!-- artisan photo -->
+          <%= image_tag @workshop.craftman.avatar.fullpath, height: 400, width: 280, crop: :fill%>
         </div>
       </div>
 
@@ -319,7 +321,7 @@
           <div class="col-xs-12 col-sm-4">
             <div class="card-index">
               <div class="card-img">
-                <%= cl_image_tag workshop_avatar(wksp), height: 150, width: 315, crop: :fill %>
+                <%= cl_image_tag workshop_pic(wksp), height: 150, width: 315, crop: :fill %>
                 <div class="col-xs-12 text-center craftman-name">
                 </div>
               </div>

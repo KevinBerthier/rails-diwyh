@@ -1,12 +1,34 @@
 <br><br><br>
 
+<div class="container-fluid">
+  <div class="row">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="col-md-2">
+          <div class="vertical-line1" id="line-center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <div class="intro" style="margin-top: 200px; margin-bottom: 40px;">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h1 class="text-center" style="line-height:1em";>
+          <span class="text-uppercase backcolor">Reconnect</span>
+          <span class="text-uppercase backcolor">with your</span>
+          <span class="text-uppercase backcolor">hands</span>
+        </h1>
+      </div>
+    </div>
+  </div>
 
+</div>
+
+<!-- Cards universes -->
 <div class="row">
-
     <ul class="grid cs-style-5">
       <% @universes.each do |universe| %>
-
         <li>
           <%= link_to universe_path(universe) do  %>
             <figure>
@@ -19,8 +41,33 @@
             </figure>
           <% end %>
         </li>
-
       <% end %>
     </ul>
-
 </div>
+
+<!-- map de ouf -->
+<div id="map" style="width: 100%; height: 600px;"></div>
+
+<% content_for(:after_js) do %>
+  <script>
+    $(document).ready(function() {
+
+      var handler = Gmaps.build('Google');
+      handler.buildMap({
+        provider: {
+          styles: Diwyh.map_styles
+          // possibility to pass other gmap options here
+        },
+        internal: { id: 'map' } }, function() {
+        markers = handler.addMarkers(<%= raw @hash.to_json %>);
+        handler.bounds.extendWith(markers);
+        handler.fitMapToBounds();
+        if (markers.length == 0) {
+          handler.getMap().setZoom(2);
+        } else if (markers.length == 1) {
+          handler.getMap().setZoom(14);
+        }
+      });
+    });
+  </script>
+<% end %>

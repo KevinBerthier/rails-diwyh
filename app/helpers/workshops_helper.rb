@@ -1,7 +1,7 @@
 module WorkshopsHelper
   include ActionView::Helpers::AssetUrlHelper
 
-  def workshop_avatar(wksp)
+  def workshop_pic(wksp)
     if wksp.photos.present?
       image_path wksp.photos.first.fullpath
     else

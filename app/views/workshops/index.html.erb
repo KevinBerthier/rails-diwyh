@@ -20,7 +20,8 @@
         <div class="col-xs-12 col-sm-4">
           <div class="card-index">
             <div class="card-img">
-              <%= cl_image_tag workshop_avatar(wksp), height: 150, width: 358, crop: :fill, style: "background: rgba(0.3,36,61,0.9)" %>
+            <!-- workshop_pic -->
+              <%= cl_image_tag workshop_pic(wksp), height: 150, width: 358, crop: :fill, style: "background: rgba(0.3,36,61,0.9)" %>
               <div class="col-xs-12 text-center craftman-name">
                 <p class="roboto txt-gras white"><%= wksp.craftman.first_name.capitalize %></p>
                 <p class="roboto txt-gras white"><%= wksp.craftman.last_name.capitalize %></p>
@@ -65,31 +66,6 @@
 </div>
 
 
-<!-- map de ouf -->
-<div id="map" style="width: 100%; height: 600px;"></div>
 
-<% content_for(:after_js) do %>
-  <script>
-    $(document).ready(function() {
-
-      var handler = Gmaps.build('Google');
-      handler.buildMap({
-        provider: {
-          styles: Diwyh.map_styles
-          // possibility to pass other gmap options here
-        },
-        internal: { id: 'map' } }, function() {
-        markers = handler.addMarkers(<%= raw @hash.to_json %>);
-        handler.bounds.extendWith(markers);
-        handler.fitMapToBounds();
-        if (markers.length == 0) {
-          handler.getMap().setZoom(2);
-        } else if (markers.length == 1) {
-          handler.getMap().setZoom(14);
-        }
-      });
-    });
-  </script>
-<% end %>
 
 
