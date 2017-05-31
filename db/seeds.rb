@@ -378,7 +378,7 @@ leather = Universe.new({
   name: "Leather",
   code: "leather",
   banner: open_photo("leather_univers.jpg"),
-  collage: open_photo("background_stone.png"),
+  collage: open_photo("background_leather.png"),
 })
 leather.save!
 puts 'Leather universe created...'
