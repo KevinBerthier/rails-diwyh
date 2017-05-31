@@ -6,7 +6,7 @@ class MessagesController < ApplicationController
 
   def index
     @workshop = Workshop.friendly.find(params[:workshop_id])
-    @messages = current_user.messages.where(workshop_id: @workshop.id)
+    @messages = current_user.messages.where(workshop_id: @workshop.id).order(created_at: :asc)
     @message = Message.new
 
   end

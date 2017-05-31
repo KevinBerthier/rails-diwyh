@@ -1,17 +1,15 @@
 
 <!-- NE SURTOUT PAS CHANGER LES CLASS -->
 <div class="container">
+  <h2 class="text-center"><%= @workshop.title %> with <%= @workshop.craftman.first_name %> <%= @workshop.craftman.last_name %></h2>
+
+  <%= link_to "<< dashboard", dashboard_path, class: "btn btn-default back-button" %>
   <div class="row">
     <div class="chat_window col-xs-12 col-md-10 col-md-offset-1">
-      <ul class="messages" id="messages">
-        <% @messages.each do |message| %>
-          <%= render "messages/show", message: message %>
-        <% end %>
-      </ul>
+      <%= render "messages/messages" %>
       <div class="bottom_wrapper clearfix">
         <%= render 'messages/form', workshop: @workshop, message: @message %>
       </div>
     </div>
   </div>
 </div>
-

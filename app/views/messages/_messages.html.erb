@@ -1,0 +1,5 @@
+      <ul class="messages" id="messages">
+        <% @messages.each do |message| %>
+          <%= render "messages/show", message: message %>
+        <% end %>
+      </ul>

@@ -9,19 +9,20 @@
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   text-decoration: none;
   color: $gray;
-}
-.left {
-  padding-left: 60px;
-  padding-bottom: 30px;
-  display: inline-block;
-  width: 60%;
-}
-.right {
-  display: inline-block;
-  width: 38%;
-  padding-left: 50px;
-  padding-top: 60px;
-  float: right;
+
+  .left {
+    padding-left: 60px;
+    padding-bottom: 30px;
+    display: inline-block;
+    width: 60%;
+  }
+  .right {
+    display: inline-block;
+    width: 38%;
+    padding-left: 50px;
+    padding-top: 60px;
+    float: right;
+  }
 }
 
 // Home
