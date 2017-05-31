@@ -1,16 +1,20 @@
-<div class="padded-md" style="background-image: linear-gradient(-225deg, rgba(0, 101, 168, 0.6) 0%, rgba(55, 101, 132, 0.4) 80%);">
+<div class="padded-md ">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-        <div class="background-form">
-          <h1 class="text-center">New Message</h1>
+        <div class="background-form chat_window">
+          <h3 class="text-center">New Message</h3>
+          <h4 class="text-center">For the workshop:
+          <br>"<%= @workshop.title %>"</h4>
           <%= simple_form_for [@workshop, @message], url: workshop_create_first_message_path(@workshop, current_user) do |f| %>
             <%= f.error_notification %>
             <%= f.input :date_checkin, as: :string, input_html:{type: "date"} %>
             <%= f.input :date_checkout, as: :string, input_html:{type: "date"} %>
             <%= f.input :content %>
 
-            <%= f.button :submit, class: "btn btn-default btn-block" %>
+            <div class="text-center">
+              <%= f.button :submit, "Contact", class: "btn btn-message" %>
+            </div>
           <% end %>
         </div>
       </div>

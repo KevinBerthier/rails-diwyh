@@ -193,3 +193,23 @@
 .new-booking {
   position: absolute;
 }
+
+.btn-message {
+  width: 100px;
+  height: 40px;
+  border-radius: 2px;
+  background-color: $gold1;
+  border: none;
+  color: $gold2;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  text-align: center;
+}
+.btn-message:hover {
+  background-color: rgba(#dfbe6a, .7);
+  color: rgba(#926f34, .6);
+}
+
+.chat_window h4 {
+  line-height: 27px;
+}
