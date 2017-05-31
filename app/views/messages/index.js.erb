@@ -3,18 +3,17 @@
   $('#messages').html("<%= j render 'messages/messages',messages: @messages %>");
 <% else %>
   // Create a paragraph for the new message. But hide it.
-  var messages = $("<%= j render 'messages/messages', messages: @messages %>").hide();
+  var messages = $("<%= j render 'messages/messages', messages: @messages %>").css("display","none");
   // Add it to the DOM, at the end of the existing messages. It's still hidden.
 
-  var d = $('#chat_window');
-  d.animate({ scrollTop: d.prop("scrollHeight")}, 1000);
 
   $('#chat_window').empty();
-  $('#chat_window').prepend(messages);
-  // Show the new message with an animation!
-  messages.show();
+  $('#chat_window').append(messages);
+  messages.css("display","block");
 
-
+  var d = $('#messages');
+  // d.animate({ scrollTop: d.prop("scrollHeight")}, 0);
+  d.scrollTop(d.prop("scrollHeight"));
 
   // Reset the form
 //   $('#new_message').html("<%= j render 'messages/form', workshop: @workshop, message: Message.new %>");
