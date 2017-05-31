@@ -10,9 +10,9 @@
         <li>
           <%= link_to universe_path(universe) do  %>
             <figure>
-              <div>
+              <div class="front-image">
                 <%= cl_image_tag universe.banner.fullpath, height: 300, width: 480, crop: :crop %>
-                <h2> <%= universe.name %> </h2>
+                <h2 class="text-uppercase"> <%= universe.name %> </h2>
               </div>
               <figcaption style="background-image: url('<%= cl_image_path universe.collage.path %>')";>
               </figcaption>
