@@ -19,7 +19,7 @@
         <div class="txt-light"> <%= link_to "#{@workshop.universe.name}", universe_path(@workshop.universe), class: "text-uppercase link-back" %> > <%= link_to "#{@workshop.craftman.job.name}", universe_workshops_path(@workshop.universe, anchor: @workshop.craftman.job.name), class: "link-back" %> </div>
       </div>
       <div class="right">
-        <%= link_to "Contact the craftsman", new_workshop_message_path(@workshop), class: "btn btn-default" %>
+        <%= link_to "Contact the craftsman", new_workshop_message_path(@workshop), class: "btn btn-black" %>
       </div>
     </div>
   </div>
@@ -351,7 +351,7 @@
                   </div>
                 </div>
                 <div class="text-center card-index-button">
-                  <%= link_to "DETAILS", workshop_path(wksp), class: "btn btn-lg btn-default" %>
+                  <%= link_to "DETAILS", workshop_path(wksp), class: "btn btn-lg btn-black" %>
                 </div>
               </div>
             </div>
