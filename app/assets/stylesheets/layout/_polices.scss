@@ -63,6 +63,10 @@ h5 {
 }
 .txt-light {
   font-weight: 300;
+  a {
+    text-decoration: none;
+    color: $gray;
+  }
 }
 .txt-regular {
   font-weight: 400;

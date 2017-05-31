@@ -28,7 +28,7 @@ Rails.application.routes.draw do
     post '/messages/create', to: 'messages#create_first', as: :create_first_message
 
     post '/users/:user_id/bookings/create', to: 'bookings#create', as: :create_user_booking
-    resources :messages, only: %i(new create)
+    resources :messages, only: %i(new create index)
   end
 
   resources :bookings, only: %i(index show edit destroy)

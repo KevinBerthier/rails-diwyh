@@ -1,0 +1,65 @@
+.background-form {
+  color: $gray;
+  display:flex;
+  flex-direction: column;
+  padding:30px;
+  margin: 0 auto;
+  width:100%;
+  height:100%;
+  font-size:em(14px);
+  z-index: 900;
+  position: relative;
+  background: white;
+  // background: rgba(0, 0, 0, 0.25);
+}
+
+.top-left-form {
+  top: 20px;
+  left: 20px;
+}
+.bottom-left-form {
+  bottom: 20px;
+  left: 20px;
+}
+.top-right-form {
+  top: 20px;
+  right: 20px;
+}
+
+.border-form {
+  position: absolute;
+  // border: 3px solid #EAEBEF;
+  z-index: 600;
+}
+
+// .background-marbre {
+//   background-size: cover !important;
+//   background-image: url('marbre.jpg');
+// }
+.border-marbre {
+  border: 2px solid #EAEBEF;
+}
+
+// .background-glass {
+//   background-size: cover;
+//   background-image: url('glass_univers.jpg');
+// }
+.border-glass {
+  border: 2px solid #C1D1E1;
+}
+
+// .background-metal {
+//   background-size: cover;
+//   background-image: url('metal_univers.jpg');
+// }
+.border-metal {
+  border: 2px solid #8A846C;
+}
+
+// .background-color {
+//   background-size: cover;
+//   background-image: url('glass.jpg');
+// }
+.border-color {
+  border: 2px solid #CE9FC2;
+}
