@@ -2,6 +2,7 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+
 .grid {
   padding: 20px 20px 100px 20px;
   max-width: 1300px;
@@ -20,14 +21,22 @@
 .grid figure {
   margin: 0;
   position: relative;
+  background: linear-gradient(182deg, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.32));
+}
+.grid figure .front-image {
+  background: linear-gradient(182deg, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.32));
 }
 .grid figure h2 {
   position: absolute;
   text-align: center;
   vertical-align: middle;
   top: 40%;
-  left: 37%;
+  left: 35%;
   z-index: 9000;
+  // border: 3px double white;
+  // padding: 100px;
+  color: white;
+
 }
 .grid figure img {
   max-width: 100%;
