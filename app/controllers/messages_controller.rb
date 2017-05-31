@@ -8,6 +8,10 @@ class MessagesController < ApplicationController
     @workshop = Workshop.friendly.find(params[:workshop_id])
     @messages = current_user.messages.where(workshop_id: @workshop.id).order(created_at: :asc)
     @message = Message.new
+    respond_to  do |format|
+      format.html
+      format.js
+    end
 
   end
 

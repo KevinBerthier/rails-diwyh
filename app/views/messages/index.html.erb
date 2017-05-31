@@ -6,10 +6,14 @@
   <%= link_to "<< dashboard", dashboard_path, class: "btn btn-default back-button" %>
   <div class="row">
     <div class="chat_window col-xs-12 col-md-10 col-md-offset-1">
-      <%= render "messages/messages" %>
+      <div id="chat_window">
+        <%= render "messages/messages", messages: @messages %>
+      </div>
       <div class="bottom_wrapper clearfix">
         <%= render 'messages/form', workshop: @workshop, message: @message %>
       </div>
     </div>
   </div>
 </div>
+
+<%= link_to "refresh", remote: true  %>

@@ -1,0 +1,21 @@
+<% if @message.errors.any? %>
+  // Render new message form with errors
+  $('#messages').html("<%= j render 'messages/messages',messages: @messages %>");
+<% else %>
+  // Create a paragraph for the new message. But hide it.
+  var messages = $("<%= j render 'messages/messages', messages: @messages %>").hide();
+  // Add it to the DOM, at the end of the existing messages. It's still hidden.
+
+  var d = $('#chat_window');
+  d.animate({ scrollTop: d.prop("scrollHeight")}, 1000);
+
+  $('#chat_window').empty();
+  $('#chat_window').prepend(messages);
+  // Show the new message with an animation!
+  messages.show();
+
+
+
+  // Reset the form
+//   $('#new_message').html("<%= j render 'messages/form', workshop: @workshop, message: Message.new %>");
+<% end %>
