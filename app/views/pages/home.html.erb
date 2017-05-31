@@ -19,9 +19,16 @@
           <span class="text-uppercase backcolor">with your</span>
           <span class="text-uppercase backcolor">hands</span>
         </h1>
+
+        <div class="invitation margin-top-md" style="line-height:1em";>
+          <div class="text-center txt-light backcolor">explore</div>
+          <div class="text-center txt-light backcolor">our universes</div>
+        </div>
       </div>
     </div>
   </div>
+
+
 
 </div>
 
@@ -32,7 +39,7 @@
         <li>
           <%= link_to universe_path(universe) do  %>
             <figure>
-              <div class="front-image">
+              <div >
                 <%= cl_image_tag universe.banner.fullpath, height: 300, width: 480, crop: :crop %>
                 <h2 class="text-uppercase"> <%= universe.name %> </h2>
               </div>
@@ -44,6 +51,16 @@
       <% end %>
     </ul>
 </div>
+
+
+<div class="col-md-6 col-md-offset-3">
+  <div class="invitation margin-top-md margin-bottom-md" style="line-height:1em";>
+    <div class="text-center txt-light backcolor">explore</div>
+    <div class="text-center txt-light backcolor">our workshops</div>
+    <div class="text-center txt-light backcolor">on the map</div>
+  </div>
+</div>
+
 
 <!-- map de ouf -->
 <div id="map" style="width: 100%; height: 600px;"></div>
