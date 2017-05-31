@@ -216,7 +216,7 @@ workshop_attributes = [
   {
     title:        "Create your own rocking chair in tropical wood",
     price:        3000,
-    description:  "A hand carved seat and well balanced rockers make this a very comfortable chair. The rockers are constructed by way of lamination - timber is cut into thin strips and then glued together in the desired shape. This method provides exceptional strength. Joins are mortice and tenoned and the main joins are also dowelled for extra strength. The chair is handed sanded and finished with an oil and wax finish.",
+    description:  "A hand carved seat and well balanced rockers make this a very comfortable chair. The rockers are constructed by way of lamination - timber is cut into thin strips and then glued together in the desired shape. This method provides exceptional strength. Joins are mortice and tenoned and the main joins are also dowelled for extra strength. The chair is handed sanded and finished with an oil and wax finish. Cutting edge design and superb aesthetics are reflected in the Rocking Chair. It offers the supreme comfort of ergonomics paired with a smooth rocking motion created by its solid beech base and runners. In addition the body hugging design is constructed in a natural way to ensure a feeling of comfort. The main part is covered in different materials including leather and comes in a variety of colors.",
     craftman:     sarah,
     photos:       open_photo("chair_tropical.jpg"),
     skills:       "Understand How Wood Works and Behaves, Use a Hand Plane, Cut a Mortise and Tenon Joint, master sharpen saws."

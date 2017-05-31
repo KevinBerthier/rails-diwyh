@@ -4,12 +4,12 @@
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-sm-offset-3">
         <div class="background-form chat_window">
-          <h2 class="txt-bold text-center">Contact <%= @workshop.craftman.first_name %> <%= @workshop.craftman.last_name %></h2>
+          <h2 class="text-center txt-light">Contact <%= @workshop.craftman.first_name %> <%= @workshop.craftman.last_name %></h2>
           <%= simple_form_for [@workshop, @message], url: workshop_create_first_message_path(@workshop, current_user) do |f| %>
             <%= f.error_notification %>
-            <%= f.input :date_checkin, as: :string, input_html:{type: "date"}, label: "From" %>
-            <%= f.input :date_checkout, as: :string, input_html:{type: "date"}, label: "To" %>
-            <%= f.input :content, label: "Present yourself and what you want to learn with this experience"  %>
+            <%= f.input :date_checkin, as: :string, input_html:{type: "date"}, label: "From", class: "txt-light" %>
+            <%= f.input :date_checkout, as: :string, input_html:{type: "date"}, label: "To", class: "txt-light" %>
+            <%= f.input :content, label: "Start to dialogue with the craftsman you selected", class: "txt-light"  %>
 
             <div class="text-center">
               <%= f.button :submit, "SEND", class: "btn btn-message" %>

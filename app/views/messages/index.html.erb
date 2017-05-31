@@ -1,18 +1,39 @@
 
 <!-- NE SURTOUT PAS CHANGER LES CLASS -->
 <div class="container">
-  <h2 class="text-center"><%= @workshop.title %> with <%= @workshop.craftman.first_name %> <%= @workshop.craftman.last_name %></h2>
-
-  <%= link_to "<< dashboard", dashboard_path, class: "btn btn-default back-button" %>
   <div class="row">
-    <div class="col-xs-12">
-      <h3 class="text-center">Workshop: <%= @workshop.title %></h3>
-    </div>
-    <div class="chat_window col-xs-12 col-md-10 col-md-offset-1">
-      <%= render "messages/messages" %>
-      <div class="bottom_wrapper clearfix">
-        <%= render 'messages/form', workshop: @workshop, message: @message %>
+
+    <div class="chat_window col-xs-12 col-xs-offset-1 ">
+      <!-- header chat -->
+      <div id="header">
+      <div class="row">
+
+
+        <div class="col-xs-6">
+          <div class="header-chat-1">
+            <p class="text-left"><%= @workshop.craftman.first_name %> <%= @workshop.craftman.last_name %></p>
+          </div>
+        </div>
+
+        <div class="col-xs-6">
+          <div class="header-chat-2">
+          <p class="text-right"><%= link_to "Go to dashboard", dashboard_path %></p>
+          </div>
+        </div>
+
       </div>
+      </div>
+
+      <!-- chat -->
+      <div>
+        <%= render "messages/messages" %>
+        <div class="bottom_wrapper clearfix">
+          <%= render 'messages/form', workshop: @workshop, message: @message %>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
+
+<%= link_to "", workshop_messages_path(@workshop), id: "refresh", remote: true %>
