@@ -48,7 +48,6 @@
     </div>
 
 
-
     <div class="row">
 
       <!-- Tableau DETAILS workshop -->
@@ -57,12 +56,12 @@
         <!-- 1ère ligne ARTISAN -->
         <div class="row">
           <div class="col-sm-3">
-            <div class="upper-line"><hr></div>
-            <p class="txt-sm txt-regular chivo">Craftsman</p>
+
+            <p class="txt-sm txt-regular chivo padded-top-sm ">Craftsman</p>
           </div>
           <div class="col-sm-9">
-            <div class="upper-line-left"><hr></div>
-            <p class="txt-sm txt-light chivo"><%= @workshop.craftman.first_name.capitalize %> <%= @workshop.craftman.last_name.capitalize %></p>
+
+            <p class="txt-sm txt-light chivo padded-top-sm"><%= @workshop.craftman.first_name.capitalize %> <%= @workshop.craftman.last_name.capitalize %></p>
           </div>
         </div>
 
@@ -95,18 +94,19 @@
           <div class="col-md-3">
             <div class="upper-line"><hr></div>
             <p class="txt-sm txt-regular chivo">Where</p>
-            <div class="final-line"><hr></div>
+
           </div>
           <div class="col-md-9">
             <div class="upper-line-left"><hr></div>
             <p class="txt-sm txt-light chivo"><%= @workshop.craftman.locality %></p>
-            <div class="final-line-left"><hr></div>
+
           </div>
         </div>
 
+
         <!-- mini map -->
         <div class="padded-md">
-          <div id="map" style="width: 290px; height: 290px;"></div>
+          <div id="map" style="width: 330px; height: 330px;"></div>
 
           <% content_for(:after_js) do %>
             <script>
@@ -137,7 +137,19 @@
 
       <!-- Description workshop -->
       <div class="col-md-5 margin-left">
+        <h4 class="no-margin-top no-padding-top">in a nutshell</h4>
         <p class="txt-light"><%= @workshop.description %></p>
+        <h4 class="no-margin-top no-padding-top">features</h4>
+        <ul class="txt-light">
+         <li>build a shell structure with a polyurethane finish effect</li>
+         <li>learn Body how to fully upholstered the seat</li>
+         <li>9 different wood base selected</li>
+         <li>match Lacquered wooden legs with Polyurethane seat options</li>
+         <li>make the assembly manually</li>
+         <li>design and create all the tenon joints</li>
+         <li>prototype your Custom Fabric Options</li>
+         <li>initiation to sculpt animals charachters on chair feets</li>
+        </ul>
       </div>
 
     </div>
@@ -212,7 +224,7 @@
           <p class="txt-light"> <%= @workshop.craftman.description %> </p>
         </div>
         <div class="col-xs-2 col-xs-offset-1">
-          <%= image_tag @workshop.universe.artisan_profile.fullpath, height: 400, width: 280, crop: :fill%>
+          <%= image_tag @workshop.universe.artisan_profile.fullpath, height: 280, width: 280, crop: :fill%>
         </div>
       </div>
 
