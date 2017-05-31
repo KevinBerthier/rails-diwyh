@@ -8,6 +8,10 @@ class MessagesController < ApplicationController
     @workshop = Workshop.friendly.find(params[:workshop_id])
     @messages = current_user.messages.where(workshop_id: @workshop.id).order(created_at: :asc)
     @message = Message.new
+    respond_to  do |format|
+      format.html
+      format.js
+    end
 
   end
 
@@ -27,10 +31,7 @@ class MessagesController < ApplicationController
 
   def create_first
     @workshop = Workshop.friendly.find(params[:workshop_id])
-    @message = Message.new(content:
-      "#{current_user.first_name} contacted you for the workshop :
-      #{@workshop.title} from #{message_params['date_checkin']}
-      to #{message_params['date_checkin']}. #{message_params['content']}")
+    @message = Message.new(message_params)
     @message.workshop = @workshop
     @message.craftman = @workshop.craftman
     @message.user = current_user

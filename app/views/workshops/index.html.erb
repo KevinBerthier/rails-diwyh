@@ -54,7 +54,7 @@
                 </div>
               </div>
               <div class="text-center card-index-button">
-                <%= link_to "DETAILS", workshop_path(wksp), class: "btn btn-lg btn-default" %>
+                <%= link_to "DETAILS", workshop_path(wksp), class: "btn btn-lg btn-black" %>
               </div>
             </div>
           </div>
@@ -67,4 +67,8 @@
 
 
 
+<!-- TITLE -->
+<% content_for(:title_tag) do %>
+  DIWYH - Explore <%= @universe.name %> workshops
+<% end %>
 

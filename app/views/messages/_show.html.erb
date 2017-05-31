@@ -7,6 +7,10 @@
   <div class="text_wrapper">
     <div class="text">
       <p><%= message.content %></p>
+      <% if message.date_checkin %>
+        <p style="font-size: 12px;">Workshop asked from <%= message.date_checkin %> to <%= message.date_checkout %> </p>
+      <% end %>
     </div>
   </div>
 </li>
+
