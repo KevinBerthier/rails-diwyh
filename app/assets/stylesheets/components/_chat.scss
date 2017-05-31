@@ -4,13 +4,13 @@
   // width: calc(100% - 20px);
   // max-width: 800px;
   height: 500px;
-  border-radius: 10px;
+  border-radius: 2px;
   background-color: #fff;
   margin-top: 40px;
   // transform: translateX(-50%) translateY(-50%);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  background-color: #f8f8f8;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  border: 1px solid $gold2;
 }
 
 .top_menu {
@@ -64,35 +64,39 @@
   min-width: 51%;
 }
 .messages .message.left .avatar {
-  background-color: #f5886e;
+  background-color: white;
   float: left;
 }
 .messages .message.left .text_wrapper {
-  background-color: #ffe6cb;
+  background-color: white;
+  border: 1px solid rgba(#926f34, .6);
   margin-left: 20px;
+  border-radius: 2px;
 }
 .messages .message.left .text_wrapper::after, .messages .message.left .text_wrapper::before {
   right: 100%;
-  border-right-color: #ffe6cb;
+  border-right-color: rgba(#926f34, 0.6);
 }
 .messages .message.left .text {
-  color: #c48843;
+  color: $gold2;
 }
 .messages .message.right .avatar {
-  background-color: #fdbf68;
+  background-color: white;
   float: right;
 }
 .messages .message.right .text_wrapper {
-  background-color: #c7eafc;
+  background-color: white;
   margin-right: 20px;
   float: right;
+  border: 1px solid $gold1;
+  border-radius: 2px;
 }
 .messages .message.right .text_wrapper::after, .messages .message.right .text_wrapper::before {
   left: 100%;
-  border-left-color: #c7eafc;
+  border-left-color: $gold1;
 }
 .messages .message.right .text {
-  color: #45829b;
+  color: $gold2;
 }
 .messages .message.appeared {
   opacity: 1;
@@ -106,7 +110,7 @@
 .messages .message .text_wrapper {
   display: inline-block;
   padding: 20px;
-  border-radius: 6px;
+  // border-radius: 6px;
   width: calc(100% - 85px);
   min-width: 100px;
   max-width: 100%;
@@ -146,7 +150,7 @@
 .bottom_wrapper .message_input_wrapper {
   display: inline-block;
   height: 50px;
-  border-radius: 25px;
+  border-radius: 2px;
   border: 1px solid #bcbdc0;
   width: calc(100% - 160px);
   position: relative;
@@ -159,24 +163,24 @@
   width: calc(100% - 40px);
   position: absolute;
   outline-width: 0;
-  color: gray;
+  color: $gold2;
 }
 .bottom_wrapper .send_message {
   width: 140px;
   height: 50px;
   display: inline-block;
-  border-radius: 50px;
-  background-color: #a3d063;
-  border: 2px solid #a3d063;
-  color: #fff;
+  border-radius: 2px;
+  background-color: $gold1;
+  border: none;
+  color: $gold2;
   cursor: pointer;
   transition: all 0.2s linear;
   text-align: center;
   float: right;
 }
 .bottom_wrapper .send_message:hover {
-  color: #a3d063;
-  background-color: #fff;
+  background-color: rgba(#dfbe6a, .7);
+  color: rgba(#926f34, .6);
 }
 .bottom_wrapper .send_message .text {
   font-size: 18px;
@@ -191,4 +195,24 @@
 
 .new-booking {
   position: absolute;
+}
+
+.btn-message {
+  width: 100px;
+  height: 40px;
+  border-radius: 2px;
+  background-color: $gold1;
+  border: none;
+  color: $gold2;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  text-align: center;
+}
+.btn-message:hover {
+  background-color: rgba(#dfbe6a, .7);
+  color: rgba(#926f34, .6);
+}
+
+.chat_window h4 {
+  line-height: 27px;
 }
