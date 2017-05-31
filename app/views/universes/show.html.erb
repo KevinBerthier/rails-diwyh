@@ -168,7 +168,7 @@
           </div>
           <div class="picture-one">
             <!-- photo du craftman -->
-            <%= cl_image_tag craftman_avatar(@first_craftman),:gravity=>"custom:face", :height=>240, :width=>240, :x=>1987, :crop=>"fill" %>
+            <%= cl_image_tag craftman_avatar(@first_craftman),:gravity=>"custom:face", :height=>240, :width=>300, :x=>1987, crop: :crop %>
           </div>
         </div>
       </div>
@@ -207,7 +207,7 @@
         <div class="presentation-pic">
           <div class="picture-two">
             <!-- photo du craftman -->
-            <%= cl_image_tag craftman_avatar(@second_craftman), width: 240, height: 240, crop: :fill %>
+            <%= cl_image_tag craftman_avatar(@second_craftman), width: 300, height: 240, crop: :crop %>
           </div>
           <div class=" name-two bottom-surlign <%= @universe.code %>">
             <!-- introduire en ruby le nom du craftman -->
