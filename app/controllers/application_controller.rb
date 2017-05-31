@@ -6,4 +6,8 @@ class ApplicationController < ActionController::Base
   def disable_nav
    @disable_nav = true
   end
+
+  def default_url_options
+    { host: ENV["HOST"] || "localhost:3000" }
+  end
 end
