@@ -152,9 +152,9 @@
                       <div class="col-xs-5 col-sm-5">
                       <!-- photo  -->
                         <div class="image-card padded-top-xs padded-bottom-xs">
-                          <%= cl_image_tag wksp.photos.first, height: 175, width: "100%", crop: :fill, style: "background: rgba(0,36,61,0.6)" %>
-                            <p class="flex-card-1"><%= wksp.craftman.first_name %> </p>
-                            <p class="flex-card-2"><%= wksp.craftman.last_name %></p>
+                          <%= cl_image_tag wksp.photos.first.path, height: 160, width: 280, crop: :fill, style: "background: rgba(0,36,61,0.6)" %>
+                            <p class="flex-card-1 txt-gras"><%= wksp.craftman.first_name %> </p>
+                            <p class="flex-card-2 txt-gras"><%= wksp.craftman.last_name %></p>
                         </div>
 
                       </div>
@@ -162,21 +162,21 @@
 
                       <div class="col-xs-5 col-sm-5">
                       <!-- infos in the middle  -->
-                        <h2 class="card-title txt-description padded-top-xs padded-bottom-xs"><%= wksp.title %></h2>
-                        <p class="txt-sm padded-sm"><%= truncate(wksp.description, length: 140, separator: '.') %></p>
+                        <h2 class="card-title txt-description padded-top-xs padded-bottom-xs roboto"><%= wksp.title %></h2>
+                        <p class="txt-sm padded-sm roboto"><%= truncate(wksp.description, length: 140, separator: '.') %></p>
                         <div class="row">
                           <div class="col-xs-4 col-sm-4">
                             <div class="upper-line"><hr></div>
-                            <h6 class="txt-light">Price</h6>
+                            <h6 class="txt-light roboto">Price</h6>
                             <div class="upper-line"><hr></div>
-                            <h6 class="txt-light">Where</h6>
+                            <h6 class="txt-light roboto">Where</h6>
                           </div>
                           <div class="col-xs-8 col-sm-8">
                             <div class="upper-line-left"><hr></div>
-                            <h6 class="txt-light"><%= humanized_money_with_symbol(wksp.price)%>/day</h6>
+                            <h6 class="txt-light roboto"><%= humanized_money_with_symbol(wksp.price)%>/day</h6>
                             <div class="upper-line-left"><hr></div>
 
-                            <h6 class="txt-light"><%= wksp.craftman.locality %></h6>
+                            <h6 class="txt-light roboto"><%= wksp.craftman.locality %></h6>
 
                           </div>
                         </div>
@@ -184,11 +184,11 @@
 
                       <div class="col-xs-2 col-sm-2 text-center">
                       <!-- buttons  -->
-                        <%= link_to "details", workshop_path(wksp), class: "btn btn-sm btn-default margin-sm" %>
+                        <%= link_to "details", workshop_path(wksp), class: "btn btn-sm btn-default margin-btn" %>
 
-                        <%= link_to "modify", workshop_path(wksp), class: "btn btn-sm btn-default margin-sm" %>
+                        <%= link_to "modify", workshop_path(wksp), class: "btn btn-sm btn-default margin-btn" %>
 
-                        <a href="#" class="btn btn-sm btn-default margin-sm" >contact</a>
+                        <a href="#" class="btn btn-sm btn-default margin-btn" >contact</a>
                       </div>
 
                     </div>

@@ -19,12 +19,12 @@
     <% job.workshops.each do |wksp| %>
         <div class="col-xs-12 col-sm-4">
           <div class="card-index">
-            <div class="card-img">
+            <div class="card-img" >
             <!-- workshop_pic -->
-              <%= cl_image_tag workshop_pic(wksp), height: 150, width: 358, crop: :fill, style: "background: rgba(0.3,36,61,0.9)" %>
+              <%= cl_image_tag workshop_pic(wksp), height: 200, width: 358, crop: :fill %>
               <div class="col-xs-12 text-center craftman-name">
-                <p class="roboto txt-gras white"><%= wksp.craftman.first_name.capitalize %></p>
-                <p class="roboto txt-gras white"><%= wksp.craftman.last_name.capitalize %></p>
+                <p class="txt-mmd roboto white"><%= wksp.craftman.first_name.capitalize %></p>
+                <p class="txt-mmd roboto white"><%= wksp.craftman.last_name.capitalize %></p>
               </div>
             </div>
             <div class="card-block">
@@ -34,28 +34,26 @@
                 <div class="row">
                   <div class="col-md-3">
                     <div class="upper-line"><hr></div>
-                    <h6 class="txt-regular">Where</h6>
+                    <p class="roboto txt-description txt-light">Where</p>
                   </div>
                   <div class="col-md-9">
                     <div class="upper-line-left"><hr></div>
-                    <h6 class="txt-light"><%= wksp.craftman.address %></h6>
+                    <p class="roboto txt-description txt-light"><%= wksp.craftman.locality %></p>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-3">
                     <div class="upper-line"><hr></div>
-                    <h6 class="txt-regular">Price</h6>
-                    <div class="final-line"><hr></div>
+                    <p class="roboto txt-description txt-light">Price</p>
                   </div>
                   <div class="col-md-9">
                     <div class="upper-line-left"><hr></div>
-                    <h6 class="txt-light"><%= wksp.price.to_i %>€/day</h6>
-                    <div class="final-line-left"><hr></div>
+                    <p class="roboto txt-description txt-light"><%= wksp.price.to_i %>€/day</p>
                   </div>
                 </div>
               </div>
               <div class="text-center card-index-button">
-                <%= link_to "DETAILS", workshop_path(wksp), class: "btn btn-lg btn-black" %>
+                <%= link_to "DETAILS", workshop_path(wksp), class: "txt-light btn btn-lg btn-black" %>
               </div>
             </div>
           </div>

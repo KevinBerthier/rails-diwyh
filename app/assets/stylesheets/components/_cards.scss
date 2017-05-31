@@ -50,14 +50,13 @@
 
 // Workshops#index
 .card-index {
-  background-size: cover !important;
-  height: 500px;
+  height: 560px;
   background-color: white;
   border-radius: 2px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.1);
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .card-block {
   padding: 30px 30px 20px 30px;
@@ -82,10 +81,6 @@
   padding-top: 20px;
 }
 .card-img {
-  width: 100%;
-  position: abosolute;
-  top: 0px;
-  left: 0px;
   text-align: center;
 }
 
@@ -128,3 +123,5 @@
 .card-map {
   max-width: 350px;
 }
+
+
