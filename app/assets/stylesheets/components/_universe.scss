@@ -90,12 +90,13 @@
 }
 
 .card-job {
-    width: 440px;
-    height: 370px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    position: relative;
+  width: 440px;
+  height: 370px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+
   h3 {
     color: white;
     top: 150px;
@@ -103,6 +104,10 @@
 }
 .card-job h3:hover {
   font-size: 34px;
+  text-decoration: none;
+}
+
+a:hover {
   text-decoration: none;
 }
 
