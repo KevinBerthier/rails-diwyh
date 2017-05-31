@@ -1,0 +1,35 @@
+
+
+<div class="card-map">
+  <div class="card-block">
+    <p class="card-title roboto txt-gras txt-md text-uppercase text-center"><%= workshop.title %></p>
+    <p class="roboto txt-description txt-light padded-bottom-m text-center"><%= workshop.description[0..80] %>...</p>
+    <div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="upper-line"><hr></div>
+          <h6 class="txt-regular">Where</h6>
+        </div>
+        <div class="col-md-9">
+          <div class="upper-line-left"><hr></div>
+          <h6 class="txt-light"><%= workshop.craftman.address %></h6>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="upper-line"><hr></div>
+          <h6 class="txt-regular">Price</h6>
+          <div class="final-line"><hr></div>
+        </div>
+        <div class="col-md-9">
+          <div class="upper-line-left"><hr></div>
+          <h6 class="txt-light"><%= workshop.price.to_i %>€/day</h6>
+          <div class="final-line-left"><hr></div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center card-index-button">
+      <%= link_to "DETAILS", workshop_path(workshop), class: "btn btn-lg btn-default" %>
+    </div>
+  </div>
+</div>
