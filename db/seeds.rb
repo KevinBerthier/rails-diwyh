@@ -110,7 +110,8 @@ guillaume = Craftman.new(
     address: "108 Rue Thimonnier, 69530 Brignais",
     locality: "Brignais",
     birth_date: "01/12/1970",
-    job: carpenter
+    job: carpenter,
+    # avatar: open_photo("guillaume.jpg")
   })
 guillaume.save
 
@@ -126,7 +127,8 @@ sarah = Craftman.new(
     address: "Warrnambool, VIC, 3280 Australia",
     locality: "Warrnambool",
     birth_date: "11/11/1987",
-    job: carpenter
+    job: carpenter,
+    # avatar: open_photo("sarah.jpg")
   })
 sarah.save
 
@@ -142,7 +144,8 @@ andrew = Craftman.new(
     address: "44 Otonabee Dr Unit 3, Kitchener, ON N2C 1L6, Canada",
     locality: "Kitchener",
     birth_date: "03/08/1956",
-    job: cabinetmaker
+    job: cabinetmaker,
+    # avatar: open_photo("andrew.jpg")
   })
 andrew.save
 
@@ -158,7 +161,8 @@ laura = Craftman.new(
     address: "PO BOX 3089 WEST HOBART TASMANIA 7000",
     locality: "west hobart",
     birth_date: "10/12/1987",
-    job: cabinetmaker
+    job: cabinetmaker,
+    # avatar: open_photo("laura.jpg")
   })
 laura.save
 
@@ -174,7 +178,8 @@ ernest = Craftman.new(
   address: "1512 Pacheco St, Santa Fe, NM 87505, united states",
   locality: "Santa Fe",
   birth_date: "10/10/2000",
-  job: framer
+  job: framer,
+  # avatar: open_photo("ernest.jpg")
   })
 ernest.save
 
@@ -190,7 +195,8 @@ thomas = Craftman.new(
   address: "15 rue Jean Mermoz, 75008 Paris",
   locality: "Paris",
   birth_date: "12/12/1937",
-  job: framer
+  job: framer,
+  # avatar: open_photo("thomas.jpg")
   })
 thomas.save
 
@@ -204,7 +210,7 @@ workshop_attributes = [
     price:        2000,
     description:  "Curved lines at the corners of the dining table soften the silhouette, while the angled legs add a striking edge to the design.Crafted from robust solid oak legs, this table and bench set is made for everyday use. In a lacquer finish to protect it from wear and tear.",
     craftman:     laura,
-    artisan_pic:  open_photo("wood_workshop.jpg"),
+    # artisan_pic:  open_photo("wood_workshop.jpg"),
     skills:       "Understand How Wood Works and Behaves, Use a Hand Plane, Cut a Mortise and Tenon Joint, master sharpen saws, Prep Lumber With Hand Tools, Cut a Mortise and Tenon Joint, surface finishing ."
   },
   {
@@ -212,7 +218,8 @@ workshop_attributes = [
     price:        3000,
     description:  "A hand carved seat and well balanced rockers make this a very comfortable chair. The rockers are constructed by way of lamination - timber is cut into thin strips and then glued together in the desired shape. This method provides exceptional strength. Joins are mortice and tenoned and the main joins are also dowelled for extra strength. The chair is handed sanded and finished with an oil and wax finish.",
     craftman:     sarah,
-    artisan_pic:  open_photo("wood_workshop.jpg"),
+    # artisan_pic:  open_photo("chair_tropical.jpg"),
+    # changer le nom
     skills:       "Understand How Wood Works and Behaves, Use a Hand Plane, Cut a Mortise and Tenon Joint, master sharpen saws."
   },
   {
@@ -220,7 +227,7 @@ workshop_attributes = [
     price:        200,
     description:  "We are going to make possible your children to play with their favorite football team members made in the purest wood from Jura. With a striker and a goal keeper, marbles are being turned into ballon d'or! Each box includes 2 wooden players, 1 wooden goal, 3 colored marbles according to the team and 3 stickers to custom the wooden pieces.",
     craftman:     guillaume,
-    artisan_pic:  open_photo("wood_workshop.jpg"),
+    artisan_pic:  open_photo("wooden-play.jpg"),
     skills:       "Understand How Wood Works and Behaves, Use Sharpen Saws, Furniture finishing."
   },
   {

@@ -168,7 +168,7 @@
           </div>
           <div class="picture-one">
             <!-- photo du craftman -->
-            <%= cl_image_tag craftman_avatar(@first_craftman), width: 240, height: 240, crop: :fill %>
+            <%= cl_image_tag craftman_avatar(@first_craftman),:gravity=>"custom:face", :height=>240, :width=>240, :x=>1987, :crop=>"fill" %>
           </div>
         </div>
       </div>
