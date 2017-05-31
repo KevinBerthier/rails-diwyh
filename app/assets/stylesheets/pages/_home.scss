@@ -5,6 +5,11 @@
 .intro h1 {
   color: $gray;
 }
+.invitation {
+  color: $gray;
+  padding: 10px;
+}
+// Ligne dynamique
 .vertical-line1 {
   width: 2px;
   height: 0;
@@ -33,6 +38,7 @@
   }
 }
 
+//Grille des univers
 .grid {
   padding: 20px 20px 100px 20px;
   max-width: 1300px;
@@ -51,10 +57,7 @@
 .grid figure {
   margin: 0;
   position: relative;
-  background: linear-gradient(182deg, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.32));
-}
-.grid figure .front-image {
-  background: linear-gradient(182deg, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.32));
+  //background: linear-gradient(182deg, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.32));
 }
 .grid figure h2 {
   position: absolute;
@@ -115,3 +118,4 @@
     min-width: 300px;
   }
 }
+
