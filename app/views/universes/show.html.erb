@@ -10,6 +10,9 @@
         <div class="row">
           <div class="col-xs-12 col-xs-offset-2 col-sm-offset-2 col-md-6">
             <h1><%= @universe.name.upcase %></h1>
+            <div class="btn-banner text-center">
+                <%= link_to "Explore our #{@universe.name.downcase} workshops", universe_workshops_path(@universe), class: "btn-default"  %>
+            </div>
           </div>
           <div class="col-xs-12 col-xs-offset-1 col-md-6 col-md-offset-6">
             <h5>
@@ -148,8 +151,20 @@
         <div class="presentation-pic">
           <div class="name-one">
             <!-- introduire en ruby first_name et last_name du craftman -->
-            <h3><%= @first_craftman.first_name %></h3>
-            <h3><%= @first_craftman.last_name %></h3>
+            <h3 style="line-height:1em;">
+              <span style="line-height:1em;">
+                <span style="letter-spacing:0.1em;">
+                  <span class="backcolor"><%= @first_craftman.first_name %></span>
+                </span>
+              </span>
+            </h3>
+            <h3 style="line-height:1em;">
+              <span style="line-height:1em;">
+                <span style="letter-spacing:0.1em;">
+                  <span class="backcolor"><%= @first_craftman.last_name %></span>
+                </span>
+              </span>
+            </h3>
           </div>
           <div class="picture-one">
             <!-- photo du craftman -->
@@ -196,8 +211,20 @@
           </div>
           <div class=" name-two bottom-surlign <%= @universe.code %>">
             <!-- introduire en ruby le nom du craftman -->
-            <h3><%= @second_craftman.first_name %></h3>
-            <h3><%= @second_craftman.last_name %></h3>
+            <h3 style="line-height:1em;">
+              <span style="line-height:1em;">
+                <span style="letter-spacing:0.1em;">
+                  <span class="backcolor"><%= @second_craftman.first_name %></span>
+                </span>
+              </span>
+            </h3>
+            <h3 style="line-height:1em;">
+              <span style="line-height:1em;">
+                <span style="letter-spacing:0.1em;">
+                  <span class="backcolor"><%= @second_craftman.last_name %></span>
+                </span>
+              </span>
+            </h3>
           </div>
         </div>
       </div>
@@ -212,8 +239,20 @@
         <div class="presentation-pic">
           <div class="name-three">
             <!-- introduire en ruby le nom du craftman -->
-            <h3><%= @third_craftman.first_name %></h3>
-            <h3><%= @third_craftman.last_name %></h3>
+            <h3 style="line-height:1em;">
+              <span style="line-height:1em;">
+                <span style="letter-spacing:0.1em;">
+                  <span class="backcolor"><%= @third_craftman.first_name %></span>
+                </span>
+              </span>
+            </h3>
+            <h3 style="line-height:1em;">
+              <span style="line-height:1em;">
+                <span style="letter-spacing:0.1em;">
+                  <span class="backcolor"><%= @third_craftman.last_name %></span>
+                </span>
+              </span>
+            </h3>
           </div>
           <div class="picture-one">
             <!-- photo du craftman -->
@@ -235,5 +274,6 @@
       </div>
     </div>
   </div>
+
 
 <div id="white-margin"></div>
