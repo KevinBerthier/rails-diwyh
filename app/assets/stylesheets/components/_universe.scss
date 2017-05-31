@@ -22,6 +22,12 @@
     position: absolute;
     bottom: -300px;
   }
+  .btn-banner {
+    position: absolute;
+    top: 220px;
+    left: 70px;
+    width: 140px;
+  }
 }
 .adaptation {
   position: absolute;
@@ -96,6 +102,10 @@
     top: 150px;
   }
 }
+.card-job h3:hover {
+  font-size: 34px;
+  text-decoration: none;
+}
 
 a:hover {
   text-decoration: none;
@@ -120,7 +130,9 @@ a:hover {
   height: 100px;
   width: 350px;
 }
-
+.backcolor {
+  background-color: white;
+}
 .name-one {
   // width: 150px;
   position: relative;
