@@ -59,18 +59,17 @@
   position: relative;
   //background: linear-gradient(182deg, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.32));
 }
-.grid figure h2 {
-  position: absolute;
-  text-align: center;
-  vertical-align: middle;
-  top: 40%;
-  left: 35%;
-  z-index: 9000;
-  // border: 3px double white;
-  // padding: 100px;
-  color: white;
-
-}
+// .grid figure h2 {
+//   position: absolute;
+//   text-align: center;
+//   vertical-align: middle;
+//   top: 40%;
+//   left: 35%;
+//   z-index: 9000;
+//   // border: 3px double white;
+//   // padding: 100px;
+//   color: white;
+// }
 .grid figure img {
   max-width: 100%;
   display: block;
@@ -133,4 +132,15 @@
   right:0;
   z-index: 1000;
   background: linear-gradient(-225deg, rgba(0,101,168,0.2) 0%, rgba(0,36,61,0.3) 50%);
+}
+
+.universe-gate h2 {
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 9000;
+  top: 40%;
+  left: 0%;
+  width: 100%;
+  color: white;
 }
