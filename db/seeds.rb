@@ -26,7 +26,7 @@ puts 'database cleaned...'
 amelie = User.new({
   email: "amelie.marcombes@hec.ca",
   password: "password",
-  first_name: "Amelie",
+  first_name: "Amélie",
   last_name: "Marcombes",
   phone: "06 10 11 22 09",
   avatar: open_photo("amelie.png")
@@ -263,7 +263,7 @@ workshop_attributes = [
     skills:       "Understand How Wood Works and Behaves, Master Sharpen Saws, Planes, and Chisels, Cut Dovetail Joints, Lacquer your frame."
   },
   {
-    title:        "learn how to frame your paintings with taste",
+    title:        "Learn how to frame your paintings with taste",
     price:        180,
     description:  "Like the setting for a diamond, the frame around a work of art is the finishing touch, the element that completes and elevates a painting, presenting it to the viewer in its best possible light. Framing, however, is an art in and of itself, and just as a good frame choice can greatly enhance the appearance of a work, a poor frame choice can drastically diminish a work.",
     craftman:     thomas,
