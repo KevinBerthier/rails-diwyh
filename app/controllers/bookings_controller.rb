@@ -36,19 +36,15 @@ class BookingsController < ApplicationController
   end
 
   def accept
-    if @booking.submitted?
-      @booking.status = :accepted
-      @booking.save
-    end
+    @booking.status = :accepted
+    @booking.save
     redirect_to dashboard_path, notice: "The quotation ' #{@booking.workshop.title} ' has been successfully accepted"
     # à terme rediriger vers la page de paiement que l'on séparera.
   end
 
   def reject
-    if @booking.submitted?
-      @booking.status = :rejected
-      @booking.save
-    end
+    @booking.status = :rejected
+    @booking.save
     redirect_to dashboard_path, notice: "The quotation for the workshop ' #{@booking.workshop.title} ' has been rejected"
   end
 
