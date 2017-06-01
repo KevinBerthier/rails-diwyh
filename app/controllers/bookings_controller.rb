@@ -45,7 +45,10 @@ class BookingsController < ApplicationController
   end
 
   def reject
-    @booking.rejected! if @booking.submitted?
+    if @booking.submitted?
+      @booking.status = :rejected
+      @booking.save
+    end
     redirect_to dashboard_path, notice: "The quotation for the workshop ' #{@booking.workshop.title} ' has been rejected"
   end
 

@@ -22,7 +22,7 @@
                <% elsif current_user.facebook_picture_url %>
                 <%= image_tag current_user.facebook_picture_url,height: 150, width: 150, crop: :fill, class: "profil-pic"%>
                <% else %>
-                <%= image_tag "loic.png", height: 150, width: 150, crop: :fill, class: "profil-pic" %>
+                <%= image_tag "amelie.png", height: 150, width: 150, crop: :fill, class: "profil-pic" %>
                <% end %>
             </div>
 
@@ -140,21 +140,17 @@
               <div class="color-line-wood text-left bar-size-sm"><hr></div>
               <h4 class="txt-md txt-heavy no-margin-top">workshops</h4>
 
-              <% if @user.bookings == nil %>
-                <div class="dash_item">
-                  <p class="txt-light">No workshop</p>
-                </div>
-              <% else %>
-                <% @user.workshops.each do |wksp| %>
+              <% if @user.bookings.where(status: "accepted") != []  %>
+                <% @user.bookings.where(status: "accepted").each do |booking| %>
                   <div class="dash_item">
                     <!-- workshops card  -->
                     <div class="row">
                       <div class="col-xs-5 col-sm-5">
                       <!-- photo  -->
                         <div class="image-card padded-top-xs padded-bottom-xs">
-                          <%= cl_image_tag wksp.photos.first.path, height: 160, width: 280, crop: :fill, style: "background: rgba(0,36,61,0.6)" %>
-                            <p class="flex-card-1 txt-gras"><%= wksp.craftman.first_name %> </p>
-                            <p class="flex-card-2 txt-gras"><%= wksp.craftman.last_name %></p>
+                          <%= cl_image_tag booking.workshop.photos.first.path, height: 160, width: 280, crop: :fill, style: "background: rgba(0,36,61,0.6)" %>
+                            <p class="flex-card-1 txt-gras"><%= booking.workshop.craftman.first_name %> </p>
+                            <p class="flex-card-2 txt-gras"><%= booking.workshop.craftman.last_name %></p>
                         </div>
 
                       </div>
@@ -162,8 +158,8 @@
 
                       <div class="col-xs-5 col-sm-5">
                       <!-- infos in the middle  -->
-                        <h2 class="card-title txt-description padded-top-xs padded-bottom-xs roboto"><%= wksp.title %></h2>
-                        <p class="txt-sm padded-sm roboto"><%= truncate(wksp.description, length: 140, separator: '.') %></p>
+                        <h2 class="card-title txt-description padded-top-xs padded-bottom-xs roboto"><%= booking.workshop.title %></h2>
+                        <p class="txt-sm padded-sm roboto"><%= truncate(booking.workshop.description, length: 140, separator: '.') %></p>
                         <div class="row">
                           <div class="col-xs-4 col-sm-4">
                             <div class="upper-line"><hr></div>
@@ -173,10 +169,10 @@
                           </div>
                           <div class="col-xs-8 col-sm-8">
                             <div class="upper-line-left"><hr></div>
-                            <h6 class="txt-light roboto"><%= humanized_money_with_symbol(wksp.price)%>/day</h6>
+                            <h6 class="txt-light roboto"><%= humanized_money_with_symbol(booking.workshop.price)%>/day</h6>
                             <div class="upper-line-left"><hr></div>
 
-                            <h6 class="txt-light roboto"><%= wksp.craftman.locality %></h6>
+                            <h6 class="txt-light roboto"><%= booking.workshop.craftman.locality %></h6>
 
                           </div>
                         </div>
@@ -184,9 +180,9 @@
 
                       <div class="col-xs-2 col-sm-2 text-center">
                       <!-- buttons  -->
-                        <%= link_to "details", workshop_path(wksp), class: "btn btn-sm btn-default margin-btn" %>
+                        <%= link_to "details", workshop_path(booking.workshop), class: "btn btn-sm btn-default margin-btn" %>
 
-                        <%= link_to "modify", workshop_path(wksp), class: "btn btn-sm btn-default margin-btn" %>
+                        <%= link_to "modify", workshop_path(booking.workshop), class: "btn btn-sm btn-default margin-btn" %>
 
                         <a href="#" class="btn btn-sm btn-default margin-btn" >contact</a>
                       </div>
@@ -195,6 +191,10 @@
                   </div>
 
                 <% end %>
+              <% else %>
+                <div class="dash_item">
+                  <p class="txt-light">No workshop</p>
+                </div>
               <% end %>
 
             </div>
