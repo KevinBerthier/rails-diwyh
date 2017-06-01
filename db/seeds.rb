@@ -23,17 +23,18 @@ puts 'database cleaned...'
 
 ##########################################
 
-loic = User.new({
-  email: "loic@exemple.com",
+amelie = User.new({
+  email: "amelie.marcombes@hec.ca",
   password: "password",
-  first_name: "Loïc",
-  last_name: "Cessot",
-  phone: "06 10 11 22 09"
+  first_name: "Amelie",
+  last_name: "Marcombes",
+  phone: "06 10 11 22 09",
+  avatar: open_photo("amelie.png")
   })
-loic.save
+amelie.save
 
 kevin = User.new({
-  email: "kevin@exemple.com",
+  email: "kevindrd87@hotmail.fr",
   password: "password",
   first_name: "Kevin",
   last_name: "Berthier",
@@ -207,7 +208,7 @@ puts '6 craftmen created...'
 workshop_attributes = [
   {
     title:        "Your scandi style wooden table in 2 days",
-    price:        2000,
+    price:        200,
     description:  "Curved lines at the corners of the dining table soften the silhouette, while the angled legs add a striking edge to the design.Crafted from robust solid oak legs, this table and bench set is made for everyday use. In a lacquer finish to protect it from wear and tear.",
     craftman:     laura,
     photos:       open_photo("Scandi_table.jpeg"),
@@ -215,15 +216,15 @@ workshop_attributes = [
   },
   {
     title:        "Create your own rocking chair in tropical wood",
-    price:        3000,
+    price:        150,
     description:  "A hand carved seat and well balanced rockers make this a very comfortable chair. The rockers are constructed by way of lamination - timber is cut into thin strips and then glued together in the desired shape. This method provides exceptional strength. Joins are mortice and tenoned and the main joins are also dowelled for extra strength. The chair is handed sanded and finished with an oil and wax finish. Cutting edge design and superb aesthetics are reflected in the Rocking Chair. It offers the supreme comfort of ergonomics paired with a smooth rocking motion created by its solid beech base and runners. In addition the body hugging design is constructed in a natural way to ensure a feeling of comfort. The main part is covered in different materials including leather and comes in a variety of colors.",
-    craftman:     sarah,
+    craftman:     andrew,
     photos:       open_photo("chair_tropical.jpg"),
     skills:       "Understand How Wood Works and Behaves, Use a Hand Plane, Cut a Mortise and Tenon Joint, master sharpen saws."
   },
   {
     title:        "Create some wooden plays for your kid",
-    price:        200,
+    price:        190,
     description:  "We are going to make possible your children to play with their favorite football team members made in the purest wood from Jura. With a striker and a goal keeper, marbles are being turned into ballon d'or! Each box includes 2 wooden players, 1 wooden goal, 3 colored marbles according to the team and 3 stickers to custom the wooden pieces.",
     craftman:     guillaume,
     photos:       open_photo("Baby-foot.jpg"),
@@ -231,7 +232,7 @@ workshop_attributes = [
   },
   {
     title:        "Your dream design desk in walnut made in 3 days",
-    price:        3000,
+    price:        300,
     description:  "This is one of the best desk designs when it comes to storage space. This well-designed Desk holds stacks of paper and files in a neat compartment under the desk, helping you clear all the clutter on the desks` surface. Even if underneath the desk there are files and folders, this is not an impediment for a comfortable seating experience.",
     craftman:     guillaume,
     photos:       open_photo("Your_dream_design_desk.jpg"),
@@ -239,7 +240,7 @@ workshop_attributes = [
   },
   {
     title:        "Bring to life a design bench for your garden",
-    price:        2000,
+    price:        200,
     description:  "This simple bench or banquette is a stunner with it’s clean lines and slightly coastal feel! This is the perfect little seating piece for outside, perhaps with a dining table or even configured with a corner unit into a nook like arrangement. That would look equally as fabulous inside or out!",
     craftman:     andrew,
     photos:       open_photo("Bring_to_life_design.jpeg"),
@@ -247,7 +248,7 @@ workshop_attributes = [
   },
   {
     title:        "Wood carving for beginners: how to get started !",
-    price:        500,
+    price:        160,
     description:  "Wood carving is a fun, accessible, and creative craft that doesn’t require a fancy studio, or equipment. All you need is a piece of wood and something sharp to carve it with. Of course, what kind of wood and what kind of carving tools you pick will affect the difficulty, safety, and result of your wood carving endeavors. In this wood carving for beginners guide, we’ll go over some of the most important information a new craftsman or craftswoman needs to know to get started.",
     craftman:     guillaume,
     photos:       open_photo("Wood_carving_for_beginners.jpg"),
@@ -263,7 +264,7 @@ workshop_attributes = [
   },
   {
     title:        "learn how to frame your paintings with taste",
-    price:        600,
+    price:        180,
     description:  "Like the setting for a diamond, the frame around a work of art is the finishing touch, the element that completes and elevates a painting, presenting it to the viewer in its best possible light. Framing, however, is an art in and of itself, and just as a good frame choice can greatly enhance the appearance of a work, a poor frame choice can drastically diminish a work.",
     craftman:     thomas,
     photos:       open_photo("Learn_how_to_frame.jpg"),
@@ -276,7 +277,7 @@ puts "#{workshop_attributes.count} workshops created..."
 
 
 first_booking = Booking.new({
-  user: loic,
+  user: amelie,
   workshop: Workshop.first,
   date_check_in: Date.today,
   date_check_out: Date.tomorrow + 1,
@@ -286,7 +287,7 @@ first_booking = Booking.new({
 first_booking.save
 
 second_booking = Booking.new({
-  user: loic,
+  user: amelie,
   workshop: Workshop.last,
   date_check_in: Date.today,
   date_check_out: Date.tomorrow + 1,
@@ -300,6 +301,51 @@ puts '2 bookings created...'
 # SEEDS FOR OTHER UNIVERSE... #
 ###############################
 
+###############################
+
+stone = Universe.new({
+  name: "Stone",
+  code: "stone",
+  banner: open_photo("stone_univers.jpg"),
+  collage: open_photo("background_stone.png"),
+})
+stone.save!
+puts 'Stone universe created...'
+
+###############################
+
+leather = Universe.new({
+  name: "Leather",
+  code: "leather",
+  banner: open_photo("leather_univers.jpg"),
+  collage: open_photo("background_leather.png"),
+})
+leather.save!
+puts 'Leather universe created...'
+
+###############################
+
+clay = Universe.new({
+  name: "Clay",
+  code: "clay",
+  banner: open_photo("clay_univers.jpg"),
+  collage: open_photo("background_clay.png"),
+})
+clay.save!
+puts 'Clay universe created...'
+
+###############################
+
+fabric = Universe.new({
+  name: "Fabric",
+  code: "fabric",
+  banner: open_photo("fabric_univers.jpg"),
+  collage: open_photo("background_fabric.png"),
+})
+fabric.save!
+puts 'Fabric universe created...'
+
+###############################
 glass = Universe.new({
   name: "Glass",
   code: "glass",
@@ -319,50 +365,6 @@ metal = Universe.new({
 })
 metal.save!
 puts 'Metal universe created...'
-
-###############################
-
-clay = Universe.new({
-  name: "Clay",
-  code: "clay",
-  banner: open_photo("clay_univers.jpg"),
-  collage: open_photo("background_clay.png"),
-})
-clay.save!
-puts 'Clay universe created...'
-
-###############################
-
-stone = Universe.new({
-  name: "Stone",
-  code: "stone",
-  banner: open_photo("stone_univers.jpg"),
-  collage: open_photo("background_stone.png"),
-})
-stone.save!
-puts 'Stone universe created...'
-
-###############################
-
-fabric = Universe.new({
-  name: "Fabric",
-  code: "fabric",
-  banner: open_photo("fabric_univers.jpg"),
-  collage: open_photo("background_fabric.png"),
-})
-fabric.save!
-puts 'Fabric universe created...'
-
-###############################
-
-leather = Universe.new({
-  name: "Leather",
-  code: "leather",
-  banner: open_photo("leather_univers.jpg"),
-  collage: open_photo("background_leather.png"),
-})
-leather.save!
-puts 'Leather universe created...'
 
 ###############################
 

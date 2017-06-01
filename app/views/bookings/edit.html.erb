@@ -8,7 +8,7 @@
       <!-- colonne text -->
        <div class="">
        <!-- caracteristiques -->
-        <h3 class=" padded-md"><%= @booking.workshop.title.downcase %></h3>
+        <h2 class="txt-md txt-heavy padded-md"><%= @booking.workshop.title %></h2>
         <div class="row">
            <div class="col-xs-6 col-md-6">
              <p class="txt-description">Craftman</p>
@@ -34,7 +34,7 @@
 
        <div class="">
         <!-- résa -->
-        <h3 class=" padded-md">reservation dates</h3>
+        <h2 class="txt-md txt-heavy padded-md">Reservation dates</h2>
         <div class="row">
            <div class="col-xs-6 col-md-6">
              <p class="txt-sm">Start</p>
@@ -52,7 +52,7 @@
 
        <div class="">
        <!-- prix -->
-        <h3 class=" padded-md">price</h3>
+        <h2 class="txt-md txt-heavy padded-md">Price</h2>
         <div class="row">
            <div class="col-xs-6 col-md-6">
              <p class="txt-description">Total price</p>
@@ -74,7 +74,7 @@
                <%= simple_form_for @booking, url: accept_booking_path(@booking) do |f| %>
                <%= f.input :date_check_in, as: :hidden %>
                <%= f.input :date_check_out, as: :hidden  %>
-               <%= f.submit "ACCEPT", class: "btn txt-heavy btn-default " %>
+               <%= f.submit "ACCEPT", class: "btn btn-default " %>
                <% end %>
              </div>
           </div>
