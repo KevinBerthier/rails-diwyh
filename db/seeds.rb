@@ -280,7 +280,7 @@ first_booking = Booking.new({
   user: amelie,
   workshop: Workshop.first,
   date_check_in: Date.today,
-  date_check_out: Date.tomorrow + 1,
+  date_check_out: Date.tomorrow,
   status: :submitted,
   total_price: 3000,
   })
@@ -288,9 +288,9 @@ first_booking.save
 
 second_booking = Booking.new({
   user: amelie,
-  workshop: Workshop.last,
+  workshop: Workshop.second,
   date_check_in: Date.today,
-  date_check_out: Date.tomorrow + 1,
+  date_check_out: Date.tomorrow,
   status: :accepted,
   total_price: 4000,
   })
