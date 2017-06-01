@@ -70,7 +70,7 @@
 //   // padding: 100px;
 //   color: white;
 // }
-.grid figure img {
+.grid figure .img {
   max-width: 100%;
   display: block;
   position: relative;
@@ -84,12 +84,12 @@
   background-size: cover;
   color: $gray;
 }
-.cs-style-5 figure img {
+.cs-style-5 figure .img {
   z-index: 10;
   transition: transform 0.4s;
 }
-.no-touch .cs-style-5 figure:hover img,
-.cs-style-5 figure.cs-hover img {
+.no-touch .cs-style-5 figure:hover .img,
+.cs-style-5 figure.cs-hover .img {
   transform: scale(0.4);
 }
 .cs-style-5 figcaption {
@@ -131,9 +131,10 @@
   left:132px;
   right:0;
   z-index: 1000;
+}
+.lng {
   background: linear-gradient(-225deg, rgba(0,101,168,0.2) 0%, rgba(0,36,61,0.3) 50%);
 }
-
 .universe-gate h2 {
   position: absolute;
   text-align: center;
