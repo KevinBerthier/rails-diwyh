@@ -206,7 +206,7 @@ puts '6 craftmen created...'
 ##########################################
 
 workshop_attributes = [
-  {
+  wooden_table = {
     title:        "Your scandi style wooden table in 2 days",
     price:        200,
     description:  "Curved lines at the corners of the dining table soften the silhouette, while the angled legs add a striking edge to the design.Crafted from robust solid oak legs, this table and bench set is made for everyday use. In a lacquer finish to protect it from wear and tear.",
@@ -214,7 +214,7 @@ workshop_attributes = [
     photos:       open_photo("Scandi_table.jpeg"),
     skills:       "Understand How Wood Works and Behaves, Use a Hand Plane, Cut a Mortise and Tenon Joint, master sharpen saws, Prep Lumber With Hand Tools, Cut a Mortise and Tenon Joint, surface finishing ."
   },
-  {
+  rocking_chair = {
     title:        "Create your own rocking chair in tropical wood",
     price:        150,
     description:  "A hand carved seat and well balanced rockers make this a very comfortable chair. The rockers are constructed by way of lamination - timber is cut into thin strips and then glued together in the desired shape. This method provides exceptional strength. Joins are mortice and tenoned and the main joins are also dowelled for extra strength. The chair is handed sanded and finished with an oil and wax finish. Cutting edge design and superb aesthetics are reflected in the Rocking Chair. It offers the supreme comfort of ergonomics paired with a smooth rocking motion created by its solid beech base and runners. In addition the body hugging design is constructed in a natural way to ensure a feeling of comfort. The main part is covered in different materials including leather and comes in a variety of colors.",
@@ -279,8 +279,8 @@ puts "#{workshop_attributes.count} workshops created..."
 first_booking = Booking.new({
   user: amelie,
   workshop: Workshop.first,
-  date_check_in: Date.today,
-  date_check_out: Date.tomorrow + 1,
+  date_check_in: Date.today +10,
+  date_check_out: Date.tomorrow + 11,
   status: :submitted,
   total_price: 3000,
   })
@@ -288,9 +288,9 @@ first_booking.save
 
 second_booking = Booking.new({
   user: amelie,
-  workshop: Workshop.last,
-  date_check_in: Date.today,
-  date_check_out: Date.tomorrow + 1,
+  workshop: Workshop.second,
+  date_check_in: Date.today +30,
+  date_check_out: Date.tomorrow + 31,
   status: :accepted,
   total_price: 4000,
   })
