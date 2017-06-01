@@ -1,7 +1,7 @@
 
 .chat_window {
   max-width: 80%;
-  height: 500px;
+  height: 700px;
   margin-top: 80px;
   margin-bottom: 50px;
   overflow: hidden;
@@ -45,7 +45,7 @@
   list-style: none;
   padding: 20px 10px 0 10px;
   margin: 0;
-  height: 250px;
+  height: 400px;
   overflow: scroll;
 }
 .messages .message {
@@ -69,7 +69,7 @@
 }
 .messages .message.left .text_wrapper::after, .messages .message.left .text_wrapper::before {
   right: 100%;
-  border-right-color: rgba(#926f34, 0.6);
+  border-right-color: rgba(#713538, 1);
 }
 .messages .message.left .text {
   color: white;
@@ -104,8 +104,8 @@
 .messages .message .text_wrapper {
   display: inline-block;
   padding: 20px;
-  width: calc(100% - 85px);
-  min-width: 100px;
+  //width: calc(100% - 85px);
+  //min-width: 100px;
   max-width: 100%;
   position: relative;
 }

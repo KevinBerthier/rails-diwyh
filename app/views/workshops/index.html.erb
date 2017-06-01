@@ -21,11 +21,16 @@
           <div class="card-index">
             <div class="card-img" >
             <!-- workshop_pic -->
-              <%= cl_image_tag workshop_pic(wksp), height: 200, width: 358, crop: :fill %>
-              <div class="col-xs-12 text-center craftman-name">
-                <p class="txt-mmd roboto white"><%= wksp.craftman.first_name.capitalize %></p>
-                <p class="txt-mmd roboto white"><%= wksp.craftman.last_name.capitalize %></p>
-              </div>
+                <%= cl_image_tag workshop_pic(wksp), height: 220, width: 358, crop: :fill %>
+                <div class="col-xs-12 text-center craftman-name">
+                  <p class="txt-mmd roboto white">
+                    <%= wksp.craftman.first_name.capitalize %>
+                  </p>
+                  <p class="txt-mmd roboto white">
+                    <%= wksp.craftman.last_name.capitalize %>
+                  </p>
+                </div>
+            <div class="card-img-filter"></div>
             </div>
             <div class="card-block">
               <p class="card-title roboto txt-gras txt-md text-uppercase"><%= wksp.title %></p>
