@@ -281,8 +281,8 @@ first_booking = Booking.new({
   workshop: Workshop.first,
   date_check_in: Date.today,
   date_check_out: Date.tomorrow,
-  status: :submitted,
-  total_price: 3000,
+  status: :accepted,
+  total_price: 700,
   })
 first_booking.save
 
@@ -291,8 +291,8 @@ second_booking = Booking.new({
   workshop: Workshop.second,
   date_check_in: Date.today,
   date_check_out: Date.tomorrow,
-  status: :accepted,
-  total_price: 4000,
+  status: :submitted,
+  total_price: 900,
   })
 second_booking.save
 puts '2 bookings created...'
