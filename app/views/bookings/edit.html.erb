@@ -16,15 +16,15 @@
              <p class="txt-description">Address</p>
            </div>
            <div class="col-xs-6 col-md-6">
-             <p class="txt-description txt-bold"><%= @craftman.first_name + " " + @craftman.last_name %></p>
-             <p class="txt-description txt-bold">
+             <p class="txt-light"><%= @craftman.first_name + " " + @craftman.last_name %></p>
+             <p class="txt-light">
                <% if @craftman.phone != nil %>
                 <%= @craftman.phone %>
                <% else %>
                 <%= "-" %>
                <% end %>
              </p>
-             <p class="txt-description txt-bold"><%= @craftman.address %></p>
+             <p class="txt-light"><%= @craftman.address %></p>
            </div>
         </div>
         <div class="padded-ri">
@@ -34,15 +34,15 @@
 
        <div class="">
         <!-- résa -->
-        <h2 class="txt-md txt-heavy padded-md">Reservation dates</h2>
+        <h2 class="txt-md padded-md">Reservation dates</h2>
         <div class="row">
            <div class="col-xs-6 col-md-6">
              <p class="txt-sm">Start</p>
-             <p class="txt-bold"><%= @booking.date_check_in %></p>
+             <p class="txt-description"><%= @booking.date_check_in %></p>
            </div>
            <div class="col-xs-6 col-md-6">
              <p class="txt-sm">End</p>
-             <p class="txt-bold"><%= @booking.date_check_out %></p>
+             <p class="txt-description"><%= @booking.date_check_out %></p>
            </div>
         </div>
         <div class="padded-ri">
@@ -52,23 +52,24 @@
 
        <div class="">
        <!-- prix -->
-        <h2 class="txt-md txt-heavy padded-md">Price</h2>
+        <h2 class="txt-md padded-md">Price</h2>
         <div class="row">
            <div class="col-xs-6 col-md-6">
              <p class="txt-description">Total price</p>
-             <p class="txt-description">Caution</p>
            </div>
            <div class="col-xs-6 col-md-6">
-             <p class="txt-description txt-bold"><%= @booking.total_price  %> €</p>
-             <p class="txt-description txt-bold"><%= @booking.total_price * 2  %> €</p>
+             <p class="txt-light"><%= @booking.total_price  %> €</p>
            </div>
         </div>
         <div class="padded-ri">
           <hr style="height:1px;" />
         </div>
+       </div>
+
 
         <!-- container button -->
          <div class="row">
+
           <div class="col-xs-6 col-md-6 text-right">
              <div id="btn-conf-booking" class="padded-full-lg">
                <%= simple_form_for @booking, url: accept_booking_path(@booking) do |f| %>
@@ -87,10 +88,10 @@
                <% end %>
              </div>
           </div>
-        </div>
-       </div>
 
-      </div>
+         </div>
+
+       </div>
 
       <div class="col-xs-12 col-md-6">
       <!-- photo -->
@@ -98,7 +99,7 @@
          <% if @workshop.photos.first.blank? %>
            <%= image_tag("http://placehold.it/600x550") %>
          <% else %>
-           <%= cl_image_tag @workshop.photos.first.path, width: 600, height: 600, crop: :crop %>
+           <%= cl_image_tag @workshop.photos.first.path, width: 550, height: 515, crop: :fill %>
          <% end %>
        </div>
       </div>
