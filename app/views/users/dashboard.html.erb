@@ -119,7 +119,7 @@
                     </div>
                  <% else %>
                     <% @threads.each do |(workshop, user), message| %>
-                      <%= link_to workshop_messages_path(workshop, user) do %>
+                      <%= link_to workshop_messages_path(workshop) do %>
                         <div class="dash_item padded-sm quotation-text txt-light">
                           <%= "#{workshop.title} with #{workshop.craftman.first_name}"
                           %>
