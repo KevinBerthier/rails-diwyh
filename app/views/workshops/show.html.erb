@@ -331,10 +331,7 @@
       <% @workshop.craftman.workshops.each do |wksp| %>
           <div class="col-xs-12 col-sm-4">
             <div class="card-index">
-              <div class="card-img">
-                <%= cl_image_tag workshop_pic(wksp), height: 200, width: 324, crop: :fill %>
-                <div class="col-xs-12 text-center craftman-name">
-                </div>
+              <div class="card-img img-fluid" style="background-size: cover !important;background-image: url('<%= image_url workshop_pic(wksp), height: 200, crop: :fill %>');">
               </div>
               <div class="card-block">
                 <p class="card-title roboto txt-gras txt-md text-uppercase"><%= wksp.title %></p>
