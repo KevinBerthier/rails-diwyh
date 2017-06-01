@@ -82,13 +82,23 @@
 }
 .card-img {
   text-align: center;
+  position: relative;
 }
-
+.card-img-filter{
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index: 1000;
+  background: linear-gradient(-225deg, rgba(0,101,168,0.2) 0%, rgba(0,36,61,0.4) 50%);
+}
 .craftman-name {
   position: absolute;
   top: 50px;
   color: white;
   font-weight: 400;
+  z-index: 1001;
 }
 .craftman-name p {
   text-align: center;
